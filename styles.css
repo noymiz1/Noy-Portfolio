@@ -3,6 +3,7 @@
 @import url('/styles/footer.css');
 @import url('/styles/top-bar.css');
 @import url('/styles/contact.css');
+@import url('/styles/projects.css');
 
 @font-face {
   font-family: 'PPMondwest-Regular';

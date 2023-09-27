@@ -1,45 +1,211 @@
+/* Global Styles */
+main {
+  display: block;
+}
+
+body, h4 {
+  font-family: 'Balto-Book', sans-serif;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: 'PPMondwest-Regular', serif;
+  font-weight: normal;
+}
+
+/* About Section */
 .about-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  /* Space between items */
+  align-items: start;
+  justify-content: flex-start;
+  padding: 40px 20px;
+  gap: 50px;
 }
 
-/* Styles for the Image */
 .profile-image {
-  flex: 1;
-  max-width: 250px;
-}
-
-/* Styles for the Blurb */
-.blurb {
-  flex: 2;
-  min-width: 300px;
-}
-
-.profile-image img {
-  width: 200px;
-  height: 200px;
-  max-width: 100%;
-  border-radius: 50%;
-  /* This will maintain the circular appearance */
-  object-fit: cover;
-  /* This ensures that the image scales correctly */
-}
-
-.see-more {
   position: relative;
-  display: inline-block;
+  flex: 0 0 400px;
+  max-width: 400px;
+  width: 100%;
 }
 
-.arrow {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 10px solid currentColor;
-  /* Matches the color of the text */
-  margin-left: 5px;
-  /* Add space between text and arrow */
+#profile-pic {
+  width: 100%;
+  height: auto;
+}
+
+#profile-canvas {
+  display: none; /* hide initially */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; /* Over the image */
+}
+
+.profile-image:hover #profile-canvas {
+  display: block; /* display canvas on hover */
+}
+
+
+.blurb {
+  flex-grow: 1;
+  font-size: 1.5em;
+  padding-top: 50px;
+  line-height: 1.6;
+}
+
+/* Resume Section */
+.resume {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.row {
+  width: 48%;
+}
+
+.resume h3 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 10px;
+}
+
+.resume h4 {
+  font-size: 18px;
+  margin: 15px 0;
+  line-height: 1.4;
+}
+
+.resume p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.skills div,
+.education div,
+.experience div {
+  margin-bottom: 20px;
+}
+
+/* Title hover effects */
+
+.title {
+  font-family: 'PPMondwest-Regular', serif;
+  font-size: 3.5rem;
+  padding-top: 40px;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.title-letter {
+  margin-left: -2px;
+}
+
+.title span:hover {
+  font-style: italic;
+}
+
+.title span:nth-child(1):hover {
+  color: red;
+  font-style: italic;
+}
+
+.title span:nth-child(2):hover {
+  color: blue;
+  font-style: italic;
+}
+
+.title span:nth-child(3):hover {
+  color: #ffa3b1;
+  font-style: italic;
+}
+
+.title span:nth-child(4):hover {
+  color: #7242cd;
+  font-style: italic;
+}
+
+.title span:nth-child(5):hover {
+  color: #ff8800;
+  font-style: italic;
+}
+
+.title span:nth-child(6):hover {
+  color: #ff0033;
+  font-style: italic;
+}
+
+.title span:nth-child(7):hover {
+  color: #05b4ff;
+  font-style: italic;
+}
+
+.title span:nth-child(8):hover {
+  color: #61ff98;
+  font-style: italic;
+}
+
+.title span:nth-child(9):hover {
+  color: #c2007b;
+  font-style: italic;
+}
+
+.title span:nth-child(10):hover {
+  color: #bbff00;
+  font-style: italic;
+}
+
+.title span:nth-child(11):hover {
+  color: orange;
+  font-style: italic;
+}
+
+.title span:nth-child(12):hover {
+  color: rgb(48, 177, 197);
+  font-style: italic;
+}
+
+.title span:nth-child(13):hover {
+  color: rgb(229, 237, 0);
+  font-style: italic;
+}
+
+.title span:nth-child(14):hover {
+  color: rgb(222, 34, 46);
+  font-style: italic;
+}
+
+.title span:nth-child(15):hover {
+  color: rgb(237, 177, 188);
+  font-style: italic;
+}
+
+.title span:nth-child(16):hover {
+  color: rgb(115, 6, 143);
+  font-style: italic;
+}
+
+.title span:nth-child(17):hover {
+  color: rgb(156, 233, 108);
+  font-style: italic;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .profile-image img {
+    width: 300px;
+  }
+
+  .row {
+    width: 100%;
+  }
 }

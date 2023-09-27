@@ -3,9 +3,15 @@ import { pixelate } from "./pixelate.js";
 const GALLERY_DATA = [
   
   {
+    name: "Enduring Heirlooms",
+    src: "/assets/EnduringHeirlooms_Thumbnail.jpg",
+    text: "Interdiscplinary Art & Design research, Harvard GSD Seminar, 2021",
+    tags: ["writing", "product design"]
+  },
+  {
     name: "Carestry",
     src: "/assets/Carestry_Thumbnail.png",
-    text: "App development, 2021",
+    text: "App development, MIT Sloan New Enterprises, 2021",
     tags: ["branding", "product design"]
   },
   {
@@ -15,16 +21,28 @@ const GALLERY_DATA = [
     tags: ["animation", "production"]
   },
   {
-    name: "Irma Boom",
-    src: "/assets/IrmaBoomBooklet_Thumbnail.jpg",
-    text: "Booklet design, 2019",
-    tags: ["print", "digital design"]
+    name: "Labyrinth at Scale",
+    src: "/assets/Labyrinth_Thumbnail.gif",
+    text: "Digital Media: Models project, Harvard GSD, 2021",
+    tags: ["animation", "simulation", "fabrication", "digital design", "writing"]
   },
   {
     name: "Design Margins",
     src: "/assets/DesignMargins_Thumbnail.png",
-    text: "Podcast, 2021",
+    text: "Podcast, Radcliffe Engaged Student Grant, 2021",
     tags: ["branding", "production"]
+  },
+  {
+    name: "New Waiting Rooms",
+    src: "/assets/DV_Thumbnail.jpg",
+    text: "New Spaces of Justice, Harvard GSD, 2020",
+    tags: ["design research", "writing"]
+  },
+  {
+    name: "Irma Boom",
+    src: "/assets/IrmaBoomBooklet_Thumbnail.jpg",
+    text: "Booklet design, 2019",
+    tags: ["print", "digital design"]
   },
   {
     name: "Mousetrap",
@@ -35,13 +53,13 @@ const GALLERY_DATA = [
   {
     name: "Soul in a Box",
     src: "assets/SoulinaBox_Thumbnail.gif",
-    text: "Conceptual digital fabrication project, 2023",
+    text: "Digital fabrication project, MIT Media Lab, 2023",
     tags: ["digital fabrication", "fabrication"]
   },
   {
     name: "Bounty Carsheets",
     src: "/assets/Bounty_Thumbnail.png",
-    text: "Rebrand, 2022",
+    text: "Rebrand, Harvard GSD Seminar, 2022",
     tags: ["branding", "packaging", "fabrication"]
   },
 ]

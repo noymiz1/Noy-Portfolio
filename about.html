@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Noy's Portfolio</title>
   
-  <link rel="stylesheet" href="../styles.css"/>
+  <link rel="stylesheet" href="./styles.css">
 
   <script src="/js/html-fragment.js" type="module"></script>
 </head>
@@ -18,20 +18,135 @@
     <div class="about-container">
       <!-- Image Section -->
       <div class="profile-image">
-          <img src="/assets/noybiopic.png" alt="BioPic"/>
+        <img id="profile-pic" src="/assets/noybiopic.png" alt="Profile Picture">
+        <canvas id="profile-canvas"></canvas>
       </div>
-  
+      
+      <div class="title">
+            
+        <span class="name-letter">A</span>
+        
+        <span class="name-letter">L</span><span class="name-letter">i</span><span class="name-letter">t</span><span class="name-letter">t</span><span class="name-letter">l</span><span class="name-letter">e</span>
+          
+          <span class="name-letter">b</span><span class="name-letter">i</span><span class="name-letter">t</span>
+          
+          <span class="name-letter">a</span><span class="name-letter">b</span><span class="name-letter">o</span><span class="name-letter">u</span><span class="name-letter">t</span>
+
+          <span class="name-letter">m</span><span class="name-letter">e</span><span class="name-letter">.</span><span class="name-letter">.</span><span class="name-letter">.</span>
+      </div>
+
       <!-- Blurb Section -->
       <div class="blurb">
-          <h2>A little about me...</h2>
+          <!--<h2>A little about me...</h2> -->
+
           <p>
               I'm Noy, a Boston-based artist and designer specializing in branding, graphic/web design, Illustration, motion graphics, and animation. Beyond purely digital, I enjoy fabrication and woodwork. 
           </p>
-        <p class="see-more">See more of my history below <span class="arrow"></span></p>
+        <p class="see-more">See more of my history below &#11183; <span class="arrow"></span></p>
       </div>
     </div>
-  </main>
+    <div class="resume">
+
+      <!-- Row 1 -->
+      <div class="row">
+          <!-- Education Section -->
+          <section class="education">
+              <h3>Education</h3>
+              <div>
+                  <h4>Harvard University Graduate School of Design</h4>
+                  <p>Class of 2023</p>
+                  <p>Master in Design Studies with Distinction</p>
+                  <p>Track - Art, Design, and the Public Domain</p>
+              </div>
+              <div>
+                  <h4>University of Central Florida</h4>
+                  <p>Class of 2020</p>
+                  <p>BFA in Emerging Media - Graphic Design</p>
+                  <p>Minor in Computer Science</p>
+              </div>
+          </section>
   
+          <!-- Skills Section -->
+          <section class="skills">
+              <h3>Skills</h3>
+              <div>
+                  <h4>Design</h4>
+                  <p>Logo and Identity Design, Illustration, Animation, UI/UX Design, Wireframing, Exhibition Design, Packaging, Signage, Publications, and Layout, Typography, Photo Retouching, Video Editing, CAD</p>
+              </div>
+              <div>
+                  <h4>Fine Arts/Fabrication</h4>
+                  <p>Drawing, Knit, Crochet, Sewing, Painting, Installation Art, Sculpting, CNC machining, Woodwork, Laser Cutting, Electronics Design, Molding and Casting</p>
+              </div>
+              <div>
+                <h4>Programs</h4>
+                <p>Adobe Creative Suite, Figma, Rhino, Grasshopper, Fusion360, Blender, Maya, Procreate, Unity, Unreal Engine</p>
+            </div>
+            <div>
+              <h4>Code</h4>
+              <p>HTML/CSS, Javascript, Arduino</p>
+          </div>
+          <div>
+            <h4>Languages</h4>
+            <p>English, Hebrew</p>
+        </div>
+              <!-- ... Add the rest of the skills ... -->
+          </section>
+      </div>
+  
+      <!-- Row 2 -->
+      <div class="row">
+          <!-- Experience Section -->
+          <section class="experience">
+              <h3>Work Experience</h3>
+              <div>
+                  <h4>Philips | Communications Designer</h4>
+                  <p>September 2021 - August 2023, Cambridge, MA</p>
+              </div>
+              <div>
+                  <h4>Harvard Ed Portal | Arts & Culture Intern</h4>
+                  <p>September 2022 - June 2023, Cambridge, MA</p>
+              </div>
+              <div>
+                  <h4>Harvard GSD | Admissions Graphic Designer/Assistant</h4>
+                  <p>September 2020 - May 2021, Cambridge, MA</p>
+              </div>
+              <div>
+                  <h4>UCF Diverse Families Bookshelf | Graphic Designer</h4>
+                  <p>January 2017 - May 2020, Orlando, FL</p>
+              </div>
+              <div>
+                  <h4>YMCA | Junior Graphic Designer</h4>
+                  <p>January 2019 - March 2019, Orlando, FL</p>
+              </div>
+          </section>
+  
+          <!-- Publication and Exhibitions Section -->
+          <section class="publications-exhibitions">
+              <h3>Publication</h3>
+              <p>"New Spaces of Justice," Pidgin 29, Pidgin Press, April 2021: 140-151</p>
+  
+              <h3>Exhibitions</h3>
+              <div>
+              <p>Harvard AFVS Showcase 2021, Carpenter Center, Cambridge, MA</p>
+              </div>
+              <div>
+              <p>SPOT Showcase 2019, AIGA Mentorship Program, Orlando, FL</p>
+              </div>
+              <div>
+              <p>ALA Annual Conference 2018, Diverse Families Bookshelf, New Orleans, LA</p>
+              </div>
+              <div>
+              <p>UCF Celebrates the Arts 2018, Dr Philips center for the Performing Arts, Orlando, FL</p>
+              </div>
+              <!-- ... Add the rest of the exhibitions ... -->
+          </section>
+      </div>
+  
+  </div>
+   </main>
+
   <html-fragment src="/components/footer.html"></html-fragment>
+  <script src="/js/pixelPaint.js" type="module"></script>
+
 </body>
 </html>
