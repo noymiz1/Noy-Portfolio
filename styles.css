@@ -1,0 +1,45 @@
+@import url('/styles/about.css');
+@import url('/styles/gallery.css');
+@import url('/styles/footer.css');
+@import url('/styles/top-bar.css');
+@import url('/styles/contact.css');
+
+@font-face {
+  font-family: 'PPMondwest-Regular';
+  /* You can name it whatever you like */
+  src: url('fonts/PPMondwest-Regular.otf') format('opentype');
+  /* Path relative to your CSS file */
+}
+
+@font-face {
+    font-family: 'BaskervilleItalic';
+    src: url('fonts/BaskervilleItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Balto-Book';
+    src: url('fonts/Balto-Book.ttf') format('truetype');
+    font-weight: normal;
+}
+
+:root {
+  --top-color: white;
+}
+
+html,
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+

@@ -1,0 +1,29 @@
+footer {
+  width: 100%;
+  background-color: #ffffff; /* Dark background color */
+  color: #000000; /* White text color */
+  padding: 20px 0;
+  font-family: 'Balto-Book', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  z-index: 2;
+  border-top: 1px solid black;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* Side padding */
+}
+
+.extra-text {
+    display: none;
+    color: #a4cc38;  /* Let's say the color is orange. Change this as needed. */
+    margin-left: 10px;  /* To add some space between the name and the extra text */
+}
+
+.footer-name:hover .extra-text {
+    display: inline;
+}
+

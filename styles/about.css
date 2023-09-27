@@ -1,0 +1,45 @@
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  /* Space between items */
+}
+
+/* Styles for the Image */
+.profile-image {
+  flex: 1;
+  max-width: 250px;
+}
+
+/* Styles for the Blurb */
+.blurb {
+  flex: 2;
+  min-width: 300px;
+}
+
+.profile-image img {
+  width: 200px;
+  height: 200px;
+  max-width: 100%;
+  border-radius: 50%;
+  /* This will maintain the circular appearance */
+  object-fit: cover;
+  /* This ensures that the image scales correctly */
+}
+
+.see-more {
+  position: relative;
+  display: inline-block;
+}
+
+.arrow {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid currentColor;
+  /* Matches the color of the text */
+  margin-left: 5px;
+  /* Add space between text and arrow */
+}

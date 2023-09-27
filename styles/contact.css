@@ -1,0 +1,95 @@
+/* Form Styles */
+
+#fs-frm {
+    width: 100%;
+    max-width: 400px; /* Maximum width of the form */
+    margin: 20px auto; /* Center the form on the page */
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    /*border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.3); /* A subtle shadow */
+    border: 1px solid black;
+}
+
+#fs-frm-inputs {
+    margin-bottom: 20px;
+}
+/* Update the input and textarea styles */
+#fs-frm input[type="text"],
+#fs-frm input[type="email"],
+#fs-frm textarea {
+    width: 100%;
+    padding: 8px 0; /* Remove left and right padding */
+    margin: 20px 0; /* Increased margin for visual spacing */
+    border: none; /* Remove all borders */
+    border-bottom: 1px solid #ccc; /* Add bottom border only */
+    background-color: transparent; /* Ensure no background color */
+    font-size: 14px;
+    box-sizing: border-box; 
+    outline: none; /* Remove browser default outline on focus */
+    transition: border-color 0.3s; /* Smooth transition for the border color */
+}
+
+#fs-frm input[type="text"]:focus,
+#fs-frm input[type="email"]:focus,
+#fs-frm textarea:focus {
+    border-color: #8ae265; /* Darker border color when the input/textarea is in focus */
+}
+
+/* If you'd like to prevent vertical resizing of the textarea: */
+#fs-frm textarea {
+    resize: none;
+}
+
+#fs-frm input[type="submit"] {
+    font-family: 'Balto-Book', sans-serif;
+    padding: 4px 8px;
+    background-color: #ffffff; /* Dark background*/
+    color: #000000; 
+    /*border: 1px solid var(--top-color);*/
+    border: 1px solid black;
+    border-radius: 1000px;
+    height: min-content;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color        0.3s ease;
+}
+
+#fs-frm input[type="submit"]:hover {
+  background-color: #000000;
+  color: white
+}
+
+label {
+    font-weight: regular;
+    margin-top: 20px;
+}
+
+/* This will style all body text on the contact page, but not on other pages */
+.contact-page {
+    font-family: 'Balto-Book', sans-serif;
+    background-color: #ffffff; /* Just an example, you can choose any background color */
+    overflow: hidden;
+}
+
+/* This styles all paragraphs within the contact page */
+.contact-page p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+/* If you have other specific elements you want to style on the contact page, continue using the .contact-page prefix */
+.contact-page h1 { 
+    font-family: 'PPMondwest-Regular', serif;
+    font-size: 2.5em;
+    color: #000000;
+    font-weight: normal;   
+}
+
+/* ... and so on for other elements */
+
+#fs-frm {
+    z-index: 1;
+    position: relative; /* Ensure that z-index takes effect */
+}
+

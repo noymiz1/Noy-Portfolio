@@ -1,0 +1,85 @@
+.gallery-navigation {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.nav-tag {
+  padding: 4px 8px;
+  background-color: #ffffff;
+  /* Dark background*/
+  color: #000000;
+  border: 1px solid black;
+  border-radius: 1000px;
+  height: min-content;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-tag:hover {
+  background-color: #000000;
+  color: white
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 30px 40px;
+}
+
+.gallery-entry {
+  cursor: pointer;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-color: black;
+  border: solid #dedede 1px;
+  overflow: hidden;
+}
+
+.gallery-entry img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.gallery-entry-img {
+  position: relative;
+}
+
+.gallery-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  mix-blend-mode: difference;
+  font-family: 'PPMondwest-Regular', serif;
+  font-size: 3em;
+  opacity: 0;
+  transition: opacity 0.3s;
+  text-align: center;
+}
+
+.gallery-entry:hover .gallery-text {
+  opacity: 1;
+}
+
+
+.gallery-entry:hover .gallery-text {
+  opacity: 1;
+}
+
+.gallery-description,
+.gallery-tags {
+  line-height: 1.2;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-family: 'Balto-book', sans-serif;
+  font-size: 16px;
+}
+
+.gallery-tags {
+  color: grey;
+  font-size: 14px;
+}

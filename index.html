@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noy's Portfolio</title>
+
+  <link rel="preload" as="style" href="./styles.css"/>
+  <link rel="stylesheet" href="../styles.css"/>
+  
+  <script src="/js/html-fragment.js" type="module"></script>
+  <script src="/js/indexWidgets.js" defer type="module"></script>
+</head>
+
+<body>
+  
+  <html-fragment src="/components/top-bar.html"></html-fragment>
+  
+  <main>
+    <div class="gallery-navigation">
+      <button class="nav-tag" data-tag="all">All Projects</button>
+      <button class="nav-tag" data-tag="animation">Animation</button>
+      <button class="nav-tag" data-tag="branding">Branding</button>
+      <button class="nav-tag" data-tag="product design">Product Design</button>
+      <button class="nav-tag" data-tag="print">Print</button>
+      <button class="nav-tag" data-tag="fabrication">Fabrication</button>
+      <button class="nav-tag" data-tag="digital fabrication">Digital Fabrication</button>
+      <button class="nav-tag" data-tag="production">Production</button>
+    </div>
+
+
+    <div class="image-gallery"></div>
+  
+  </main>
+  <html-fragment src="/components/footer.html"></html-fragment>
+</body>
+</html>
