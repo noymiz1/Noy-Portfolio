@@ -11,6 +11,14 @@ h3 {
   font-weight: normal;
 } */
 
+.arrow {
+  margin-top: 10px;
+}
+
+.arrow::after {
+  content: "⮯";
+}
+
 .shadow-box {
   border: 1px solid black;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
