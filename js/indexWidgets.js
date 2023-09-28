@@ -40,6 +40,7 @@ const GALLERY_DATA = [
   },
   {
     name: "Audiotate",
+    href: "/projects/audiotate.html",
     src:  "assets/Audiotate_Thumbnail.jpg",
     text: "Design for Desirability Lab, Harvard, 2020",
     tags: ["design research", "branding", "product design"]
