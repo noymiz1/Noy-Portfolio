@@ -32,6 +32,20 @@ const GALLERY_DATA = [
     tags: ["branding", "packaging", "design research", "fabrication"]
   },
   {
+    name: "Soul in a Box",
+    href: "https://fab.cba.mit.edu/classes/863.22/Harvard/people/Noy/index.html",
+    src: "assets/SoulinaBox_Thumbnail.gif",
+    text: "Digital fabrication project, MIT Media Lab, 2023",
+    tags: ["digital fabrication", "fabrication"]
+  },
+  {
+    name: "Mousetrap",
+    href: "https://www.youtube.com/watch?v=XWpL1ldDlKo",
+    src: "/assets/Mousetrap_Thumbnail.gif",
+    text: "Short film, 2022",
+    tags: ["animation", "production", "fabrication"]
+  },
+  {
     name: "Carestry",
     href: "/projects/carestry_project.html",
     src: "/assets/Carestry_Thumbnail.png",
@@ -62,19 +76,6 @@ const GALLERY_DATA = [
     src: "/assets/IrmaBoomBooklet_Thumbnail.jpg",
     text: "Booklet design, 2019",
     tags: ["print", "digital design"]
-  },
-  {
-    name: "Mousetrap",
-    href: "https://www.youtube.com/watch?v=XWpL1ldDlKo",
-    src: "/assets/Mousetrap_Thumbnail.gif",
-    text: "Short film, 2022",
-    tags: ["animation", "production", "fabrication"]
-  },
-  {
-    name: "Soul in a Box",
-    src: "assets/SoulinaBox_Thumbnail.gif",
-    text: "Digital fabrication project, MIT Media Lab, 2023",
-    tags: ["digital fabrication", "fabrication"]
   },
 ]
 
