@@ -5,7 +5,7 @@ const GALLERY_DATA = [
   {
     name: "Enduring Heirlooms",
     href: "/projects/enduringheirlooms_project.html",
-    src: "/assets/EnduringHeirlooms_Thumbnail.jpg",
+    src: "/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg",
     text: "Interdiscplinary Art & Design research, Harvard GSD Seminar, 2021",
     tags: ["writing", "product design", "design research"]
     
@@ -13,67 +13,67 @@ const GALLERY_DATA = [
   {
     name: "A Knot",
     href: "https://www.youtube.com/watch?v=7r4n4fM5_aU",
-    src: "/assets/AKnot_Thumbnail.gif",
+    src: "/assets/Thumbnails/AKnot_Thumbnail.gif",
     text: "Short film, 2022",
     tags: ["animation", "production"]
   },
   {
     name: "Labyrinth at Scale",
     href: "/projects/labyrinth_project.html",
-    src: "/assets/Labyrinth_Thumbnail.gif",
+    src: "/assets/Thumbnails/Labyrinth_Thumbnail.gif",
     text: "Digital Media: Models project, Harvard GSD, 2021",
     tags: ["animation", "simulation", "fabrication", "writing"]
   },
   {
     name: "Bounty Carsheets",
     href: "/projects/bounty.html",
-    src: "/assets/bounty_thumbnail2.jpg",
+    src: "/assets/Thumbnails/bounty_thumbnail2.jpg",
     text: "Rebrand, Harvard GSD Seminar, 2022",
     tags: ["branding", "packaging", "design research", "fabrication"]
   },
   {
     name: "Soul in a Box",
     href: "https://fab.cba.mit.edu/classes/863.22/Harvard/people/Noy/index.html",
-    src: "assets/SoulinaBox_Thumbnail.gif",
-    text: "Digital fabrication project, MIT Media Lab, 2023",
+    src: "assets/Thumbnails/SoulinaBox_Thumbnail.gif",
+    text: "How to Make Almost Anything, MIT Media Lab, 2023",
     tags: ["digital fabrication", "fabrication"]
   },
   {
     name: "Mousetrap",
     href: "https://www.youtube.com/watch?v=XWpL1ldDlKo",
-    src: "/assets/Mousetrap_Thumbnail.gif",
+    src: "/assets/Thumbnails/Mousetrap_Thumbnail.gif",
     text: "Short film, 2022",
     tags: ["animation", "production", "fabrication"]
   },
   {
     name: "Carestry",
     href: "/projects/carestry_project.html",
-    src: "/assets/Carestry_Thumbnail.png",
+    src: "/assets/Thumbnails/Carestry_Thumbnail.png",
     text: "App development, MIT Sloan New Enterprises, 2021",
     tags: ["branding", "product design"]
   },
   {
     name: "Audiotate",
     href: "/projects/audiotate.html",
-    src:  "assets/Audiotate_Thumbnail.jpg",
+    src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
     text: "Design for Desirability Lab, Harvard, 2020",
     tags: ["design research", "branding", "product design"]
   },
   {
     name: "Design Margins",
-    src: "/assets/DesignMargins_Thumbnail.png",
+    src: "/assets/Thumbnails/DesignMargins_Thumbnail.png",
     text: "Podcast, Radcliffe Engaged Student Grant, 2021",
     tags: ["branding", "production"]
   },
   {
     name: "New Waiting Rooms",
-    src: "/assets/DV_Thumbnail.jpg",
+    src: "/assets/Thumbnails/DV_Thumbnail.jpg",
     text: "New Spaces of Justice, Harvard GSD, 2020",
     tags: ["design research", "writing"]
   },
   {
     name: "Irma Boom",
-    src: "/assets/IrmaBoomBooklet_Thumbnail.jpg",
+    src: "/assets/Thumbnails/IrmaBoomBooklet_Thumbnail.jpg",
     text: "Booklet design, 2019",
     tags: ["print", "digital design"]
   },
