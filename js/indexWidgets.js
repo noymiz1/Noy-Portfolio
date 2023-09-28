@@ -7,6 +7,7 @@ const GALLERY_DATA = [
     src: "/assets/EnduringHeirlooms_Thumbnail.jpg",
     text: "Interdiscplinary Art & Design research, Harvard GSD Seminar, 2021",
     tags: ["writing", "product design"]
+    
   },
   {
     name: "Carestry",
@@ -24,7 +25,7 @@ const GALLERY_DATA = [
     name: "Labyrinth at Scale",
     src: "/assets/Labyrinth_Thumbnail.gif",
     text: "Digital Media: Models project, Harvard GSD, 2021",
-    tags: ["animation", "simulation", "fabrication", "digital design", "writing"]
+    tags: ["animation", "simulation", "fabrication", "writing"]
   },
   {
     name: "Design Margins",

@@ -11,6 +11,7 @@ body {
     background-color: #ffffff;
     padding: 30px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid black;
 }
 
 .project-title {
@@ -32,16 +33,69 @@ body {
 
 .project-images {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* This will make the grid responsive */
+    gap: 10px;
 }
 
 .project-image {
+    cursor: pointer;
+    /* Allow the images to determine the row height */
     width: 100%;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: block;
 }
+
+.project-images img {
+    width: 100%;
+    display: block;
+    margin: 10px 0; /* Adjust according to preference */
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    width: auto;
+    height: auto;
+    border: 5px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox-content {
+    align-self: center;
+    object-fit: contain; /* This ensures the image does not exceed its content box */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 50px;
+    color: rgb(104, 104, 104);
+    cursor: pointer;
+    z-index: 10; /* to ensure it's above the image */
+}
+
+.zoom-in {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 10; /* to ensure it's above the image */
+}
+
+
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {

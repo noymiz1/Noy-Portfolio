@@ -15,6 +15,9 @@ Things to do:
   - Noy Mizrachi back to home page
   -media breakpoints
 
+  -Fix Lightbox
+  -fix links
+
 Home page structure:
 Animation -
 *slider, 3 visible squares*

@@ -13,6 +13,26 @@ h3 {
   font-weight: normal;
 }
 
+.shadow-box {
+  border: 1px solid black;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  padding-top: 50px;
+  margin: auto;  /* Auto margins are used to center block elements */
+  background-color: white;
+  width: 70%;   /* Adjust this percentage for your preferred width. 70% means it will take up 70% of its parent's width. */
+  max-width: 1000px;  /* Prevents the content box from becoming too wide on large screens */
+  overflow: hidden;
+}
+
+.centered-content {
+  display: flex;  /* Turns on Flexbox */
+  flex-direction: column;  /* Stacks child elements vertically */
+  justify-content: center;  /* Centers children vertically */
+  align-items: center;  /* Centers children horizontally */
+  height: 100%;  /* Takes full height of parent, in this case, the body */
+}
+
 /* About Section */
 .about-container {
   display: flex;
@@ -34,23 +54,19 @@ h3 {
   height: auto;
 }
 
-#profile-canvas {
-  display: none; /* hide initially */
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2; /* Over the image */
+.profile-image img {
+  opacity: 0;
+  transition: opacity 0.3s; /* This ensures a smooth fade-in effect */
 }
 
-.profile-image:hover #profile-canvas {
-  display: block; /* display canvas on hover */
+.title:hover + .profile-image img {
+  opacity: 1;
 }
-
 
 .blurb {
   flex-grow: 1;
   font-size: 1.5em;
-  padding-top: 50px;
+  padding-top: 0px;
   line-height: 1.6;
 }
 
@@ -59,7 +75,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 10px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
@@ -78,8 +94,11 @@ h3 {
 
 .resume h4 {
   font-size: 18px;
+  font-weight: bolder;
   margin: 15px 0;
-  line-height: 1.4;
+  line-height: 1;
+  background-color: #ffe9e9; /* light pink background */
+  padding: 2px;
 }
 
 .resume p {
@@ -202,10 +221,14 @@ h3 {
   }
 
   .profile-image img {
-    width: 300px;
+    width: 90%;  /* Adjust to your preference, maybe a fixed value like 250px works better */
   }
 
   .row {
     width: 100%;
+  }
+
+  .shadow-box {
+    width: 95%;   /* Use more of the screen width on small screens */
   }
 }

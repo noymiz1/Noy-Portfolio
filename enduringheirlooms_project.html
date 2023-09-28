@@ -2,24 +2,29 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Page</title>
-  <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="./styles.css">
 
-  <script src="/js/html-fragment.js" type="module"></script>
+    <script src="/js/html-fragment.js" type="module"></script>
 </head>
 
 <body>
     <html-fragment src="/components/top-bar.html"></html-fragment>
     <main>
-    <div class="project-container">
-        <h2 class="project-title">Enduring Heirlooms</h2>
-        <p class="project-blurb">2021-2023<br><br>during Heirlooms is a digital platform concept where users build their heirlooms a provenance— mapping lost cultural identity and discovering the origin of enduring traits, proverbs, and behaviors passed down to them. The methodology is meant to be shared and open access with others who have difficulty mapping their lineage and only have remnants of a lost culture in their possession.
+        <div class="project-container">
+            <h2 class="project-title">Enduring Heirlooms</h2>
+            <p class="project-blurb">
+                2021-2023<br><br>
+                
+                Enduring Heirlooms is a digital platform concept where users build their heirlooms a provenance— mapping lost cultural identity and discovering the origin of enduring traits, proverbs, and behaviors passed down to them. The methodology is meant to be shared and open access with others who have difficulty mapping their lineage and only have remnants of a lost culture in their possession. 
 
-            <br><br>The website EnduringHeirlooms.com encourages open access ownership of family heirlooms. The platform includes a timeline, map, and archive of relics that eventually link shared origin stories. Users can upload images and descriptions of various family heirlooms like amulets, traits, language, recipes, etc., and map their migration across lands. Eventually, with more aggregated data, users searching for information about family heirlooms will be able to parse the database and discover similar matches, connecting missing links in their 
-            genealogy.
-             </p>
+                <br><br>The website EnduringHeirlooms.com encourages open access ownership of family heirlooms. The platform includes a timeline, map, and archive of relics that eventually link shared origin stories. Users can upload images and descriptions of various family heirlooms like amulets, traits, language, recipes, etc., and map their migration across lands. Eventually, with more aggregated data, users searching for information about family heirlooms will be able to parse the database and discover similar matches, connecting missing links in their genealogy.
+            </p>
+        </div>
+        
+        <!-- Moved project images outside of project-container -->
         <div class="project-images">
             <img src="assets/Enduring Heirlooms/EH_pic1.jpg" alt="Project Image 1" class="project-image">
             <img src="assets/Enduring Heirlooms/EH_pic2.jpg" alt="Project Image 2" class="project-image">
@@ -28,9 +33,16 @@
             <img src="assets/Enduring Heirlooms/EH_pic5.jpg" alt="Project Image 2" class="project-image">
             <!-- ... Additional images as needed -->
         </div>
-    </div>
+
+        <div class="lightbox" id="lightbox">
+            <span class="close" id="closeLightbox">&times;</span>
+            <img class="lightbox-content" id="lightboxImg" src="">
+            <span class="zoom-in" id="zoomIn">&#128269;</span> <!-- This is a magnifying glass character -->
+        </div>
+
     </main>
     <html-fragment src="/components/footer.html"></html-fragment>
+    <script src="js/lightbox.js"></script>
 </body>
 
 </html>

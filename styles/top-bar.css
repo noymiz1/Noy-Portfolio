@@ -15,9 +15,9 @@
 
 .name {
   font-family: 'PPMondwest-Regular', serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   padding: 10px;
-  padding-left: 10px;
+  padding-left: 40px;
   /*cursor: pointer;*/
 }
 
@@ -87,6 +87,7 @@ a {
 
 .menu {
   display: flex;
+  padding-right: 40px;
 }
 
 .menu-item {
@@ -126,7 +127,7 @@ a {
     /*font-style: italic;*/
     /*letter-spacing: -.5px;*/
     line-height: 1.2;
-    color: #a4cc38;
+    color: #f5989e;
     background-color: #fff; 
     padding-top: 0px;
     

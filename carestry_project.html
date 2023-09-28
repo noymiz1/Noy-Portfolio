@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="./styles.css">
+
+    <script src="/js/html-fragment.js" type="module"></script>
+</head>
+
+<body>
+    <html-fragment src="/components/top-bar.html"></html-fragment>
+    <main>
+        <div class="project-container">
+            <h2 class="project-title">Carestry</h2>
+            <p class="project-blurb">
+                2021<br><br>Carestry is a collaborative scheduler for caregivers, it grew to also include a registry feature.
+
+                <br><br>Carestry is a startup developed in the course New Enterprises at MIT Sloan. The project was eventually presented at the MIT Educational Accelerator, Delta v. The startup underwent extensive market research and user tesing. All design work is my own.
+                
+                
+            </p>
+        </div>
+        
+        <!-- Moved project images outside of project-container -->
+        <div class="project-images">
+            <img src="assets/Carestry/Carestry_pic1.jpeg" alt="Project Image 1" class="project-image">
+            <img src="assets/Carestry/Carestry_pic2.jpeg" alt="Project Image 2" class="project-image">
+            <img src="assets/Carestry/Carestry_pic3.jpeg" alt="Project Image 2" class="project-image">
+            <img src="assets/Carestry/Carestry_pic4.jpeg" alt="Project Image 2" class="project-image">
+            <img src="assets/Carestry/Carestry_pic5.jpeg" alt="Project Image 2" class="project-image">
+            <img src="assets/Carestry/Carestry_pic6.jpeg" alt="Project Image 2" class="project-image">
+            <img src="assets/Carestry/Carestry_pic7.jpeg" alt="Project Image 2" class="project-image">
+            <img src="assets/Carestry/Carestry_pic8.jpeg" alt="Project Image 2" class="project-image">
+            <img src="assets/Carestry/Carestry_pic9.jpeg" alt="Project Image 2" class="project-image">
+            
+            <!-- ... Additional images as needed -->
+        </div>
+
+        <div class="lightbox" id="lightbox">
+            <span class="close" id="closeLightbox">&times;</span>
+            <img class="lightbox-content" id="lightboxImg" src="">
+            <span class="zoom-in" id="zoomIn">&#128269;</span> <!-- This is a magnifying glass character -->
+        </div>
+
+    </main>
+    <html-fragment src="/components/footer.html"></html-fragment>
+    <script src="js/lightbox.js"></script>
+</body>
+
+</html>
