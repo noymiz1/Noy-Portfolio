@@ -53,6 +53,13 @@ const GALLERY_DATA = [
     tags: ["branding", "product design"]
   },
   {
+    name: "New Spaces",
+    href: "/projects/newspaces.html",
+    src: "/assets/Thumbnails/DV_Thumbnail.jpg",
+    text: "New Spaces of Justice, Harvard GSD, 2020",
+    tags: ["design research", "writing"]
+  },
+  {
     name: "Audiotate",
     href: "/projects/audiotate.html",
     src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
@@ -65,12 +72,6 @@ const GALLERY_DATA = [
     src: "/assets/Thumbnails/DesignMargins_Thumbnail.png",
     text: "Podcast, Radcliffe Engaged Student Grant, 2021",
     tags: ["branding", "production"]
-  },
-  {
-    name: "New Waiting Rooms",
-    src: "/assets/Thumbnails/DV_Thumbnail.jpg",
-    text: "New Spaces of Justice, Harvard GSD, 2020",
-    tags: ["design research", "writing"]
   },
   {
     name: "Irma Boom",
