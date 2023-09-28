@@ -19,6 +19,7 @@ const GALLERY_DATA = [
   },
   {
     name: "Labyrinth at Scale",
+    href: "/projects/labyrinth_project.html",
     src: "/assets/Labyrinth_Thumbnail.gif",
     text: "Digital Media: Models project, Harvard GSD, 2021",
     tags: ["animation", "simulation", "fabrication", "writing"]
