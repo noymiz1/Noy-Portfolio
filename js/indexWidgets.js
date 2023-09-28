@@ -7,7 +7,7 @@ const GALLERY_DATA = [
     href: "/projects/enduringheirlooms_project.html",
     src: "/assets/EnduringHeirlooms_Thumbnail.jpg",
     text: "Interdiscplinary Art & Design research, Harvard GSD Seminar, 2021",
-    tags: ["writing", "product design"]
+    tags: ["writing", "product design", "design research"]
     
   },
   {
@@ -19,6 +19,7 @@ const GALLERY_DATA = [
   },
   {
     name: "A Knot",
+    href: "https://www.youtube.com/watch?v=7r4n4fM5_aU",
     src: "/assets/AKnot_Thumbnail.gif",
     text: "Short film, 2022",
     tags: ["animation", "production"]
@@ -28,6 +29,12 @@ const GALLERY_DATA = [
     src: "/assets/Labyrinth_Thumbnail.gif",
     text: "Digital Media: Models project, Harvard GSD, 2021",
     tags: ["animation", "simulation", "fabrication", "writing"]
+  },
+  {
+    name: "Audiotate",
+    src:  "assets/Audiotate_Thumbnail.jpg",
+    text: "Design for Desirability Lab, Harvard, 2020",
+    tags: ["design research", "branding", "product design"]
   },
   {
     name: "Design Margins",
@@ -49,6 +56,7 @@ const GALLERY_DATA = [
   },
   {
     name: "Mousetrap",
+    href: "https://www.youtube.com/watch?v=XWpL1ldDlKo",
     src: "/assets/Mousetrap_Thumbnail.gif",
     text: "Short film, 2022",
     tags: ["animation", "production", "fabrication"]
