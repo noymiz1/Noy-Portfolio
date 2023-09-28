@@ -27,7 +27,7 @@ const GALLERY_DATA = [
   {
     name: "Bounty Carsheets",
     href: "/projects/bounty.html",
-    src: "/assets/Bounty_Thumbnail.png",
+    src: "/assets/bounty_thumbnail2.jpg",
     text: "Rebrand, Harvard GSD Seminar, 2022",
     tags: ["branding", "packaging", "design research", "fabrication"]
   },
