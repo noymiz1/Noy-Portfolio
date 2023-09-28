@@ -6,7 +6,7 @@ const GALLERY_DATA = [
     name: "Enduring Heirlooms",
     href: "/projects/enduringheirlooms_project.html",
     src: "/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg",
-    text: "Interdiscplinary Art & Design research, Harvard GSD Seminar, 2021",
+    text: "Interdiscplinary Art & Design research, Harvard GSD, 2021",
     tags: ["writing", "product design", "design research"]
     
   },
@@ -28,7 +28,7 @@ const GALLERY_DATA = [
     name: "Bounty Carsheets",
     href: "/projects/bounty.html",
     src: "/assets/Thumbnails/bounty_thumbnail2.jpg",
-    text: "Rebrand, Harvard GSD Seminar, 2022",
+    text: "Rebrand, Harvard GSD, 2022",
     tags: ["branding", "packaging", "design research", "fabrication"]
   },
   {
@@ -74,6 +74,7 @@ const GALLERY_DATA = [
   },
   {
     name: "Irma Boom",
+    href: "/projects/irmaboom.html",
     src: "/assets/Thumbnails/IrmaBoomBooklet_Thumbnail.jpg",
     text: "Booklet design, 2019",
     tags: ["print", "digital design"]
