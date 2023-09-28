@@ -87,6 +87,7 @@ a {
 
 .menu {
   display: flex;
+  flex-direction: column;
   padding-right: 40px;
 }
 
@@ -108,41 +109,32 @@ a {
 
 .about-wrapper {
     line-height: 1.4;  /* Adjust as needed */
-    vertical-align: middle;
     position: relative; /* Needed for absolute positioning of child elements */
 }
 
 .hover-text {
-    width: 200px;
-    white-space: nowrap; 
-    opacity: 0;  /* Make it initially invisible */
-    transform: translateY(-2px); /* Move it up a bit*/
-    visibility: hidden; /* Hide it so it doesn't interfere with clicks or other elements */
-    
-    position: absolute;
-    left: 0;
-    top: 50%; /* Position it right below the link */
-    font-family: 'Balto-Book', sans-serif;
-    font-size: .9em;
-    /*font-style: italic;*/
-    /*letter-spacing: -.5px;*/
-    line-height: 1.2;
-    color: #f5989e;
-    background-color: #fff; 
-    padding-top: 0px;
-    
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Updated to ease-in */
-}
-
-.menu-item:hover ~ .hover-text {
-    opacity: 0;
-    transform: translateY(-10px);
-    visibility: hidden;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 110%;
+  top: 0%;
+  font-family: 'Balto-Book', sans-serif;
+  font-size: .9em;
+  line-height: 1.2;
+  color: #f5989e;
+  background-color: #fff;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 /* Show the hover-text ONLY when the specific item (About) is hovered */
 .about-wrapper:hover .hover-text {
     opacity: 1;
-    transform: translateY(0);
     visibility: visible;
+}
+
+@media (max-width: 480px) {
+  .hover-text {
+    display: none;
+  }
 }

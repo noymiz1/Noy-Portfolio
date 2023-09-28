@@ -1,5 +1,6 @@
 footer {
   width: 100%;
+  box-sizing: border-box;
   background-color: #ffffff; /* Dark background color */
   color: #000000; /* White text color */
   padding: 20px 0;

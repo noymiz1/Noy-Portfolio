@@ -1,9 +1,7 @@
 /* Global Styles */
-main {
-  display: block;
-}
 
-body, h4 {
+
+/* body, h4 {
   font-family: 'Balto-Book', sans-serif;
   font-weight: normal;
 }
@@ -11,35 +9,26 @@ body, h4 {
 h3 {
   font-family: 'PPMondwest-Regular', serif;
   font-weight: normal;
-}
+} */
 
 .shadow-box {
   border: 1px solid black;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
   padding: 20px;
   padding-top: 50px;
-  margin: auto;  /* Auto margins are used to center block elements */
+  margin: 20px auto;  /* Auto margins are used to center block elements */
   background-color: white;
-  width: 70%;   /* Adjust this percentage for your preferred width. 70% means it will take up 70% of its parent's width. */
+  width: 85%;   /* Adjust this percentage for your preferred width. 70% means it will take up 70% of its parent's width. */
   max-width: 1000px;  /* Prevents the content box from becoming too wide on large screens */
   overflow: hidden;
 }
 
-.centered-content {
-  display: flex;  /* Turns on Flexbox */
-  flex-direction: column;  /* Stacks child elements vertically */
-  justify-content: center;  /* Centers children vertically */
-  align-items: center;  /* Centers children horizontally */
-  height: 100%;  /* Takes full height of parent, in this case, the body */
-}
-
 /* About Section */
 .about-container {
-  display: flex;
-  align-items: start;
-  justify-content: flex-start;
-  padding: 40px 20px;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-items: center;
 }
 
 .profile-image {
@@ -117,9 +106,6 @@ h3 {
 .title {
   font-family: 'PPMondwest-Regular', serif;
   font-size: 3.5rem;
-  padding-top: 40px;
-  padding: 10px;
-  padding-left: 10px;
 }
 
 .title-letter {

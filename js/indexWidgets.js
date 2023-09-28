@@ -11,6 +11,7 @@ const GALLERY_DATA = [
   },
   {
     name: "Carestry",
+    href: "/projects/carestry_project.html",
     src: "/assets/Carestry_Thumbnail.png",
     text: "App development, MIT Sloan New Enterprises, 2021",
     tags: ["branding", "product design"]
@@ -65,18 +66,20 @@ const GALLERY_DATA = [
   },
 ]
 
-function createGalleryEl({ src, name, text, tags }) {
+function createGalleryEl({ src, name, text, tags, href }) {
   const el = document.createElement("div");
   el.classList.add("gallery-entry");
   el.dataset.tags = tags.join(' '); // Sets a data attribute with all tags for filtering
   
   el.innerHTML = `
-    <div class="gallery-entry-img">
-      <img src="${src}"/>
-      <div class="gallery-text">${name}</div>
-    </div>
-    <div class="gallery-description">${text}</div>
-    <div class="gallery-tags">${tags.join(', ')}</div>
+    <a class="gallery-entry-link" href="${href ?? "/"}">
+      <div class="gallery-entry-img">
+        <img src="${src}"/>
+        <div class="gallery-text">${name}</div>
+      </div>
+      <div class="gallery-description">${text}</div>
+      <div class="gallery-tags">${tags.join(', ')}</div>
+    </a>
   `;
   
   el.img = el.querySelector("img");
