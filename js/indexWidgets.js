@@ -61,6 +61,7 @@ const GALLERY_DATA = [
   },
   {
     name: "Design Margins",
+    href: "/projects/designmargins.html",
     src: "/assets/Thumbnails/DesignMargins_Thumbnail.png",
     text: "Podcast, Radcliffe Engaged Student Grant, 2021",
     tags: ["branding", "production"]
