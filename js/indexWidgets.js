@@ -11,13 +11,6 @@ const GALLERY_DATA = [
     
   },
   {
-    name: "Carestry",
-    href: "/projects/carestry_project.html",
-    src: "/assets/Carestry_Thumbnail.png",
-    text: "App development, MIT Sloan New Enterprises, 2021",
-    tags: ["branding", "product design"]
-  },
-  {
     name: "A Knot",
     href: "https://www.youtube.com/watch?v=7r4n4fM5_aU",
     src: "/assets/AKnot_Thumbnail.gif",
@@ -29,6 +22,13 @@ const GALLERY_DATA = [
     src: "/assets/Labyrinth_Thumbnail.gif",
     text: "Digital Media: Models project, Harvard GSD, 2021",
     tags: ["animation", "simulation", "fabrication", "writing"]
+  },
+  {
+    name: "Carestry",
+    href: "/projects/carestry_project.html",
+    src: "/assets/Carestry_Thumbnail.png",
+    text: "App development, MIT Sloan New Enterprises, 2021",
+    tags: ["branding", "product design"]
   },
   {
     name: "Audiotate",

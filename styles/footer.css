@@ -24,7 +24,11 @@ footer {
     margin-left: 10px;  /* To add some space between the name and the extra text */
 }
 
-.footer-name:hover .extra-text {
-    display: inline;
+.footer-name-link {
+    text-decoration: none; /* remove the default underline for links */
+    color: inherit; /* inherit the color of its parent, so it uses the same color */
 }
 
+.footer-name-link:hover + .extra-text {
+    display: inline;
+}
