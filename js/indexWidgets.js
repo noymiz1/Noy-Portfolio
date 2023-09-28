@@ -4,6 +4,7 @@ const GALLERY_DATA = [
   
   {
     name: "Enduring Heirlooms",
+    href: "/projects/enduringheirlooms_project.html",
     src: "/assets/EnduringHeirlooms_Thumbnail.jpg",
     text: "Interdiscplinary Art & Design research, Harvard GSD Seminar, 2021",
     tags: ["writing", "product design"]
