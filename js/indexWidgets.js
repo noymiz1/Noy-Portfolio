@@ -25,6 +25,13 @@ const GALLERY_DATA = [
     tags: ["animation", "simulation", "fabrication", "writing"]
   },
   {
+    name: "Bounty Carsheets",
+    href: "/projects/bounty.html",
+    src: "/assets/Bounty_Thumbnail.png",
+    text: "Rebrand, Harvard GSD Seminar, 2022",
+    tags: ["branding", "packaging", "fabrication"]
+  },
+  {
     name: "Carestry",
     href: "/projects/carestry_project.html",
     src: "/assets/Carestry_Thumbnail.png",
@@ -67,12 +74,6 @@ const GALLERY_DATA = [
     src: "assets/SoulinaBox_Thumbnail.gif",
     text: "Digital fabrication project, MIT Media Lab, 2023",
     tags: ["digital fabrication", "fabrication"]
-  },
-  {
-    name: "Bounty Carsheets",
-    src: "/assets/Bounty_Thumbnail.png",
-    text: "Rebrand, Harvard GSD Seminar, 2022",
-    tags: ["branding", "packaging", "fabrication"]
   },
 ]
 
