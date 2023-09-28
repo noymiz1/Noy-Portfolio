@@ -63,6 +63,13 @@ h3 {
   margin: 20px;
 }
 
+.arrow {
+  padding-top: 10px;
+  width: 50px;    /* or whatever width you prefer */
+  height: auto;   /* maintain aspect ratio */
+  vertical-align: middle; /* to align it with the text */
+}
+
 /* Resume Section */
 .resume {
   display: flex;
