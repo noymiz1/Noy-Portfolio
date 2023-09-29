@@ -62,7 +62,7 @@ const GALLERY_DATA = [
   {
     name: "Super Bloom",
     href: "/projects/superbloom.html",
-    src: "/assets/Thumbnails/table_thumbnail.JPG",
+    src: "/assets/Thumbnails/table_thumbnail2.jpg",
     text: "Table design and fabrication, 2023",
     tags: ["fabrication", "digital fabrication"]
   },
