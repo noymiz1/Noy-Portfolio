@@ -2,20 +2,13 @@ import { pixelate } from "./pixelate.js";
 
 const GALLERY_DATA = [
   
-  {
-    name: "Philips",
-    href: "/projects/hemda.html",
-    src: "/assets/Thumbnails/philips_thumbnail.jpg",
-    text: "Communications design, 2021-23",
-    tags: ["branding", "packaging", ""]
-  },
-  {
-    name: "Bhākti",
-    href: "/projects/hemda.html",
-    src: "/assets/Thumbnails/Bhākti_thumbnail.png",
-    text: "Artist facilitation, Harvard Ed Portal, 2022",
-    tags: ["video production", "branding", "facilitation"]
-  },
+  // {
+  //   name: "Philips",
+  //   href: "/projects/hemda.html",
+  //   src: "/assets/Thumbnails/philips_thumbnail.jpg",
+  //   text: "Communications design, 2021-23",
+  //   tags: ["branding", "packaging","video"]
+  // },
   {
     name: "A Knot",
     href: "https://www.youtube.com/watch?v=7r4n4fM5_aU",
@@ -59,6 +52,13 @@ const GALLERY_DATA = [
     text: "Short film, 2022",
     tags: ["animation", "production", "fabrication"]
   },
+  // {
+  //   name: "Bhākti",
+  //   href: "/projects/hemda.html",
+  //   src: "/assets/Thumbnails/Bhākti_thumbnail.png",
+  //   text: "Artist facilitation, Harvard Ed Portal, 2022",
+  //   tags: ["video production", "branding", "facilitation"]
+  // },
   {
     name: "Super Bloom",
     href: "/projects/superbloom.html",
@@ -101,13 +101,13 @@ const GALLERY_DATA = [
     text: "Booklet design, 2019",
     tags: ["print", "digital design"]
   },
-  {
-    name: "Hemda Hummus",
-    href: "/projects/hemda.html",
-    src: "/assets/Thumbnails/hemda_thumbnail.png",
-    text: "Brand design, 2019",
-    tags: ["branding", "packaging"]
-  },
+  // {
+  //   name: "Hemda Hummus",
+  //   href: "/projects/hemda.html",
+  //   src: "/assets/Thumbnails/hemda_thumbnail.png",
+  //   text: "Brand design, 2019",
+  //   tags: ["branding", "packaging"]
+  // },
 ]
 
 function createGalleryEl({ src, name, text, tags, href }) {
