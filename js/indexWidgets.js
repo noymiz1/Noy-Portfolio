@@ -3,12 +3,18 @@ import { pixelate } from "./pixelate.js";
 const GALLERY_DATA = [
   
   {
-    name: "Enduring Heirlooms",
-    href: "/projects/enduringheirlooms_project.html",
-    src: "/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg",
-    text: "Interdiscplinary Art & Design research, Harvard GSD, 2021",
-    tags: ["writing", "product design", "design research"]
-    
+    name: "Philips",
+    href: "/projects/hemda.html",
+    src: "/assets/Thumbnails/philips_thumbnail.jpg",
+    text: "Communications design, 2021-23",
+    tags: ["branding", "packaging", ""]
+  },
+  {
+    name: "Bhākti",
+    href: "/projects/hemda.html",
+    src: "/assets/Thumbnails/Bhākti_thumbnail.png",
+    text: "Artist facilitation, Harvard Ed Portal, 2022",
+    tags: ["video production", "branding", "facilitation"]
   },
   {
     name: "A Knot",
@@ -18,10 +24,18 @@ const GALLERY_DATA = [
     tags: ["animation", "production"]
   },
   {
+    name: "Enduring Heirlooms",
+    href: "/projects/enduringheirlooms_project.html",
+    src: "/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg",
+    text: "Interdiscplinary Art & Design research, Harvard GSD, 2021",
+    tags: ["writing", "product design", "design research"]
+    
+  },
+  {
     name: "Labyrinth at Scale",
     href: "/projects/labyrinth_project.html",
     src: "/assets/Thumbnails/Labyrinth_Thumbnail.gif",
-    text: "Digital Media: Models project, Harvard GSD, 2021",
+    text: "Digital Media: Models, Harvard GSD, 2021",
     tags: ["animation", "simulation", "fabrication", "writing"]
   },
   {
@@ -44,6 +58,13 @@ const GALLERY_DATA = [
     src: "/assets/Thumbnails/Mousetrap_Thumbnail.gif",
     text: "Short film, 2022",
     tags: ["animation", "production", "fabrication"]
+  },
+  {
+    name: "Super Bloom",
+    href: "/projects/superbloom.html",
+    src: "/assets/Thumbnails/table_thumbnail.JPG",
+    text: "Table design and fabrication, 2023",
+    tags: ["fabrication", "digital fabrication"]
   },
   {
     name: "Carestry",
@@ -79,6 +100,13 @@ const GALLERY_DATA = [
     src: "/assets/Thumbnails/IrmaBoomBooklet_Thumbnail.jpg",
     text: "Booklet design, 2019",
     tags: ["print", "digital design"]
+  },
+  {
+    name: "Hemda Hummus",
+    href: "/projects/hemda.html",
+    src: "/assets/Thumbnails/hemda_thumbnail.png",
+    text: "Brand design, 2019",
+    tags: ["branding", "packaging"]
   },
 ]
 
