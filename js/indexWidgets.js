@@ -20,7 +20,7 @@ const GALLERY_DATA = [
     name: "Enduring Heirlooms",
     href: "/projects/enduringheirlooms_project.html",
     src: "/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg",
-    text: "Interdiscplinary Art & Design research, Harvard GSD, 2021",
+    text: "Interdisciplinary Art & Design research, Harvard GSD, 2021",
     tags: ["writing", "product design", "design research"]
     
   },
