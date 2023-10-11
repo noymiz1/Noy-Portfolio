@@ -97,3 +97,45 @@
   color: grey;
   font-size: 14px;
 }
+
+/* ... Your existing styles ... */
+
+/* Night Mode overrides */
+body[data-theme="dark"] {
+  background-color: black;
+}
+
+body[data-theme="dark"] .nav-tag {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+body[data-theme="dark"] .nav-tag:hover,
+body[data-theme="dark"] .nav-tag.selected {
+  background-color: white;
+  color: black;
+}
+
+body[data-theme="dark"] .gallery-entry {
+  background: black;
+  border-color: white;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+body[data-theme="dark"] .gallery-entry:hover {
+  border-color: white;
+}
+
+body[data-theme="dark"] .gallery-description,
+body[data-theme="dark"] .gallery-tags {
+  color: white;
+}
+
+body[data-theme="dark"] .gallery-tags {
+  color: lightgray;
+}
+
+body[data-theme="dark"] .gallery-text {
+  mix-blend-mode: screen; /* Change the blend mode so text remains visible against dark backgrounds */
+}

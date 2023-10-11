@@ -1,5 +1,11 @@
 /* Global Styles */
+div {
+  transition: all .7s ease;
+}
 
+body {
+  min-height: 100vh;
+}
 
  body, h4 {
   font-family: 'Balto-Book', sans-serif;
@@ -228,4 +234,31 @@ h3 {
   .shadow-box {
     width: 95%;   /* Use more of the screen width on small screens */
   }
+}
+
+/* Night Mode Styles */
+
+/* When the body has the data-theme attribute set to "dark" */
+body[data-theme="dark"] {
+  background-color: #121212; /* Dark background color */
+  color: #EAEAEA; /* Light text color for general body text */
+}
+
+body[data-theme="dark"] .shadow-box {
+  background-color: #1E1E1E; /* Darker box color */
+  border-color: #2D2D2D;
+  color: #EAEAEA; /* Light text color */
+}
+
+body[data-theme="dark"] .title span:hover {
+  color: #FF5733; /* Adjust the hover colors for the title as you like for night mode */
+}
+
+body[data-theme="dark"] .resume h3 {
+  border-color: #333; /* Darker border color */
+}
+
+body[data-theme="dark"] .resume h4 {
+  background-color: #333333; /* Darker background color for resume header */
+  color: #EAEAEA; /* Light text color */
 }

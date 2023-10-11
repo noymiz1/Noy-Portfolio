@@ -1,20 +1,29 @@
 <div class="top-bar">
   <a href="/index.html">
-    <div class="name">
-      <span class="name-letter">N</span><span class="name-letter">o</span><span class="name-letter">y</span>
-
-      <span class="name-letter">M</span><span class="name-letter">i</span><span class="name-letter">z</span><span
-        class="name-letter">r</span><span class="name-letter">a</span><span class="name-letter">c</span><span
-        class="name-letter">h</span><span class="name-letter">i</span>
-    </div>
+      <div class="name">
+          <span class="name-letter">N</span><span class="name-letter">o</span><span class="name-letter">y</span>
+          <span class="name-letter">M</span><span class="name-letter">i</span><span class="name-letter">z</span><span class="name-letter">r</span><span class="name-letter">a</span><span class="name-letter">c</span><span class="name-letter">h</span><span class="name-letter">i</span>
+      </div>
   </a>
-  <div class="menu">
-    <a class="menu-item about-wrapper" href="/about.html">
-      About&#42611;
-      <div class="hover-text">*Noy is a Cambridge-based multidiscplinary<br>designer, click to learn more.</div>
-    </a>
-    <a href="/contact.html" class="menu-item">Contact</a>
-    <a href="https://www.linkedin.com/in/noymizrachi/" target="_blank" rel="noopener noreferrer" class="menu-item">LinkedIn&#8599;</a>
-    <a href="/index.html" class="menu-item">Index</a>
-  </div>
+  <!-- 
+  <div class="night-mode">
+    <label>
+        <input type="checkbox" id="nightModeSwitch">
+        <span class="slider"></span>
+    </label>
 </div>
+--> 
+  <nav class="menu"> <!-- Changed to semantic <nav> element -->
+    
+      <a class="menu-item about-wrapper" href="/about.html">
+          About&#42611;
+          <div class="hover-text">*Noy is a Cambridge-based multidiscplinary<br>designer, click to learn more.</div>
+      </a>
+      <a href="/contact.html" class="menu-item">Contact</a>
+      <a href="https://www.linkedin.com/in/noymizrachi/" target="_blank" rel="noopener noreferrer" class="menu-item">LinkedIn&#8599;</a>
+      <a href="/index.html" class="menu-item">Index</a>
+
+  </nav> <!-- End of nav -->
+</div>
+<!-- Moved the script tag outside of the .top-bar -->
+<script src="/js/nightMode.js"></script>
