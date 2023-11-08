@@ -17,6 +17,13 @@ const GALLERY_DATA = [
     tags: ["animation", "production"]
   },
   {
+    name: "Bounty Carsheets",
+    href: "/projects/bounty.html",
+    src: "/assets/Thumbnails/bounty_thumbnail2.jpg",
+    text: "Rebrand, Harvard GSD, 2022",
+    tags: ["branding", "packaging", "design research", "fabrication"]
+  },
+  {
     name: "Enduring Heirlooms",
     href: "/projects/enduringheirlooms_project.html",
     src: "/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg",
@@ -30,13 +37,6 @@ const GALLERY_DATA = [
     src: "/assets/Thumbnails/Labyrinth_Thumbnail.gif",
     text: "Digital Media: Models, Harvard GSD, 2021",
     tags: ["animation", "simulation", "fabrication", "writing"]
-  },
-  {
-    name: "Bounty Carsheets",
-    href: "/projects/bounty.html",
-    src: "/assets/Thumbnails/bounty_thumbnail2.jpg",
-    text: "Rebrand, Harvard GSD, 2022",
-    tags: ["branding", "packaging", "design research", "fabrication"]
   },
   {
     name: "Soul in a Box",

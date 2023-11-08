@@ -40,7 +40,25 @@ h3 {
   align-items: center;
 }
 
-.profile-image {
+.image-container {
+  position: relative;
+  width: width-of-your-image; /* replace with your image's width */
+  height: height-of-your-image; /* replace with your image's height */
+}
+
+.image-container img,
+#pixelateCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#pixelateCanvas {
+  pointer-events: none; /* so the canvas doesn't block mouse events */
+}
+
+
+/* .profile-image {
   position: relative;
   flex: 0 0 400px;
   max-width: 400px;
@@ -54,12 +72,14 @@ h3 {
 
 .profile-image img {
   opacity: 0;
-  transition: opacity 0.3s; /* This ensures a smooth fade-in effect */
+  transition: opacity 0.3s;
 }
 
 .title:hover + .profile-image img {
   opacity: 1;
-}
+} 
+
+*/
 
 .blurb {
   flex-grow: 1;
@@ -262,3 +282,4 @@ body[data-theme="dark"] .resume h4 {
   background-color: #333333; /* Darker background color for resume header */
   color: #EAEAEA; /* Light text color */
 }
+
