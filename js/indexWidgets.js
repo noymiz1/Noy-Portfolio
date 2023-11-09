@@ -74,6 +74,14 @@ const GALLERY_DATA = [
     tags: ["branding", "product design"]
   },
   {
+    name: "Hemda Hummus",
+    href: "/projects/hemda.html",
+    src: "/assets/Thumbnails/hemda_top_thumbnail.png",
+    text: "Brand Design, UCF, 2019",
+    tags: ["branding", "packaging", "fabrication"]
+    
+  },
+  {
     name: "New Spaces",
     href: "/projects/newspaces.html",
     src: "/assets/Thumbnails/DV_Thumbnail.jpg",
