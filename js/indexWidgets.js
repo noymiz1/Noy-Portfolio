@@ -117,6 +117,14 @@ const GALLERY_DATA = [
     text: "Booklet design, 2019",
     tags: ["print", "digital design"]
   },
+  {
+    name: "Corporate Identity and Visual Systems",
+    href: "/projects/identitybrochure.html",
+    src: "/assets/Thumbnails/identitybrochure_thumbnail.png",
+    text: "Brochure design, 2019",
+    tags: ["print", "digital design"]
+  },
+
   // {
   //   name: "Hemda Hummus",
   //   href: "/projects/hemda.html",
