@@ -60,13 +60,6 @@ const GALLERY_DATA = [
   //   tags: ["video production", "branding", "facilitation"]
   // },
   {
-    name: "Super Bloom",
-    href: "/projects/superbloom.html",
-    src: "/assets/Thumbnails/table_thumbnail2.jpg",
-    text: "Table design and fabrication, 2023",
-    tags: ["fabrication", "digital fabrication"]
-  },
-  {
     name: "Carestry",
     href: "/projects/carestry_project.html",
     src: "/assets/Thumbnails/Carestry_Thumbnail.png",
@@ -89,11 +82,26 @@ const GALLERY_DATA = [
     tags: ["design research", "writing"]
   },
   {
+    name: "More Days",
+    href: "/projects/moredays.html",
+    src: "/assets/Thumbnails/moredays_thumbnail.png",
+    text: "Music Festival Branding, UCF, 2019",
+    tags: ["branding", "product design", "design research"]
+    
+  },
+  {
     name: "Audiotate",
     href: "/projects/audiotate.html",
     src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
     text: "Design for Desirability Lab, Harvard, 2020",
     tags: ["design research", "branding", "product design"]
+  },
+  {
+    name: "Super Bloom",
+    href: "/projects/superbloom.html",
+    src: "/assets/Thumbnails/table_thumbnail2.jpg",
+    text: "Table design and fabrication, 2023",
+    tags: ["fabrication", "digital fabrication"]
   },
   {
     name: "Design Margins",
