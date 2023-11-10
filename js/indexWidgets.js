@@ -82,13 +82,6 @@ const GALLERY_DATA = [
     
   },
   {
-    name: "New Spaces",
-    href: "/projects/newspaces.html",
-    src: "/assets/Thumbnails/DV_Thumbnail.jpg",
-    text: "New Spaces of Justice, Harvard GSD, 2020",
-    tags: ["design research", "writing"]
-  },
-  {
     name: "More Days",
     href: "/projects/moredays.html",
     src: "/assets/Thumbnails/moredays_thumbnail.png",
