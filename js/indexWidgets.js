@@ -21,21 +21,21 @@ const GALLERY_DATA = [
     href: "/projects/bounty.html",
     src: "/assets/Thumbnails/bounty_thumbnail2.jpg",
     text: "Rebrand, Harvard GSD, 2022",
-    tags: ["branding", "packaging", "design research", "fabrication"]
+    tags: ["branding", "packaging", "design strategy", "fabrication"]
   },
   {
     name: "New Spaces",
     href: "/projects/newspaces.html",
     src: "/assets/Thumbnails/DV_Thumbnail.jpg",
     text: "New Spaces of Justice, Harvard GSD, 2020",
-    tags: ["design research", "writing"]
+    tags: ["design strategy", "data visualization", "writing"]
   },
   {
     name: "Enduring Heirlooms",
     href: "/projects/enduringheirlooms_project.html",
     src: "/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg",
     text: "Interdisciplinary Art & Design research, Harvard GSD, 2021",
-    tags: ["writing", "product design", "design research"]
+    tags: ["writing", "product design", "design strategy"]
     
   },
   {
@@ -43,7 +43,7 @@ const GALLERY_DATA = [
     href: "/projects/carestry_project.html",
     src: "/assets/Thumbnails/Carestry_Thumbnail.png",
     text: "App development, MIT Sloan New Enterprises, 2021",
-    tags: ["branding", "product design"]
+    tags: ["branding", "product design", "data visualization"]
   },
   {
     name: "Labyrinth at Scale",
@@ -57,7 +57,7 @@ const GALLERY_DATA = [
     href: "https://fab.cba.mit.edu/classes/863.22/Harvard/people/Noy/index.html",
     src: "assets/Thumbnails/SoulinaBox_Thumbnail.gif",
     text: "How to Make Almost Anything, MIT Media Lab, 2023",
-    tags: ["digital fabrication", "fabrication"]
+    tags: ["animation", "fabrication"]
   },
   {
     name: "Mousetrap",
@@ -86,7 +86,7 @@ const GALLERY_DATA = [
     href: "/projects/moredays.html",
     src: "/assets/Thumbnails/moredays_thumbnail.png",
     text: "Music Festival Branding, UCF, 2019",
-    tags: ["branding", "product design", "design research"]
+    tags: ["branding", "product design", "design strategy"]
     
   },
   {
@@ -94,7 +94,7 @@ const GALLERY_DATA = [
     href: "/projects/audiotate.html",
     src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
     text: "Design for Desirability Lab, Harvard, 2020",
-    tags: ["design research", "branding", "product design"]
+    tags: ["design strategy", "branding", "product design"]
   },
   {
     name: "Super Bloom",
