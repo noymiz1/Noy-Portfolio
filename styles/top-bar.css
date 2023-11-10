@@ -80,6 +80,11 @@
   font-style: italic;
 }
 
+.name span:nth-child(12):hover {
+  color: rgb(233, 230, 19);
+  font-style: italic;
+}
+
 a {
     color: inherit;      /* Makes the link have the same color as surrounding text */
     text-decoration: none;  /* Removes the underline */
