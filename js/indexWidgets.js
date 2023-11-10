@@ -24,12 +24,26 @@ const GALLERY_DATA = [
     tags: ["branding", "packaging", "design research", "fabrication"]
   },
   {
+    name: "New Spaces",
+    href: "/projects/newspaces.html",
+    src: "/assets/Thumbnails/DV_Thumbnail.jpg",
+    text: "New Spaces of Justice, Harvard GSD, 2020",
+    tags: ["design research", "writing"]
+  },
+  {
     name: "Enduring Heirlooms",
     href: "/projects/enduringheirlooms_project.html",
     src: "/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg",
     text: "Interdisciplinary Art & Design research, Harvard GSD, 2021",
     tags: ["writing", "product design", "design research"]
     
+  },
+  {
+    name: "Carestry",
+    href: "/projects/carestry_project.html",
+    src: "/assets/Thumbnails/Carestry_Thumbnail.png",
+    text: "App development, MIT Sloan New Enterprises, 2021",
+    tags: ["branding", "product design"]
   },
   {
     name: "Labyrinth at Scale",
@@ -59,13 +73,6 @@ const GALLERY_DATA = [
   //   text: "Artist facilitation, Harvard Ed Portal, 2022",
   //   tags: ["video production", "branding", "facilitation"]
   // },
-  {
-    name: "Carestry",
-    href: "/projects/carestry_project.html",
-    src: "/assets/Thumbnails/Carestry_Thumbnail.png",
-    text: "App development, MIT Sloan New Enterprises, 2021",
-    tags: ["branding", "product design"]
-  },
   {
     name: "Hemda Hummus",
     href: "/projects/hemda.html",
