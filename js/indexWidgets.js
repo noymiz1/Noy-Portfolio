@@ -46,6 +46,13 @@ const GALLERY_DATA = [
     tags: ["branding", "product design", "data visualization"]
   },
   {
+    name: "Mousetrap",
+    href: "https://www.youtube.com/watch?v=XWpL1ldDlKo",
+    src: "/assets/Thumbnails/Mousetrap_Thumbnail.gif",
+    text: "Short film, 2022",
+    tags: ["animation", "production", "fabrication"]
+  },
+  {
     name: "Labyrinth at Scale",
     href: "/projects/labyrinth_project.html",
     src: "/assets/Thumbnails/Labyrinth_Thumbnail.gif",
@@ -58,13 +65,6 @@ const GALLERY_DATA = [
     src: "assets/Thumbnails/SoulinaBox_Thumbnail.gif",
     text: "How to Make Almost Anything, MIT Media Lab, 2023",
     tags: ["animation", "fabrication"]
-  },
-  {
-    name: "Mousetrap",
-    href: "https://www.youtube.com/watch?v=XWpL1ldDlKo",
-    src: "/assets/Thumbnails/Mousetrap_Thumbnail.gif",
-    text: "Short film, 2022",
-    tags: ["animation", "production", "fabrication"]
   },
   // {
   //   name: "Bhākti",

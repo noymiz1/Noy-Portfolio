@@ -128,9 +128,10 @@ a {
   right: 110%;
   top: 0%;
   font-family: 'Balto-Book', sans-serif;
+  text-align: right;
   font-size: .9em;
   line-height: 1.2;
-  color: #f5989e;
+  color: #ff99a0;
   background-color: #fff;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
