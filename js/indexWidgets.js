@@ -53,6 +53,13 @@ const GALLERY_DATA = [
     tags: ["animation", "production", "fabrication"]
   },
   {
+    name: "Irma Boom",
+    href: "/projects/irmaboom.html",
+    src: "/assets/Thumbnails/IrmaBoomBooklet_Thumbnail.jpg",
+    text: "Booklet design, 2019",
+    tags: ["print", "digital design"]
+  },
+  {
     name: "Labyrinth at Scale",
     href: "/projects/labyrinth_project.html",
     src: "/assets/Thumbnails/Labyrinth_Thumbnail.gif",
@@ -109,13 +116,6 @@ const GALLERY_DATA = [
     src: "/assets/Thumbnails/DesignMargins_Thumbnail.png",
     text: "Podcast, Radcliffe Engaged Student Grant, 2021",
     tags: ["branding", "production"]
-  },
-  {
-    name: "Irma Boom",
-    href: "/projects/irmaboom.html",
-    src: "/assets/Thumbnails/IrmaBoomBooklet_Thumbnail.jpg",
-    text: "Booklet design, 2019",
-    tags: ["print", "digital design"]
   },
   {
     name: "Corporate Identity and Visual Systems",

@@ -139,3 +139,27 @@ body[data-theme="dark"] .gallery-tags {
 body[data-theme="dark"] .gallery-text {
   mix-blend-mode: screen; /* Change the blend mode so text remains visible against dark backgrounds */
 }
+
+.glyph-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: -1; /* Set behind other content */
+}
+
+.glyph-style {
+  position: absolute;
+  font-family: 'PPMondwest-Regular', serif;
+  font-size: 35px; // Size of the glyphs
+  color: #000; // Color of the glyphs
+  opacity: 0; // Initially hidden
+  transition: opacity 0.5s ease-out;
+  user-select: none;
+}
+
+/* Add styles to ensure widgets are above the glyphs */
+.widget-class {
+  position: relative;
+  z-index: 1;
+}
