@@ -24,6 +24,13 @@ const GALLERY_DATA = [
     tags: ["branding", "packaging", "design strategy", "fabrication"]
   },
   {
+    name: "Carestry",
+    href: "/projects/carestry_project.html",
+    src: "/assets/Thumbnails/Carestry_Thumbnail.png",
+    text: "App development, MIT Sloan New Enterprises, 2021",
+    tags: ["branding", "product design", "data visualization"]
+  },
+  {
     name: "New Spaces",
     href: "/projects/newspaces.html",
     src: "/assets/Thumbnails/DV_Thumbnail.jpg",
@@ -37,13 +44,6 @@ const GALLERY_DATA = [
     text: "Interdisciplinary Art & Design research, Harvard GSD, 2021",
     tags: ["writing", "product design", "design strategy"]
     
-  },
-  {
-    name: "Carestry",
-    href: "/projects/carestry_project.html",
-    src: "/assets/Thumbnails/Carestry_Thumbnail.png",
-    text: "App development, MIT Sloan New Enterprises, 2021",
-    tags: ["branding", "product design", "data visualization"]
   },
   {
     name: "Mousetrap",
