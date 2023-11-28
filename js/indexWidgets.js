@@ -38,6 +38,13 @@ const GALLERY_DATA = [
     tags: ["design strategy", "data visualization", "writing"]
   },
   {
+    name: "Audiotate",
+    href: "/projects/audiotate.html",
+    src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
+    text: "Design for Desirability Lab, Harvard, 2020",
+    tags: ["design strategy", "branding", "product design"]
+  },
+  {
     name: "Enduring Heirlooms",
     href: "/projects/enduringheirlooms_project.html",
     src: "/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg",
@@ -95,13 +102,6 @@ const GALLERY_DATA = [
     text: "Music Festival Branding, UCF, 2019",
     tags: ["branding", "product design", "design strategy"]
     
-  },
-  {
-    name: "Audiotate",
-    href: "/projects/audiotate.html",
-    src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
-    text: "Design for Desirability Lab, Harvard, 2020",
-    tags: ["design strategy", "branding", "product design"]
   },
   {
     name: "Super Bloom",
