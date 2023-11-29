@@ -10,18 +10,18 @@ const GALLERY_DATA = [
   //   tags: ["branding", "packaging","video"]
   // },
   {
-    name: "A Knot",
-    href: "https://www.youtube.com/watch?v=7r4n4fM5_aU",
-    src: "/assets/Thumbnails/AKnot_Thumbnail.gif",
-    text: "Short film, 2022",
-    tags: ["animation", "production"]
-  },
-  {
     name: "Bounty Carsheets",
     href: "/projects/bounty.html",
     src: "/assets/Thumbnails/bounty_thumbnail2.jpg",
     text: "Rebrand, Harvard GSD, 2022",
     tags: ["branding", "packaging", "design strategy", "fabrication"]
+  },
+  {
+    name: "Audiotate",
+    href: "/projects/audiotate.html",
+    src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
+    text: "Design for Desirability Lab, Harvard, 2020",
+    tags: ["design strategy", "branding", "product design"]
   },
   {
     name: "Carestry",
@@ -38,11 +38,11 @@ const GALLERY_DATA = [
     tags: ["design strategy", "data visualization", "writing"]
   },
   {
-    name: "Audiotate",
-    href: "/projects/audiotate.html",
-    src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
-    text: "Design for Desirability Lab, Harvard, 2020",
-    tags: ["design strategy", "branding", "product design"]
+    name: "A Knot",
+    href: "https://www.youtube.com/watch?v=7r4n4fM5_aU",
+    src: "/assets/Thumbnails/AKnot_Thumbnail.gif",
+    text: "Short film, 2022",
+    tags: ["animation", "production"]
   },
   {
     name: "Enduring Heirlooms",
@@ -50,6 +50,14 @@ const GALLERY_DATA = [
     src: "/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg",
     text: "Interdisciplinary Art & Design research, Harvard GSD, 2021",
     tags: ["writing", "product design", "design strategy"]
+    
+  },
+  {
+    name: "Wishful Thinking",
+    href: "/projects/wishfulthinking.html",
+    src: "/assets/Thumbnails/wishfulthinking_thumbnail.jpg",
+    text: "Video Game, 2023",
+    tags: ["game design", "animation", "product design"]
     
   },
   {
