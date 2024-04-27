@@ -13,42 +13,42 @@ const GALLERY_DATA = [
     name: "Bounty Carsheets",
     href: "/projects/bounty.html",
     src: "/assets/Thumbnails/bounty_thumbnail2.jpg",
-    text: "Rebrand, Harvard GSD, 2022",
+    text: "Rebrand, Harvard GSD",
     tags: ["branding", "packaging", "design strategy", "fabrication"]
   },
   {
     name: "Audiotate",
     href: "/projects/audiotate.html",
     src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
-    text: "Design for Desirability Lab, Harvard, 2020",
+    text: "Design for Desirability Lab, Harvard",
     tags: ["design strategy", "branding", "product design"]
   },
   {
     name: "Carestry",
     href: "/projects/carestry_project.html",
     src: "/assets/Thumbnails/Carestry_Thumbnail.png",
-    text: "App development, MIT Sloan New Enterprises, 2021",
+    text: "App development, MIT Sloan New Enterprises",
     tags: ["branding", "product design", "data visualization"]
   },
   {
     name: "New Spaces",
     href: "/projects/newspaces.html",
     src: "/assets/Thumbnails/DV_Thumbnail.jpg",
-    text: "New Spaces of Justice, Harvard GSD, 2020",
+    text: "New Spaces of Justice, Harvard GSD",
     tags: ["design strategy", "data visualization", "writing"]
   },
   {
     name: "A Knot",
     href: "https://www.youtube.com/watch?v=7r4n4fM5_aU",
     src: "/assets/Thumbnails/AKnot_Thumbnail.gif",
-    text: "Short film, 2022",
+    text: "Short film",
     tags: ["animation", "production"]
   },
   {
     name: "Enduring Heirlooms",
     href: "/projects/enduringheirlooms_project.html",
     src: "/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg",
-    text: "Interdisciplinary Art & Design research, Harvard GSD, 2021",
+    text: "Interdisciplinary Art & Design research, Harvard GSD",
     tags: ["writing", "product design", "design strategy"]
     
   },
@@ -56,7 +56,7 @@ const GALLERY_DATA = [
     name: "Wishful Thinking",
     href: "/projects/wishfulthinking.html",
     src: "/assets/Thumbnails/wishfulthinking_thumbnail.jpg",
-    text: "Video Game, 2023",
+    text: "Video Game",
     tags: ["game design", "animation", "product design"]
     
   },
@@ -64,28 +64,28 @@ const GALLERY_DATA = [
     name: "Mousetrap",
     href: "https://www.youtube.com/watch?v=XWpL1ldDlKo",
     src: "/assets/Thumbnails/Mousetrap_Thumbnail.gif",
-    text: "Short film, 2022",
+    text: "Short film",
     tags: ["animation", "production", "fabrication"]
   },
   {
     name: "Irma Boom",
     href: "/projects/irmaboom.html",
     src: "/assets/Thumbnails/IrmaBoomBooklet_Thumbnail.jpg",
-    text: "Booklet design, 2019",
+    text: "Booklet design",
     tags: ["print", "digital design"]
   },
   {
     name: "Labyrinth at Scale",
     href: "/projects/labyrinth_project.html",
     src: "/assets/Thumbnails/Labyrinth_Thumbnail.gif",
-    text: "Digital Media: Models, Harvard GSD, 2021",
+    text: "Digital Media: Models, Harvard GSD",
     tags: ["animation", "simulation", "fabrication", "writing"]
   },
   {
     name: "Soul in a Box",
     href: "https://fab.cba.mit.edu/classes/863.22/Harvard/people/Noy/index.html",
     src: "assets/Thumbnails/SoulinaBox_Thumbnail.gif",
-    text: "How to Make Almost Anything, MIT Media Lab, 2023",
+    text: "How to Make Almost Anything, MIT Media Lab",
     tags: ["animation", "fabrication"]
   },
   // {
@@ -99,7 +99,7 @@ const GALLERY_DATA = [
     name: "Hemda Hummus",
     href: "/projects/hemda.html",
     src: "/assets/Thumbnails/hemda_top_thumbnail.png",
-    text: "Brand Design, UCF, 2019",
+    text: "Brand Design, UCF",
     tags: ["branding", "packaging", "fabrication"]
     
   },
@@ -107,7 +107,7 @@ const GALLERY_DATA = [
     name: "More Days",
     href: "/projects/moredays.html",
     src: "/assets/Thumbnails/moredays_thumbnail.png",
-    text: "Music Festival Branding, UCF, 2019",
+    text: "Music Festival Branding, UCF",
     tags: ["branding", "product design", "design strategy"]
     
   },
@@ -115,21 +115,21 @@ const GALLERY_DATA = [
     name: "Super Bloom",
     href: "/projects/superbloom.html",
     src: "/assets/Thumbnails/table_thumbnail2.jpg",
-    text: "Table design and fabrication, 2023",
+    text: "Table design and fabrication",
     tags: ["fabrication", "digital fabrication"]
   },
   {
     name: "Design Margins",
     href: "/projects/designmargins.html",
     src: "/assets/Thumbnails/DesignMargins_Thumbnail.png",
-    text: "Podcast, Radcliffe Engaged Student Grant, 2021",
+    text: "Podcast, Radcliffe Engaged Student Grant",
     tags: ["branding", "production"]
   },
   {
     name: "Corporate Identity and Visual Systems",
     href: "/projects/identitybrochure.html",
     src: "/assets/Thumbnails/identitybrochure_thumbnail.png",
-    text: "Brochure design, 2019",
+    text: "Brochure design",
     tags: ["print", "digital design"]
   },
 
