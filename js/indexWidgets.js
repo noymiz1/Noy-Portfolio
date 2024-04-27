@@ -24,6 +24,13 @@ const GALLERY_DATA = [
     tags: ["design strategy", "branding", "product design"]
   },
   {
+    name: "A Knot",
+    href: "https://www.youtube.com/watch?v=7r4n4fM5_aU",
+    src: "/assets/Thumbnails/AKnot_Thumbnail.gif",
+    text: "Short film",
+    tags: ["animation", "production"]
+  },
+  {
     name: "Carestry",
     href: "/projects/carestry_project.html",
     src: "/assets/Thumbnails/Carestry_Thumbnail.png",
@@ -36,13 +43,6 @@ const GALLERY_DATA = [
     src: "/assets/Thumbnails/DV_Thumbnail.jpg",
     text: "New Spaces of Justice, Harvard GSD",
     tags: ["design strategy", "data visualization", "writing"]
-  },
-  {
-    name: "A Knot",
-    href: "https://www.youtube.com/watch?v=7r4n4fM5_aU",
-    src: "/assets/Thumbnails/AKnot_Thumbnail.gif",
-    text: "Short film",
-    tags: ["animation", "production"]
   },
   {
     name: "Enduring Heirlooms",
