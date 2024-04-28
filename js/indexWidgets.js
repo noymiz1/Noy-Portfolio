@@ -25,7 +25,7 @@ const GALLERY_DATA = [
   },
   {
     name: "A Knot",
-    href: "https://www.youtube.com/watch?v=7r4n4fM5_aU",
+    href: "/projects/knot.html",
     src: "/assets/Thumbnails/AKnot_Thumbnail.gif",
     text: "Short film",
     tags: ["animation", "production"]
