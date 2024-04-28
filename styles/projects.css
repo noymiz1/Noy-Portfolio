@@ -114,6 +114,20 @@ body {
     z-index: 10; /* to ensure it's above the image */
 }
 
+.superbloom-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the images within the container */
+}
+
+.superbloom-images .project-image {
+    width: 60%; /* Adjust this value as needed to fit two images per row */
+    margin: 1%; /* Adds a little space around the images */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: contain; /* Ensures that images are scaled correctly within the given dimensions */
+}
+
+
 
 
 /* Responsive Styles */

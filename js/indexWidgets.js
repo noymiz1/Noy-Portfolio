@@ -96,6 +96,13 @@ const GALLERY_DATA = [
   //   tags: ["video production", "branding", "facilitation"]
   // },
   {
+    name: "Super Bloom",
+    href: "/projects/superbloom.html",
+    src: "/assets/Thumbnails/table_thumbnail2.jpg",
+    text: "Table design and fabrication",
+    tags: ["fabrication", "digital fabrication"]
+  },
+  {
     name: "Hemda Hummus",
     href: "/projects/hemda.html",
     src: "/assets/Thumbnails/hemda_top_thumbnail.png",
@@ -110,13 +117,6 @@ const GALLERY_DATA = [
     text: "Music Festival Branding, UCF",
     tags: ["branding", "product design", "design strategy"]
     
-  },
-  {
-    name: "Super Bloom",
-    href: "/projects/superbloom.html",
-    src: "/assets/Thumbnails/table_thumbnail2.jpg",
-    text: "Table design and fabrication",
-    tags: ["fabrication", "digital fabrication"]
   },
   {
     name: "Design Margins",
