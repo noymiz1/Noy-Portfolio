@@ -127,7 +127,20 @@ body {
     object-fit: contain; /* Ensures that images are scaled correctly within the given dimensions */
 }
 
+.philips-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the images within the container */
+    align-items: center; /* Align items in a way that the taller images don't stretch smaller ones */
+}
 
+.philips-images .project-image {
+    width: 40%; /* Adjust this value as needed to fit two images per row */
+    margin: 1%; /* Adds a little space around the images */
+    margin-top: 1%;
+    height: auto; /* This ensures that the height adjusts to maintain aspect ratio */
+    object-fit: contain; /* Ensures that images are scaled correctly within the given dimensions */
+}
 
 
 /* Responsive Styles */

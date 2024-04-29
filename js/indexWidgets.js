@@ -10,6 +10,13 @@ const GALLERY_DATA = [
   //   tags: ["branding", "packaging","video"]
   // },
   {
+    name: "Philips",
+    href: "/projects/philips.html",
+    src: "/assets/Thumbnails/philips_thumbnail2.jpg",
+    text: "Communications Design",
+    tags: ["branding", "packaging", "design strategy", "animation"]
+  },
+  {
     name: "Bounty Carsheets",
     href: "/projects/bounty.html",
     src: "/assets/Thumbnails/bounty_thumbnail2.jpg",
@@ -17,18 +24,18 @@ const GALLERY_DATA = [
     tags: ["branding", "packaging", "design strategy", "fabrication"]
   },
   {
-    name: "Audiotate",
-    href: "/projects/audiotate.html",
-    src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
-    text: "Design for Desirability Lab, Harvard",
-    tags: ["design strategy", "branding", "product design"]
-  },
-  {
     name: "A Knot",
     href: "/projects/knot.html",
     src: "/assets/Thumbnails/AKnot_Thumbnail.gif",
     text: "Short film",
     tags: ["animation", "production"]
+  },
+  {
+    name: "Audiotate",
+    href: "/projects/audiotate.html",
+    src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
+    text: "Design for Desirability Lab, Harvard",
+    tags: ["design strategy", "branding", "product design"]
   },
   {
     name: "Carestry",
