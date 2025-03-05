@@ -13,7 +13,7 @@ body {
 }
 
 h3 {
-  font-family: 'PPMondwest-Regular', serif;
+  font-family: 'PanamaProportionalItalic', serif;
   font-weight: normal;
 } 
 
@@ -141,8 +141,15 @@ h3 {
 /* Title hover effects */
 
 .title {
-  font-family: 'PPMondwest-Regular', serif;
+  font-family: 'PanamaProportionalItalic', serif;
   font-size: 3.5rem;
+  letter-spacing: -1px; 
+
+}
+
+.title span:hover {
+  font-family: 'PanamaProportionalRegular', serif; /* Regular font */
+  font-style: normal; /* Ensure it's not italic */
 }
 
 .title-letter {
@@ -150,92 +157,92 @@ h3 {
 }
 
 .title span:hover {
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(1):hover {
   color: red;
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(2):hover {
   color: blue;
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(3):hover {
   color: #ffa3b1;
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(4):hover {
   color: #7242cd;
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(5):hover {
   color: #ff8800;
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(6):hover {
   color: #ff0033;
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(7):hover {
   color: #05b4ff;
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(8):hover {
   color: #61ff98;
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(9):hover {
   color: #c2007b;
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(10):hover {
   color: #bbff00;
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(11):hover {
   color: orange;
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(12):hover {
   color: rgb(48, 177, 197);
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(13):hover {
   color: rgb(229, 237, 0);
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(14):hover {
   color: rgb(222, 34, 46);
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(15):hover {
   color: rgb(237, 177, 188);
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(16):hover {
   color: rgb(115, 6, 143);
-  font-style: italic;
+  font-style: normal;
 }
 
 .title span:nth-child(17):hover {
   color: rgb(156, 233, 108);
-  font-style: italic;
+  font-style: normal;
 }
 /* Responsive Design */
 @media (max-width: 768px) {
