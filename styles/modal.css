@@ -1,64 +1,68 @@
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(5px);
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease-in-out;
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
 }
 
+  
+/* When modal is active */
 body.modal-active .modal {
-    display: flex;
-    opacity: 1;
-    pointer-events: auto;
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
-
+  
+/* Modal Content */
 .modal-content {
-    background: white;
-    padding: 30px;
-    padding-top: 40px;
-    border-radius: 12px;
-    width: 50%;
-    max-width: 480px;
-    text-align: left;
-    font-family: "Balto-Book", sans-serif;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    font-size: 1rem;
-    line-height: 1.5;
+  background: white;
+  padding: 30px;
+  padding-top: 40px;
+  border-radius: 12px;
+  width: 50%;
+  max-width: 480px;
+  text-align: left;
+  font-family: "Balto-Book", sans-serif;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
 }
-
+  
+/* Close Button */
 .close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    cursor: pointer;
-    z-index: 1001;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  z-index: 1001;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
-
+  
 .close:hover {
-    color: #000;
-    background-color: rgba(0, 0, 0, 0.1);
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
 }
   
 /* Prevent Scrolling When Modal is Open */
