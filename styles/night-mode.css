@@ -1,0 +1,115 @@
+/* ✅ Night Mode - Global Styles */
+body.night-mode {
+    background-color: black;
+    color: white;
+  }
+  
+  /* ✅ Ensure Widgets and Sections Stay Structured */
+  body.night-mode .gallery-navigation,
+  body.night-mode .project-card {
+    background-color: black !important;
+    color: white !important;
+  }
+  
+  /* ✅ Prevent Grid/Flexbox Issues */
+  body.night-mode .image-gallery,
+  body.night-mode .project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* ✅ Fix Text Disappearing in Buttons */
+  body.night-mode .gallery-navigation button {
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+  }
+  
+  /* ✅ Ensure Images Stay Visible */
+  body.night-mode img {
+    filter: brightness(90%) !important;
+  }
+  
+  /* ✅ Fix Buttons and Inputs */
+  body.night-mode input:not(#nightModeSwitch),
+  body.night-mode textarea,
+  body.night-mode select {
+    background-color: #333 !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+  }
+  
+  /* ✅ Modal Night Mode Styles */
+  body.night-mode .modal {
+    background-color: rgba(0, 0, 0, 0.85); /* Dark but still allowing blur effect */
+    backdrop-filter: blur(10px);
+    color: white;
+  }
+  
+  body.night-mode .modal-content {
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+  }
+  
+  /* ✅ Modal About Contact Links */
+  body.night-mode .about-contact a {
+    color: #ffcc00;
+  }
+  
+  body.night-mode .about-contact p {
+    color: white;
+  }
+  
+  /* ✅ CV Button in Night Mode */
+  body.night-mode .cv-button {
+    background-color: #444;
+    color: white;
+    border: 1px solid #777;
+  }
+  
+  body.night-mode .cv-button:hover {
+    background-color: #666;
+  }
+  
+  /* ✅ Close Button in Night Mode */
+  body.night-mode .close {
+    color: white;
+  }
+  
+  /* ✅ Ensure navigation buttons maintain spacing in night mode */
+  body.night-mode [class*="All Projects"],
+  body.night-mode [class*="Branding"],
+  body.night-mode [class*="Design Strategy"],
+  body.night-mode [class*="Product Design"],
+  body.night-mode [class*="Data Visualization"],
+  body.night-mode [class*="Animation"],
+  body.night-mode [class*="Packaging"],
+  body.night-mode [class*="Print"],
+  body.night-mode [class*="Fabrication"],
+  body.night-mode [class*="Production"] {
+    margin: 0 2px !important;
+    display: inline-flex !important;
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid #555 !important;
+  }
+  
+  /* Hover state for buttons in night mode */
+  body.night-mode button:hover,
+  body.night-mode [role="button"]:hover,
+  body.night-mode .filter-button:hover,
+  body.night-mode [class*="All Projects"]:hover,
+  body.night-mode [class*="Branding"]:hover,
+  body.night-mode [class*="Design Strategy"]:hover,
+  body.night-mode [class*="Product Design"]:hover,
+  body.night-mode [class*="Data Visualization"]:hover,
+  body.night-mode [class*="Animation"]:hover,
+  body.night-mode [class*="Packaging"]:hover,
+  body.night-mode [class*="Print"]:hover,
+  body.night-mode [class*="Fabrication"]:hover,
+  body.night-mode [class*="Production"]:hover {
+    background-color: white !important;
+    color: black !important;
+  }

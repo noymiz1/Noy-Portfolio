@@ -152,9 +152,9 @@ body[data-theme="dark"] .gallery-text {
 .glyph-style {
   position: absolute;
   font-family: 'PanamaProportionaRegular', serif;
-  font-size: 35px; // Size of the glyphs
-  color: #000; // Color of the glyphs
-  opacity: 0; // Initially hidden
+  font-size: 35px; 
+  color: #000; 
+  opacity: 0; 
   transition: opacity 0.5s ease-out;
   user-select: none;
 }

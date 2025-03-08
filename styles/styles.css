@@ -1,0 +1,91 @@
+@import url('/styles/about.css');
+@import url('/styles/gallery.css');
+@import url('/styles/footer.css');
+@import url('/styles/top-bar.css');
+@import url('/styles/contact.css');
+@import url('/styles/projects.css');
+@import url('/styles/night-mode.css');
+@import url('/styles/modal.css');
+
+@font-face {
+  font-family: 'Balto-Book';
+  src: url('../fonts/Balto-Book.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PPMondwest-Regular';
+  src: url('../fonts/PPMondwest-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'BeatriceHeadlineTRIAL-Regular';
+  src: url('../fonts/BeatriceHeadlineTRIAL-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Frauen';
+  src: url('../fonts/Frauen-Roman.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Comic';
+  src: url('../fonts/GradientComicDemo-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Doyle';
+  src: url('../fonts/Doyle-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Beatrice';
+  src: url('../fonts/BeatriceTRIAL-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'BaskervilleItalic';
+  src: url('../fonts/BaskervilleItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PanamaProportionalItalic';
+  src: url('../fonts/PanamaProportionalItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PanamaProportionalRegular';
+  src: url('../fonts/PanamaProportionalRegular.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'PanamaProportionalBold';
+  src: url('../fonts/PanamaProportionalBold.otf') format('opentype');
+  font-weight: bold;
+}
+
+:root {
+  --top-color: white;
+}
+
+html,
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}

@@ -2,9 +2,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function setupModal() {
         const modal = document.getElementById("aboutModal");
         const openBtn = document.getElementById("openModal");
-        const closeBtn = modal.querySelector(".close");
-        const pixelEffectContainer = document.getElementById("pixelEffectContainer");
-        const aboutText = modal.querySelector(".hover-trigger"); // "About Me" text
+        const closeBtn = modal?.querySelector(".close");
+        const aboutText = modal?.querySelector(".hover-trigger"); // "About Me" text
+
+        // Log what we found for debugging
+        console.log("Modal found:", !!modal);
+        console.log("Open button found:", !!openBtn);
+        console.log("Close button found:", !!closeBtn);
 
         // Create floating profile image
         let profileImg = document.createElement("img");
@@ -23,118 +27,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (modal && openBtn && closeBtn) {
             openBtn.addEventListener("click", () => {
+                console.log("Modal button clicked");
                 modal.style.display = "flex";
+                // Force reflow before changing opacity for animation
+                void modal.offsetWidth;
+                modal.style.opacity = "1"; // Add this line to make it visible
                 document.body.classList.add("modal-active");
-
-                // Activate pixel effect inside the modal only
-                pixelEffectContainer.addEventListener("mousemove", pixelEffect);
             });
 
             closeBtn.addEventListener("click", () => {
+                console.log("Close button clicked");
                 modal.style.opacity = "0";
                 setTimeout(() => {
                     modal.style.display = "none";
                     document.body.classList.remove("modal-active");
-
-                    // Remove pixel effect when closing the modal
-                    pixelEffectContainer.removeEventListener("mousemove", pixelEffect);
-                    pixelEffectContainer.innerHTML = ""; // Clears any remaining squares
                     profileImg.style.opacity = "0"; // Hide profile image
                 }, 300);
             });
 
             window.addEventListener("click", (event) => {
                 if (event.target === modal) {
+                    console.log("Outside modal clicked");
                     modal.style.opacity = "0";
                     setTimeout(() => {
                         modal.style.display = "none";
                         document.body.classList.remove("modal-active");
-
-                        // Remove pixel effect when clicking outside modal
-                        pixelEffectContainer.removeEventListener("mousemove", pixelEffect);
-                        pixelEffectContainer.innerHTML = ""; // Clears any remaining squares
                         profileImg.style.opacity = "0"; // Hide profile image
                     }, 300);
                 }
             });
 
             // Show and move floating profile image on hover
-            aboutText.addEventListener("mousemove", function (e) {
-                profileImg.style.opacity = "1";
-                profileImg.style.left = `${e.pageX}px`;
-                profileImg.style.top = `${e.pageY}px`;
-            });
+            if (aboutText) {
+                aboutText.addEventListener("mousemove", function (e) {
+                    profileImg.style.opacity = "1";
+                    profileImg.style.left = `${e.pageX}px`;
+                    profileImg.style.top = `${e.pageY}px`;
+                });
 
-            // Hide profile image when leaving "About Me"
-            aboutText.addEventListener("mouseleave", function () {
-                profileImg.style.opacity = "0";
-            });
-        }
-    }
-
-    function pixelEffect(e) {
-        const squareSize = 20;
-        const fadeOutDuration = 1000;
-        const displayDuration = 7000;
-
-        const pixelEffectContainer = document.getElementById("pixelEffectContainer");
-        if (!pixelEffectContainer) return;
-
-        let lastCreated = Date.now();
-        const currentTime = Date.now();
-        if (currentTime - lastCreated < 100) return; // Throttle effect
-        lastCreated = currentTime;
-
-        const rect = pixelEffectContainer.getBoundingClientRect();
-        const mouseX = e.clientX - rect.left;
-        const mouseY = e.clientY - rect.top;
-
-        const startX = Math.floor(mouseX / squareSize) * squareSize - squareSize * 2;
-        const startY = Math.floor(mouseY / squareSize) * squareSize - squareSize * 2;
-
-        for (let x = startX; x < startX + squareSize * 5 && x < rect.width; x += squareSize) {
-            for (let y = startY; y < startY + squareSize * 5 && y < rect.height; y += squareSize) {
-                createSquare(x, y);
+                // Hide profile image when leaving "About Me"
+                aboutText.addEventListener("mouseleave", function () {
+                    profileImg.style.opacity = "0";
+                });
             }
+        } else {
+            console.error("Missing modal elements");
         }
     }
 
-    function createSquare(x, y) {
-        const square = document.createElement("div");
-        square.style.position = "absolute";
-        square.style.left = `${x}px`;
-        square.style.top = `${y}px`;
-        square.style.width = "20px";
-        square.style.height = "20px";
-        square.style.backgroundColor = randomColor();
-        square.style.zIndex = "1"; // Ensure it's behind modal content
-        square.style.opacity = "1";
-        square.style.transition = "opacity 1s ease-out";
+    // First try direct setup if elements already exist
+    if (document.getElementById("openModal")) {
+        console.log("Elements found on page load, setting up modal");
+        setupModal();
+    } else {
+        console.log("Elements not found, watching for changes");
+        // Watch for changes if not immediately available
+        const observer = new MutationObserver(() => {
+            if (document.getElementById("openModal")) {
+                console.log("Elements found after DOM change, setting up modal");
+                setupModal();
+                observer.disconnect();
+            }
+        });
 
-        document.getElementById("pixelEffectContainer").appendChild(square);
-
-        setTimeout(() => {
-            square.style.opacity = "0";
-            setTimeout(() => square.remove(), 1000);
-        }, 6000);
+        observer.observe(document.body, { childList: true, subtree: true });
     }
-
-    function randomColor() {
-        const letters = "0123456789ABCDEF";
-        let color = "#";
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
-
-    // Wait for `top-bar.html` to load dynamically
-    const observer = new MutationObserver(() => {
-        if (document.getElementById("openModal")) {
-            setupModal();
-            observer.disconnect();
-        }
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
 });
