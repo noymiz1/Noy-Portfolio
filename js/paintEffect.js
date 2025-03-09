@@ -1,53 +1,53 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const squareSize = 20;
-  const fadeOutDuration = 1000;
-  const displayDuration = 7000;
+document.addEventListener("DOMContentLoaded", function () {
+    const landingPage = document.querySelector('.landing-page');
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
 
-  let lastCreated = Date.now();
-
-  document.body.addEventListener('mousemove', function(e) {
-    const currentTime = Date.now();
-    if (currentTime - lastCreated < 100) { // Throttle the creation so it's not too intense
-      return;
+    function resizeCanvas() {
+        width = landingPage.offsetWidth;
+        height = landingPage.offsetHeight;
+        canvas.width = width;
+        canvas.height = height;
     }
-    lastCreated = currentTime;
 
-    const mouseX = e.clientX;
-    const mouseY = e.clientY;
-
-    const startX = Math.floor(mouseX / squareSize) * squareSize-squareSize*2;
-    const startY = Math.floor(mouseY / squareSize) * squareSize-squareSize*2;
-
-    for (let x = startX; x < startX + squareSize * 5 && x < window.innerWidth; x += squareSize) {
-      for (let y = startY; y < startY + squareSize * 5 && y < window.innerHeight; y += squareSize) {
-        createSquare(x, y);
-      }
+    function drawPixels() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < 1000; i++) {
+            const x = Math.random() * width;
+            const y = Math.random() * height;
+            const size = Math.random() * 3;
+            ctx.fillStyle = `rgba(0, 0, 0, ${Math.random()})`;
+            ctx.fillRect(x, y, size, size);
+        }
     }
-  });
 
-  function createSquare(x, y) {
-    const square = document.createElement('div');
-    square.style.position = 'absolute';
-    square.style.left = x + 'px';
-    square.style.top = y + 'px';
-    square.style.width = squareSize + 'px';
-    square.style.height = squareSize + 'px';
-    square.style.backgroundColor = randomColor();
-    square.style.zIndex = '-1';  // This ensures the square is behind other content
-    document.body.appendChild(square);
+    function showPixels() {
+        canvas.style.opacity = '1';
+    }
 
-    setTimeout(() => {
-      square.style.opacity = '0';
-      setTimeout(() => square.remove(), fadeOutDuration);
-    }, displayDuration - fadeOutDuration);
-  }
+    function hidePixels() {
+        canvas.style.opacity = '0';
+    }
+
+    canvas.style.position = 'absolute';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.zIndex = '-1';
+    canvas.style.transition = 'opacity 0.5s ease-in-out';
+    canvas.style.opacity = '0';
+
+    landingPage.appendChild(canvas);
+    resizeCanvas();
+    drawPixels();
+
+    window.addEventListener('resize', () => {
+        resizeCanvas();
+        drawPixels();
+    });
+
+    landingPage.addEventListener('mouseover', showPixels);
+    landingPage.addEventListener('mouseout', hidePixels);
 });
-
-function randomColor() {
-  const letters = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}

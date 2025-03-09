@@ -6,17 +6,29 @@
     <title>Noy's Portfolio</title>
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/modal.css">
+    <link rel="stylesheet" href="/styles/top-bar.css">
+    <link rel="stylesheet" href="/styles/landing.css">
     <script src="/js/html-fragment.js" type="module"></script>
     <script src="/js/indexWidgets.js" defer type="module"></script>
     <script src="/js/galleryFilter.js" defer></script>
     <script src="/js/modal.js" defer></script>
     <script src="/js/nightMode.js" defer></script>
+    <script src="/js/scroll.js" defer></script>
+    <script src="/js/hover-pixel-effect.js" defer></script>
 </head>
 <body>
     <!-- Include top-bar.html -->
     <html-fragment src="/components/top-bar.html"></html-fragment>
+
+    <!-- Landing Page Section -->
+    <section class="landing-page">
+        <h1>Crafting intuitive digital experiences</h1>
+        <p>Product designer focusing on visual storytelling, usability, and seamless interactions.</p>
+        <button id="viewWorkButton" class="view-work-button">View My Work</button>
+    </section>
+
     <main>
-        <div class="gallery-navigation">
+        <div id="projects" class="gallery-navigation">
             <button class="nav-tag selected" data-tag="all">All Projects</button>
             <button class="nav-tag" data-tag="branding">Branding</button>
             <button class="nav-tag" data-tag="design strategy">Design Strategy</button>
@@ -30,6 +42,7 @@
         </div>
         <div class="image-gallery"></div>
     </main>
+
     <!-- Include footer.html -->
     <html-fragment src="/components/footer.html"></html-fragment>
 </body>

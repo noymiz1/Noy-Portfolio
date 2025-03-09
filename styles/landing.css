@@ -1,0 +1,112 @@
+/* Landing Page Styles with Pixel Effect Support */
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    text-align: left;
+    background-color: #f5f5f5;
+    padding: 20px;
+    padding-left: 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background gradient effect */
+.landing-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    z-index: -1;
+}
+
+/* Content styles - will be moved into the blur container by JS */
+.landing-page h1 {
+    font-family: 'PanamaProportionalRegular', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
+}
+
+.landing-page p {
+    font-family: 'Balto-Book', sans-serif; /* Use Balto-Book font for secondary text */
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 3;
+    max-width: 540px;
+    line-height: 1.4;
+}
+
+.view-work-button {
+    font-family: 'PanamaProportionalRegular', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #333;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 3;
+}
+
+.view-work-button:hover {
+    background-color: #555;
+}
+
+/* Styles for the blur container (created by JS) */
+.content-blur-container {
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.landing-page:hover .content-blur-container {
+    transform: translateY(-5px);
+}
+
+/* Enhance the pixel effect container */
+.pixels-container {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.landing-page:hover .pixels-container {
+    opacity: 1;
+}
+
+/* Optional: Hide the pixels on mobile devices */
+@media (max-width: 768px) {
+    .pixels-container {
+        display: none;
+    }
+    
+    .content-blur-container {
+        background-color: rgba(245, 245, 245, 0.8) !important;
+        backdrop-filter: blur(5px);
+        padding: 20px !important;
+    }
+    
+    .landing-page {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .landing-page h1 {
+        font-size: 2rem;
+    }
+    
+    .landing-page p {
+        font-size: 1.2rem;
+    }
+}
