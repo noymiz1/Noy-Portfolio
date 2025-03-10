@@ -27,7 +27,7 @@
 
 /* Content styles - will be moved into the blur container by JS */
 .landing-page h1 {
-    font-family: "RoobertSemiMonoTRIAL-Regular", sans-serif;
+    font-family: "RoobertTRIAL-Regular", sans-serif;
     color:rgb(77, 81, 81);
     letter-spacing: -1px;
     font-style: normal;
@@ -56,7 +56,7 @@
     background-color: #333;
     border: none;
     padding: 15px 30px;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: relative;
