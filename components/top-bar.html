@@ -6,13 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://use.typekit.net/oyw2ysf.css">
     <link rel="icon" href="/assets/horse_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/top-bar.css">
 </head>
 <body>
-    <div class="top-bar">
-      <a href="/">
+    <div class="top-bar" id="topBar">
+      <a href="/" id="topBarLink">
           <div class="name">
-              <span class="name-letter">N</span><span class="name-letter">o</span><span class="name-letter">y</span>
-              <span class="name-letter">M</span><span class="name-letter">i</span><span class="name-letter">z</span><span class="name-letter">r</span><span class="name-letter">a</span><span class="name-letter">c</span><span class="name-letter">h</span><span class="name-letter">i</span> 
+              <span class="name-full">
+                <span class="name-letter">N</span><span class="name-letter">o</span><span class="name-letter">y</span>
+                <span class="name-letter">M</span><span class="name-letter">i</span><span class="name-letter">z</span><span class="name-letter">r</span><span class="name-letter">a</span><span class="name-letter">c</span><span class="name-letter">h</span><span class="name-letter">i</span>
+              </span>
+              <span class="name-initials">NM</span>
           </div>
       </a>
       <nav class="menu">
@@ -20,37 +24,27 @@
       </nav>
     </div>
 
-<!-- About Modal -->
-<div id="aboutModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-  
-      <!-- About Me Title (Hover Trigger) -->
-      <h2 class="hover-trigger">Hi! I'm Noy. 🐙</h2>
-  
-      <!-- About Bio -->
-      <p class="about-bio">
-        I'm a designer crafting intuitive experiences with a focus on visual storytelling, usability, and seamless interactions. 
-        With a Master’s in Design Studies from Harvard GSD and a background in graphic design and computer science, 
-        I bring a multidisciplinary approach to digital design. Always excited about building well-crafted products with ambitious teams. 
-        Currently shaping digital experiences at Sony Pictures.
-      </p>
-  
-      <!-- Contact Info -->
-      <div class="about-contact">
-        <p>📩 <a href="mailto:workwithnoy@gmail.com">workwithnoy@gmail.com</a></p>
-        <p>💼 <a href="https://www.linkedin.com/in/noymizrachi/" target="_blank">linkedin.com/in/noymizrachi/</a></p>
-      </div>
-  
-      <!-- Download CV Button -->
-      <div class="cv-download">
-        <a href="/assets/Noy Mizrachi_CV_March_2025.pdf" target="_blank" class="cv-button">Download CV</a>
-      </div>
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="hover-trigger">Hi! I'm Noy. 🐙</h2>
+            <p class="about-bio">
+                I'm a designer crafting intuitive experiences with a focus on visual storytelling, usability, and seamless interactions. 
+                With a Master's in Design Studies from Harvard GSD and a background in graphic design and computer science, 
+                I bring a multidisciplinary approach to digital design. Always excited about building well-crafted products with ambitious teams. 
+                Currently shaping digital experiences at Sony Pictures.
+            </p>
+            <div class="about-contact">
+                <p>📩 <a href="mailto:workwithnoy@gmail.com">workwithnoy@gmail.com</a></p>
+                <p>💼 <a href="https://www.linkedin.com/in/noymizrachi/" target="_blank">linkedin.com/in/noymizrachi/</a></p>
+            </div>
+            <div class="cv-download">
+                <a href="/assets/Noy Mizrachi_CV_March_2025.pdf" target="_blank" class="cv-button">Download CV</a>
+            </div>
+        </div>
     </div>
-  </div>
-  
-  
-  
-  
+    
+    <script src="js/scroll-transition.js" defer></script>
 </body>
 </html>
