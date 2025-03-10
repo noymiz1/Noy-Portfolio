@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A Knot</title>
+    <link rel="stylesheet" href="/styles/top-bar.css">
     <link rel="stylesheet" href="/styles/styles.css">
-
+    <link rel="stylesheet" href="https://use.typekit.net/oyw2ysf.css">
+    
     <script src="/js/html-fragment.js" type="module"></script>
 </head>
-
 <body>
     <html-fragment src="/components/top-bar.html"></html-fragment>
     <main>
@@ -19,11 +19,9 @@
                 2022<br><br>A Knot is a short film I developed during Harvard University's Experimental Animation course. Drawing inspiration from a 3rd-century Coptic textile in the Harvard Art Museums collection, this project explores the concept of the Ouroboros, aiming to create an endless loop of motion using a variety of materials.
                 
                 <br><br>The film was crafted through stop-motion animation over the course of many hours, using a light box, sand, fake worms, yarn, and shoes.  
-        
             </p>
         </div>
         
-        <!-- Moved project images outside of project-container -->
         <div class="project-images">
             <div class="project-video">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/7r4n4fM5_aU?si=lPtRduOQjLUzdUtC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -43,17 +41,10 @@
                 </div>
             </div>
         </div>
-        
-        
-        
-        <!-- <div class="lightbox" id="lightbox">
-            <span class="close" id="closeLightbox">&times;</span>
-            <img class="lightbox-content" id="lightboxImg" src="">
-            <span class="zoom-in" id="zoomIn">&#128269;</span> 
-        </div> -->
-
     </main>
-    <script src="/js/nightMode.js" defer></script>
 
+    <script src="/js/top-bar-minimizer.js" defer></script>
+    <script src="/js/nightMode.js" defer></script>
     <html-fragment src="/components/footer.html"></html-fragment>
-    <!-- <script src="js/lightbox.js"></script> -->
+</body>
+</html>

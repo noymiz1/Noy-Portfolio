@@ -1,21 +1,18 @@
-class FetchReplaceElement extends HTMLElement {
+class HTMLFragment extends HTMLElement {
     constructor() {
         super();
-        const src = this.getAttribute('src');
-
-        if (src) {
-            fetch(src)
-                .then(response => response.text())
-                .then(data => {
-                    this.outerHTML = data;
-                })
-                .catch(error => {
-                    console.error('There was an error fetching the content:', error);
-                });
-        }
+        this.loadContent();
     }
 
-    connectedCallback() { }
+    loadContent() {
+        fetch(this.getAttribute('src'))
+            .then(response => response.text())
+            .then(html => {
+                this.innerHTML = html;
+                document.dispatchEvent(new CustomEvent('fragmentsLoaded'));
+            })
+            .catch(error => console.error('Error loading fragment:', error));
+    }
 }
 
-customElements.define('html-fragment', FetchReplaceElement);
+customElements.define('html-fragment', HTMLFragment);
