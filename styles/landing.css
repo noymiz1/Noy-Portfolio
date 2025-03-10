@@ -27,7 +27,10 @@
 
 /* Content styles - will be moved into the blur container by JS */
 .landing-page h1 {
-    font-family: 'PanamaProportionalRegular', sans-serif;
+    font-family: "RoobertSemiMonoTRIAL-Regular", sans-serif;
+    color:rgb(77, 81, 81);
+    letter-spacing: -1px;
+    font-style: normal;
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 20px;
@@ -47,7 +50,7 @@
 }
 
 .view-work-button {
-    font-family: 'PanamaProportionalRegular', sans-serif;
+    font-family: 'RoobertTRIAL-Regular', sans-serif;
     font-size: 1.2rem;
     color: white;
     background-color: #333;

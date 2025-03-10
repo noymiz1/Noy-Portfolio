@@ -8,8 +8,32 @@
 @import url('/styles/modal.css');
 
 @font-face {
+  font-family: 'Sohne-Kraftig';
+  src: url('../fonts/TestSöhne-Kräftig.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Sohne-Halbfett';
+  src: url('../fonts/TestSöhne-Halbfett.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
   font-family: 'Balto-Book';
   src: url('../fonts/Balto-Book.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RoobertSemiMonoTRIAL-Regular';
+  src: url('../fonts/RoobertSemiMonoTRIAL-Regular.otf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RoobertTRIAL-Regular';
+  src: url('../fonts/RoobertTRIAL-Regular.otf') format('truetype');
   font-weight: normal;
 }
 

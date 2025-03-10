@@ -1,15 +1,32 @@
-.gallery-navigation {
-  padding: 10px;
-  padding-left: 50px;
+/* Container wrapper with perfect centering */
+.container-wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0;
   box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Gallery Navigation Styles */
+.gallery-navigation {
+  padding: 10px 10px 5px 10px; /* Equal padding on both sides */
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5px;
+  width: 100%;
+  max-width: 1375px;
 }
 
 .nav-tag {
-  padding: 4px 8px;
+  padding: 6px 12px;
   background-color: #ffffff;
-  /* Dark background*/
   color: #000000;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   border-radius: 1000px;
   margin-bottom: 2px;
   height: min-content;
@@ -19,7 +36,7 @@
 
 .nav-tag:hover {
   background-color: #000000;
-  color: white
+  color: white;
 }
 
 .nav-tag.selected {
@@ -27,26 +44,65 @@
   color: white;
 }
 
+/* Gallery Styles */
 .image-gallery {
   display: flex;
-  box-sizing: border-box;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 15px;
+  padding: 10px 10px 20px 10px; /* Equal padding on both sides */
   width: 100%;
+  max-width: 1375px;
 }
 
+/* This ensures equal spacing on the right side */
+.image-gallery::after {
+  content: "";
+  flex: 0 0 calc(33.333% - 10px);
+  max-width: calc(33.333% - 10px);
+  visibility: hidden;
+  height: 0;
+}
+
+/* Gallery entries */
 .gallery-entry {
-  width: calc(1/3*100vw - 50px);
-  margin: 10px;
-  min-width: 360px;
-  max-width: 460px;
+  flex: 0 0 calc(33.333% - 10px); /* More precise calculation */
+  margin: 0;
+  min-width: 320px;
+  max-width: 450px;
   cursor: pointer;
   background: #f8f8f8;
   border-radius: 10px;
   box-sizing: border-box;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 1px solid lightgrey; /* Changed this line */
+  border: 1px solid lightgrey;
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease, transform 0.6s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.gallery-entry.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Add staggered animation delay for a nice cascade effect */
+.gallery-entry:nth-child(3n+1) {
+  transition-delay: 0.1s;
+}
+
+.gallery-entry:nth-child(3n+2) {
+  transition-delay: 0.2s;
+}
+
+.gallery-entry:nth-child(3n+3) {
+  transition-delay: 0.3s;
+}
+
+.gallery-entry:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
 }
 
 .gallery-entry img {
@@ -72,95 +128,73 @@
   text-align: center;
 }
 
-.gallery-entry:hover {
-  border: 1px solid black; /* Added this line */
-}
-
-.gallery-entry:hover .gallery-text {
-  opacity: 1;
-}
-
-
 .gallery-entry:hover .gallery-text {
   opacity: 1;
 }
 
 .gallery-description,
 .gallery-tags {
-  line-height: 1.2;
-  margin-bottom: 5px;
-  padding: 10px;
-  font-family: 'Balto-book', sans-serif;
+  line-height: 1.4;
+  padding: 12px 15px;
+  font-family: 'Balto-Book', sans-serif;
+}
+
+.gallery-description {
   font-size: 16px;
+  margin-bottom: 0;
+  padding-bottom: 6px;
 }
 
 .gallery-tags {
   color: grey;
   font-size: 14px;
+  padding-top: 0;
+  padding-bottom: 15px;
 }
 
-/* ... Your existing styles ... */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .gallery-navigation,
+  .image-gallery {
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 10px;
+  }
 
-/* Night Mode overrides */
-body[data-theme="dark"] {
-  background-color: black;
+  .nav-tag {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+  }
+
+  .gallery-entry {
+      flex: 0 0 calc(50% - 10px);
+      width: calc(50% - 10px);
+  }
+
+  .gallery-text {
+      font-size: 0.9rem;
+  }
+  
+  .gallery-description,
+  .gallery-tags {
+      padding: 10px 12px;
+  }
+  
+  /* Adjust the pseudo-element for two items per row */
+  .image-gallery::after {
+      flex: 0 0 calc(50% - 10px);
+      max-width: calc(50% - 10px);
+  }
 }
 
-body[data-theme="dark"] .nav-tag {
-  background-color: black;
-  color: white;
-  border-color: white;
-}
-
-body[data-theme="dark"] .nav-tag:hover,
-body[data-theme="dark"] .nav-tag.selected {
-  background-color: white;
-  color: black;
-}
-
-body[data-theme="dark"] .gallery-entry {
-  background: black;
-  border-color: white;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
-}
-
-body[data-theme="dark"] .gallery-entry:hover {
-  border-color: white;
-}
-
-body[data-theme="dark"] .gallery-description,
-body[data-theme="dark"] .gallery-tags {
-  color: white;
-}
-
-body[data-theme="dark"] .gallery-tags {
-  color: lightgray;
-}
-
-body[data-theme="dark"] .gallery-text {
-  mix-blend-mode: screen; /* Change the blend mode so text remains visible against dark backgrounds */
-}
-
-.glyph-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: -1; /* Set behind other content */
-}
-
-.glyph-style {
-  position: absolute;
-  font-family: 'PanamaProportionaRegular', serif;
-  font-size: 35px; 
-  color: #000; 
-  opacity: 0; 
-  transition: opacity 0.5s ease-out;
-  user-select: none;
-}
-
-/* Add styles to ensure widgets are above the glyphs */
-.widget-class {
-  position: relative;
-  z-index: 1;
+@media (max-width: 480px) {
+  .gallery-entry {
+      flex: 0 0 100%;
+      width: 100%;
+  }
+  
+  /* Remove the pseudo-element for one item per row */
+  .image-gallery::after {
+      display: none;
+  }
 }

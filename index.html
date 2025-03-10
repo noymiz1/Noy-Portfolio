@@ -15,6 +15,7 @@
     <script src="/js/nightMode.js" defer></script>
     <script src="/js/scroll.js" defer></script>
     <script src="/js/hover-pixel-effect.js" defer></script>
+    <script src="/js/scroll-animation.js" defer></script>
 </head>
 <body>
     <!-- Include top-bar.html -->
@@ -23,24 +24,27 @@
     <!-- Landing Page Section -->
     <section class="landing-page">
         <h1>Crafting intuitive digital experiences</h1>
-        <p>Product designer focusing on visual storytelling, usability, and seamless interactions.</p>
+        <p>Product & brand designer focusing on visual storytelling, usability, and seamless interactions.</p>
         <button id="viewWorkButton" class="view-work-button">View My Work</button>
     </section>
 
     <main>
-        <div id="projects" class="gallery-navigation">
-            <button class="nav-tag selected" data-tag="all">All Projects</button>
-            <button class="nav-tag" data-tag="branding">Branding</button>
-            <button class="nav-tag" data-tag="design strategy">Design Strategy</button>
-            <button class="nav-tag" data-tag="product design">Product Design</button>
-            <button class="nav-tag" data-tag="data visualization">Data Visualization</button>
-            <button class="nav-tag" data-tag="animation">Animation</button>
-            <button class="nav-tag" data-tag="packaging">Packaging</button>
-            <button class="nav-tag" data-tag="print">Print</button>
-            <button class="nav-tag" data-tag="fabrication">Fabrication</button>
-            <button class="nav-tag" data-tag="production">Production</button>
+        <!-- Container wrapper for perfect centering -->
+        <div class="container-wrapper">
+            <div id="projects" class="gallery-navigation">
+                <button class="nav-tag selected" data-tag="all">All Projects</button>
+                <button class="nav-tag" data-tag="branding">Branding</button>
+                <button class="nav-tag" data-tag="design strategy">Design Strategy</button>
+                <button class="nav-tag" data-tag="product design">Product Design</button>
+                <button class="nav-tag" data-tag="data visualization">Data Visualization</button>
+                <button class="nav-tag" data-tag="animation">Animation</button>
+                <button class="nav-tag" data-tag="packaging">Packaging</button>
+                <button class="nav-tag" data-tag="print">Print</button>
+                <button class="nav-tag" data-tag="fabrication">Fabrication</button>
+                <button class="nav-tag" data-tag="production">Production</button>
+            </div>
+            <div class="image-gallery"></div>
         </div>
-        <div class="image-gallery"></div>
     </main>
 
     <!-- Include footer.html -->
