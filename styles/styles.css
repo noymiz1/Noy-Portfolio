@@ -7,6 +7,11 @@
 @import url('/styles/night-mode.css');
 @import url('/styles/modal.css');
 
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balto-Book&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RoobertTRIAL-Regular&display=swap');
+
 @font-face {
   font-family: 'Sohne-Kraftig';
   src: url('../fonts/TestSöhne-Kräftig.otf') format('opentype');

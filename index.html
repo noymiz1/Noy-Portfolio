@@ -16,41 +16,76 @@
     <script src="/js/scroll.js" defer></script>
     <script src="/js/hover-pixel-effect.js" defer></script>
     <script src="/js/scroll-animation.js" defer></script>
+    <script src="/js/pixel-eyes.js" defer></script>
 </head>
 <body>
-    <!-- Include top-bar.html -->
-    <html-fragment src="/components/top-bar.html"></html-fragment>
 
-    <!-- Landing Page Section -->
-    <section class="landing-page">
-        <h1>Crafting intuitive digital experiences</h1>
-        <p>Product & brand designer focusing on visual storytelling, usability, and seamless interactions.</p>
-        <button id="viewWorkButton" class="view-work-button">View My Work</button>
-    </section>
+  
+</div>
 
-    <main>
-        <!-- Container wrapper for perfect centering -->
-        <div class="container-wrapper">
-            <div id="projects" class="gallery-navigation">
-                <button class="nav-tag selected" data-tag="all">All Projects</button>
-                <button class="nav-tag" data-tag="branding">Branding</button>
-                <button class="nav-tag" data-tag="design strategy">Design Strategy</button>
-                <button class="nav-tag" data-tag="product design">Product Design</button>
-                <button class="nav-tag" data-tag="data visualization">Data Visualization</button>
-                <button class="nav-tag" data-tag="animation">Animation</button>
-                <button class="nav-tag" data-tag="packaging">Packaging</button>
-                <button class="nav-tag" data-tag="print">Print</button>
-                <button class="nav-tag" data-tag="fabrication">Fabrication</button>
-                <button class="nav-tag" data-tag="production">Production</button>
+<!-- Include top-bar.html -->
+<html-fragment src="/components/top-bar.html"></html-fragment>
+
+<!-- Landing Page Section -->
+<section class="landing-page">
+    <div class="headline-container">
+        <h1 class="headline">Crafting intuitive digital experiences</h1>
+        
+        <!-- Interactive Folder Element -->
+        <div class="folder-interaction">
+            <div class="folder-wrapper">
+                <!-- Folder emoji centered in wrapper -->
+                <div class="folder-emoji" id="folderEmoji">📁</div>
+                
+                <!-- Arrow is absolute positioned relative to wrapper -->
+                <div class="folder-arrow">
+                    <img src="/assets/arrow2.SVG" alt="Arrow" class="arrow-img">
+                    <span class="click-here-text">Click here</span>
+                </div>
             </div>
-            <div class="image-gallery"></div>
+            
+            <!-- Preview Images (initially hidden) -->
+            <div class="preview-images-container">
+                <div class="preview-image-item" id="previewImage1">
+                    <img src="/images/assets/preview1.jpg" alt="Project Preview 1">
+                </div>
+                <div class="preview-image-item" id="previewImage2">
+                    <img src="/images/projects/preview2.jpg" alt="Project Preview 2">
+                </div>
+                <div class="preview-image-item" id="previewImage3">
+                    <img src="/images/projects/preview3.jpg" alt="Project Preview 3">
+                </div>
+            </div>
         </div>
-    </main>
+    </div>
+    <p>Product & brand designer focusing on visual storytelling, usability, and seamless interactions.</p>
+    <button id="viewWorkButton" class="view-work-button">View My Work</button>
+</section>
 
-    
-    <html-fragment src="/components/footer.html"></html-fragment>
-    
-    <script src="js/html-fragment.js" type="module"></script>
-    <script src="js/top-bar-minimizer.js" defer></script>
+<main>
+    <!-- Container wrapper for perfect centering -->
+    <div class="container-wrapper">
+        <div id="projects" class="gallery-navigation">
+            <button class="nav-tag selected" data-tag="all">All Projects</button>
+            <button class="nav-tag" data-tag="branding">Branding</button>
+            <button class="nav-tag" data-tag="design strategy">Design Strategy</button>
+            <button class="nav-tag" data-tag="product design">Product Design</button>
+            <button class="nav-tag" data-tag="data visualization">Data Visualization</button>
+            <button class="nav-tag" data-tag="animation">Animation</button>
+            <button class="nav-tag" data-tag="packaging">Packaging</button>
+            <button class="nav-tag" data-tag="print">Print</button>
+            <button class="nav-tag" data-tag="fabrication">Fabrication</button>
+            <button class="nav-tag" data-tag="production">Production</button>
+        </div>
+        <div class="image-gallery"></div>
+    </div>
+</main>
+
+<html-fragment src="/components/footer.html"></html-fragment>
+
+<script src="js/html-fragment.js" type="module"></script>
+<script src="js/top-bar-minimizer.js" defer></script>
+<script src="js/about-pointer.js" defer></script>
+<script src="js/folder-interaction.js" defer></script>
 </body>
 </html>

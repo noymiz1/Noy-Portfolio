@@ -1,14 +1,13 @@
-/* Landing Page Styles with Pixel Effect Support */
+/* Landing Page Styles */
 .landing-page {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: 100vh;
-    text-align: left;
+    text-align: center;
     background-color: #f5f5f5;
     padding: 20px;
-    padding-left: 10%;
     position: relative;
     overflow: hidden;
 }
@@ -25,21 +24,30 @@
     z-index: -1;
 }
 
-/* Content styles - will be moved into the blur container by JS */
+/* Left content container */
+.landing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 .landing-page h1 {
-    font-family: "RoobertTRIAL-Regular", sans-serif;
-    color:rgb(77, 81, 81);
+    font-family: 'RoobertTRIAL-Regular', sans-serif;
+    font-weight: 700;
+    color: #333;
     letter-spacing: -1px;
     font-style: normal;
     font-size: 2.5rem;
-    color: #333;
     margin-bottom: 20px;
     position: relative;
     z-index: 3;
 }
 
 .landing-page p {
-    font-family: 'Balto-Book', sans-serif; /* Use Balto-Book font for secondary text */
+    font-family: 'Balto-Book', sans-serif;
     font-size: 1.5rem;
     color: #555;
     margin-bottom: 40px;
@@ -52,151 +60,217 @@
 .view-work-button {
     font-family: 'RoobertTRIAL-Regular', sans-serif;
     font-size: 1.2rem;
-    color: white;
-    background-color: #333;
-    border: none;
+    color: #333;
+    background-color: transparent;
+    border: 2px solid #333;
     padding: 15px 30px;
-    border-radius: 15px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     position: relative;
     z-index: 3;
 }
 
 .view-work-button:hover {
-    background-color: #555;
+    background-color: #333;
+    color: white;
 }
 
-/* Styles for the blur container (created by JS) */
-.content-blur-container {
-    transform: translateY(0);
+/* Right folder container */
+.folder-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+}
+/* Create a wrapper for the folder to maintain centering */
+.folder-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Update folder interaction to center the wrapper */
+.folder-interaction {
+    position: relative;
+    transform: scale(1.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 30px auto;
+}
+
+/* Keep existing folder emoji styles, but make sure it's displayed as a block */
+.folder-emoji {
+    font-size: 3.5rem;
+    cursor: pointer;
     transition: transform 0.3s ease;
+    user-select: none;
+    z-index: 20;
+    display: block;
 }
 
-.landing-page:hover .content-blur-container {
-    transform: translateY(-5px);
+.folder-emoji:hover {
+    transform: scale(1.1);
 }
 
-/* Enhance the pixel effect container */
-.pixels-container {
+.folder-emoji.active {
+    transform: scale(1.2) rotate(5deg);
+}
+
+/* Styling for arrow image inside the blurred container */
+.folder-arrow {
+    position: relative;
+    display: inline-block;
+    opacity: .85;
+    right: 40px;
+    transform: translate(-30px, -50px) rotate(-7deg);
+    margin-right: 10px; /* Reduced space between arrow and folder */
+    vertical-align: middle;
+    z-index: 30;
+    pointer-events: none;
+    width: 70px;
+    
+}
+
+.arrow-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 40px; /* Reduced from 60px */
+    opacity: 0.8; /* Slightly lighter */
+}
+
+/* Text for "click here" - smaller and lighter */
+.click-here-text {
+    position: absolute;
+    bottom: 0;
+    left: 20px; /* Adjusted position */
+    font-family: 'RoobertSemiMonoTRIAL-Regular', sans-serif;
+    letter-spacing: -0.7px;
+    color: #8840c7;
+    font-size: 0.7rem; /* Reduced from 1rem */
+    font-weight: 400; /* Lighter weight */
+    transform: translate(-50px, 20px) rotate(17deg);
+    white-space: nowrap;
+    opacity: 0.75; /* Make text lighter */
+}
+
+/* Improved preview image positioning to fan out from the right */
+.preview-images-container {
+    position: absolute;
+    top: 0;
+    right: -400px; /* Position at the right edge of the container */
+    width: 400px;
+    height: 400px;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Individual Preview Image Items with better fanning */
+.preview-image-item {
+    position: absolute;
+    width: 180px;
+    height: 135px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
 }
 
-.landing-page:hover .pixels-container {
+.preview-image-item.active {
     opacity: 1;
+    pointer-events: auto;
 }
 
-/* Optional: Hide the pixels on mobile devices */
+/* Adjusted positions for better fanning */
+#previewImage1.active {
+    transform: translate(-100px, -170px) rotate(-15deg) scale(1.2);
+    z-index: 13;
+}
+
+#previewImage2.active {
+    transform: translate(10px, -30px) rotate(-2deg) scale(1.2);
+    z-index: 12;
+}
+
+#previewImage3.active {
+    transform: translate(-50px, 120px) rotate(15deg) scale(1.2);
+    z-index: 11;
+}
+
+.preview-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Folder overlay */
+.folder-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 5;
+    display: none;
+}
+
+.folder-overlay.active {
+    display: block;
+}
+
+
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .pixels-container {
-        display: none;
-    }
-    
-    .content-blur-container {
-        background-color: rgba(245, 245, 245, 0.8) !important;
-        backdrop-filter: blur(5px);
-        padding: 20px !important;
-    }
-    
     .landing-page {
-        padding-left: 5%;
-        padding-right: 5%;
+        flex-direction: column;
+        padding: 20px 5%;
+        text-align: center;
     }
-    
+
+    .landing-content {
+        flex: 0 1 auto;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+
     .landing-page h1 {
         font-size: 2rem;
     }
-    
+
     .landing-page p {
         font-size: 1.2rem;
+        margin-left: auto;
+        margin-right: auto;
     }
-}
-/* Recent Project Widget Styles */
-.recent-project-widget {
-    flex: 1;
-    max-width: 600px;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
 
-.slider-container {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-}
+    .folder-container {
+        flex: 0 1 auto;
+        justify-content: center;
+    }
 
-.slider-wrapper {
-    display: flex;
-    transition: transform 0.3s ease;
-}
+    .folder-interaction {
+        margin-left: 0;
+        transform: scale(1.2);
+    }
 
-.slider-wrapper img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    flex-shrink: 0;
-}
+    .preview-images-container {
+        width: 300px;
+    }
 
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.2rem;
-    z-index: 2;
-}
-
-.slider-arrow.prev {
-    left: 20px;
-}
-
-.slider-arrow.next {
-    right: 20px;
-}
-
-.slider-dots {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    padding: 10px 0;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #ccc;
-    cursor: pointer;
-}
-
-.dot.active {
-    background: #333;
-}
-
-.project-info {
-    padding: 20px;
-}
-
-.project-tags {
-    display: flex;
-    gap: 8px;
-    margin: 15px 0;
-    flex-wrap: wrap;
-}
-
-.tag {
-    background: #f0f0f0;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: #555;
+    .preview-image-item {
+        width: 140px;
+        height: 105px;
+    }
+    
+    .folder-arrow {
+        display: none;
+    }
 }
