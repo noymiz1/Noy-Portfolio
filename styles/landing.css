@@ -151,7 +151,7 @@
     left: 20px; /* Adjusted position */
     font-family: 'RoobertSemiMonoTRIAL-Regular', sans-serif;
     letter-spacing: -0.7px;
-    color: #8840c7;
+    color: #8114e1;
     font-size: 0.7rem; /* Reduced from 1rem */
     font-weight: 400; /* Lighter weight */
     transform: translate(-50px, 20px) rotate(17deg);
@@ -173,8 +173,8 @@
 /* Individual Preview Image Items with better fanning */
 .preview-image-item {
     position: absolute;
-    width: 180px;
-    height: 135px;
+    width: 135px;
+    height: 101px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -190,17 +190,17 @@
 
 /* Adjusted positions for better fanning */
 #previewImage1.active {
-    transform: translate(-100px, -170px) rotate(-15deg) scale(1.2);
+    transform: translate(-100px, -125px) rotate(-15deg) scale(1.2);
     z-index: 13;
 }
 
 #previewImage2.active {
-    transform: translate(10px, -30px) rotate(-2deg) scale(1.2);
+    transform: translate(-30px, -10px) rotate(0deg) scale(1.2);
     z-index: 12;
 }
 
 #previewImage3.active {
-    transform: translate(-50px, 120px) rotate(15deg) scale(1.2);
+    transform: translate(-70px, 110px) rotate(15deg) scale(1.2);
     z-index: 11;
 }
 
