@@ -1,3 +1,4 @@
+/* Top Bar Styles */
 .top-bar {
   display: flex !important;
   align-items: center !important;
@@ -127,49 +128,50 @@
 
 /* Menu styling */
 .menu {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: flex-end;
-    height: 100%;
-    padding-right: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 100%;
+  padding-right: 50px;
+  margin-top: 5px; /* Adjusted to lower the menu slightly */
 }
 
 .about-wrapper {
-    display: inline-flex;
-    align-items: center;
-    margin-right: 15px;
-    height: 100%;
-    position: relative;
-    padding: 15px 0; /* Add padding to create space from top/bottom */
+  display: inline-flex;
+  align-items: center;
+  margin-right: 15px;
+  height: 100%;
+  position: relative;
+  padding: 15px 0; /* Add padding to create space from top/bottom */
 }
 
 .menu-item,
 .about-wrapper a,
 .menu a {
-    display: inline-flex;
-    align-items: center;
-    font-family: 'Balto-Book', sans-serif;
-    font-size: 1.2rem;
-    color: inherit;
-    text-decoration: none;
-    padding: 5px 10px; /* Very small vertical padding */
-    background: transparent;
-    border: 1.5px solid transparent; /* Slightly thinner border */
-    border-radius: 25px; /* Slightly smaller radius */
-    transition: all 0.3s ease;
-    height: fit-content; /* Ensure height matches content */
-    line-height: 1; /* Tighter line height */
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Balto-Book', sans-serif;
+  font-size: 1.2rem;
+  color: inherit;
+  text-decoration: none;
+  padding: 5px 10px; /* Very small vertical padding */
+  background: transparent;
+  border: 1.5px solid transparent; /* Slightly thinner border */
+  border-radius: 25px; /* Slightly smaller radius */
+  transition: all 0.3s ease;
+  height: fit-content; /* Ensure height matches content */
+  line-height: 1; /* Tighter line height */
 }
 
 .menu-item:hover,
 .about-wrapper a:hover,
 .menu a:hover {
-    border-color: #333;
-    text-decoration: none;
+  border-color: #333;
+  text-decoration: none;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
