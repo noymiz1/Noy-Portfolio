@@ -10,6 +10,13 @@ const GALLERY_DATA = [
   //   tags: ["branding", "packaging","video"]
   // },
   {
+    name: "Arctop",
+    href: "/projects/arctop.html",
+    src: "/assets/Thumbnails/arctop_thumbnail2.jpg",
+    text: "Product Design",
+    tags: ["product design", "branding", "design strategy"]
+  },
+  {
     name: "Philips",
     href: "/projects/philips.html",
     src: "/assets/Thumbnails/philips_thumbnail2.jpg",
@@ -33,9 +40,9 @@ const GALLERY_DATA = [
   {
     name: "Audiotate",
     href: "/projects/audiotate.html",
-    src:  "/assets/Thumbnails/Audiotate_Thumbnail.jpg",
+    src:  "/assets/Thumbnails/audiotate_thumbnail2.jpg",
     text: "Design for Desirability Lab, Harvard",
-    tags: ["design strategy", "branding", "product design"]
+    tags: ["product design", "design strategy", "branding",]
   },
   {
     name: "Carestry",

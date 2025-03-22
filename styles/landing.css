@@ -188,12 +188,29 @@
     pointer-events: auto;
 }
 
-/* Adjusted positions for better fanning */
+/* Special styling for iPhone mockup (previewImage1) */
+#previewImage1 {
+    width: 120px; /* Smaller size for the iPhone mockup */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0; /* Remove border radius */
+    overflow: visible; /* Allow image to extend beyond container */
+    box-shadow: none; /* Remove shadow */
+}
+
+#previewImage1 img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the whole image is visible */
+}
+
+/* When active, use your original positioning but without rotation */
 #previewImage1.active {
-    transform: translate(-100px, -125px) rotate(-15deg) scale(1.2);
+    opacity: 1;
+    transform: translate(-100px, -185px) rotate(10deg) scale(1); /* Your original X/Y positioning with no rotation */
     z-index: 13;
 }
 
+/* Adjusted positions for other preview images */
 #previewImage2.active {
     transform: translate(-30px, -10px) rotate(0deg) scale(1.2);
     z-index: 12;
@@ -225,8 +242,6 @@
 .folder-overlay.active {
     display: block;
 }
-
-
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -269,6 +284,10 @@
     .preview-image-item {
         width: 140px;
         height: 105px;
+    }
+    
+    #previewImage1 {
+        width: 150px; /* Slightly smaller on mobile */
     }
     
     .folder-arrow {

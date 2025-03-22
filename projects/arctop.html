@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arctop</title>
+    <!-- Add top-bar.css reference -->
+    <link rel="stylesheet" href="/styles/top-bar.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/oyw2ysf.css">
+    
+    <script src="/js/html-fragment.js" type="module"></script>
+</head>
+<body>
+    <html-fragment src="/components/top-bar.html"></html-fragment>
+    <main>
+        <div class="project-container">
+            <h2 class="project-title">Arctop</h2>
+            <p class="project-blurb">
+                2024<br><br>Audiotate is a music annotation digital platform that allows users from all music streaming apps to capture and revisit music as memories. It was created in Harvard University's Design for Desirability course.
+
+                It includes features like: personal lyric annotations, song-based journaling, customizable tags, cross-platform playlist organization
+                
+                <br><br>Audiotate provides a platform for intimate music discovery, archiving, and sharing.
+                
+                <br><br>Created in collaboration with Brenda Ceja, Daniela Villafuerte, Diana Zhu, Halima Badri, Kara Xie, and Sara-Ann Yong. My contribution came in the form of app and identity design for the application.
+            </p>
+        </div>
+        
+        <!-- Moved project images outside of project-container -->
+        <div class="project-images">
+            <img src="/assets/Audiotate/audiotate_pic1.jpg" alt="Project Image 1" class="project-image">
+            <img src="/assets/Audiotate/audiotate_pic2.jpg" alt="Project Image 2" class="project-image">
+            <img src="/assets/Audiotate/audiotate_pic3.jpg" alt="Project Image 3" class="project-image">
+            <img src="/assets/Audiotate/audiotate_pic4.jpg" alt="Project Image 4" class="project-image">
+            <img src="/assets/Audiotate/audiotate_pic5.jpg" alt="Project Image 5" class="project-image">
+            <img src="/assets/Audiotate/audiotate_pic6.jpg" alt="Project Image 6" class="project-image">
+        </div>
+    </main>
+
+    <!-- Add top-bar-minimizer.js before other scripts -->
+    <script src="/js/top-bar-minimizer.js" defer></script>
+    <script src="/js/nightMode.js" defer></script>
+    <html-fragment src="/components/footer.html"></html-fragment>
+</body>
+</html>
