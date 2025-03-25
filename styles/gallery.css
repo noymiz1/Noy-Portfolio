@@ -121,7 +121,7 @@
   transform: translate(-50%, -50%);
   color: white;
   mix-blend-mode: difference;
-  font-family: 'RoobertTRIAL-Regular', serif;
+  font-family: 'Test-Signifier-Light', serif;
   font-size: 3em;
   opacity: 0;
   transition: opacity 0.3s;

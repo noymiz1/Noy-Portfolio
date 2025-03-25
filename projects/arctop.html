@@ -3,44 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arctop</title>
-    <!-- Add top-bar.css reference -->
+    <title>Arctop | Brain Interface Application Design</title>
     <link rel="stylesheet" href="/styles/top-bar.css">
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/case-study.css">
     <link rel="stylesheet" href="https://use.typekit.net/oyw2ysf.css">
     
     <script src="/js/html-fragment.js" type="module"></script>
 </head>
 <body>
     <html-fragment src="/components/top-bar.html"></html-fragment>
-    <main>
-        <div class="project-container">
-            <h2 class="project-title">Arctop</h2>
-            <p class="project-blurb">
-                2024<br><br>Audiotate is a music annotation digital platform that allows users from all music streaming apps to capture and revisit music as memories. It was created in Harvard University's Design for Desirability course.
-
-                It includes features like: personal lyric annotations, song-based journaling, customizable tags, cross-platform playlist organization
-                
-                <br><br>Audiotate provides a platform for intimate music discovery, archiving, and sharing.
-                
-                <br><br>Created in collaboration with Brenda Ceja, Daniela Villafuerte, Diana Zhu, Halima Badri, Kara Xie, and Sara-Ann Yong. My contribution came in the form of app and identity design for the application.
-            </p>
+    
+     <!-- Hero Section - Updated Structure -->
+    <section class="case-study-hero fade-in">
+        <div class="hero-content">
+            <h1 class="project-title slide-up">Arctop</h1>
+            <h2 class="project-subtitle slide-up-delay">Designing an End-to-End Cognitive Decoding App</h2>
+            <div class="project-metadata slide-up-delay-2">
+                <span class="tag">Product Design</span>
+                <span class="tag">UI/UX</span>
+                <span class="tag">Cognitive Tech</span>
+                <span class="year">2024</span>
+            </div>
         </div>
         
-        <!-- Moved project images outside of project-container -->
-        <div class="project-images">
-            <img src="/assets/Audiotate/audiotate_pic1.jpg" alt="Project Image 1" class="project-image">
-            <img src="/assets/Audiotate/audiotate_pic2.jpg" alt="Project Image 2" class="project-image">
-            <img src="/assets/Audiotate/audiotate_pic3.jpg" alt="Project Image 3" class="project-image">
-            <img src="/assets/Audiotate/audiotate_pic4.jpg" alt="Project Image 4" class="project-image">
-            <img src="/assets/Audiotate/audiotate_pic5.jpg" alt="Project Image 5" class="project-image">
-            <img src="/assets/Audiotate/audiotate_pic6.jpg" alt="Project Image 6" class="project-image">
+        <div class="hero-image-container fade-in-on-scroll">
+            <img src="/assets/Arctop/arctop-hero1.png" alt="Arctop App Hero Image" class="hero-image">
         </div>
+    </section>
+    
+    <main class="case-study-content">
+        <!-- Project Overview -->
+        <section class="content-section overview-section">
+            <div class="section-container">
+                <h3 class="section-title slide-up-on-scroll">Overview</h3>
+                <div class="two-column">
+                    <div class="column-content slide-up-on-scroll">
+                        <p>Arctop is a groundbreaking cognition decoding company that transforms brain signals into actionable insights. I was contracted to completely redesign their mobile app from end to end, covering everything from the homepage and calibration screens to QA, instructional content, and interactive calibration games.</p>
+                    </div>
+                    <div class="column-content slide-up-on-scroll delay-200">
+                        <p>The project aimed to streamline the user experience, enhance usability, and ensure visual cohesion throughout the app while maintaining the company's sleek, human-centered brand identity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Key Metrics Showcase -->
+        <!-- <section class="content-section metrics-section">
+            <div class="section-container">
+                <div class="metrics-showcase">
+                    <div class="metric fade-in-on-scroll">
+                        <div class="metric-icon">🧠</div>
+                        <h4>5 Cognitive Metrics</h4>
+                        <p>Focus, enjoyment, visual attention, auditory attention, and sleep</p>
+                    </div>
+                    <div class="metric fade-in-on-scroll delay-200">
+                        <div class="metric-icon">📱</div>
+                        <h4>25+ Screens</h4>
+                        <p>Comprehensive redesign of the entire mobile application</p>
+                    </div>
+                    <div class="metric fade-in-on-scroll delay-400">
+                        <div class="metric-icon">🎮</div>
+                        <h4>Interactive Games</h4>
+                        <p>Engagement-focused calibration activities</p>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+      
+        <!-- App Showcase -->
+        <section class="content-section app-showcase">
+            <div class="mockup-display">
+                <div class="phone-mockup slide-in-left">
+                    <img src="/assets/Arctop/mockup-1.png" alt="Arctop Dashboard" class="mockup-image">
+                    <p class="mockup-caption">Home Dashboard</p>
+                </div>
+                <div class="phone-mockup slide-in-up">
+                    <img src="/assets/Arctop/mockup-2.png" alt="Arctop Calibration" class="mockup-image">
+                    <p class="mockup-caption">Calibration Screen</p>
+                </div>
+                <div class="phone-mockup slide-in-right">
+                    <img src="/assets/Arctop/mockup-3.png" alt="Arctop Game" class="mockup-image">
+                    <p class="mockup-caption">Recording Session Screen</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Background & Context -->
+        <section class="content-section bg-section">
+            <div class="section-container">
+                <h3 class="section-title slide-up-on-scroll">Background & Context</h3>
+                <div class="content-block slide-up-on-scroll">
+                    <p>Arctop's original app presented users with a lengthy, single calibration process to unlock cognitive metrics. However, the goal was to move towards individual, targeted calibrations for each metric. The challenge was to enhance usability by creating an intuitive dashboard-style interface that maintained consistency with Arctop's sleek, human-centered brand identity.</p>
+                </div>
+                
+                <div class="image-container fade-in-on-scroll">
+                    <img src="/assets/placeholder-context.jpg" alt="Arctop Context" class="full-width-image">
+                    <p class="image-caption">Arctop's brain signal technology translates neural data into actionable insights</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Problem Statement -->
+        <section class="content-section problem-section alternate-bg">
+            <div class="section-container">
+                <h3 class="section-title slide-up-on-scroll">Problem Statement</h3>
+                <div class="problem-container">
+                    <div class="problem-item fade-in-on-scroll">
+                        <h4>Fragmented Experience</h4>
+                        <p>Users struggled to navigate the app's various screens, making the overall experience feel disjointed and unclear.</p>
+                    </div>
+                    <div class="problem-item fade-in-on-scroll delay-200">
+                        <h4>Complex User Flow</h4>
+                        <p>The lack of clarity around calibration processes and metric unlocking made it difficult for users to engage effectively.</p>
+                    </div>
+                    <div class="problem-item fade-in-on-scroll delay-400">
+                        <h4>Brand Alignment</h4>
+                        <p>Ensuring every element of the design adhered to Arctop's brand guidelines while maintaining usability and consistency across the entire app.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Research & Strategy -->
+        <section class="content-section research-section">
+            <div class="section-container">
+                <h3 class="section-title slide-up-on-scroll">Research & Strategy</h3>
+                <div class="two-column">
+                    <div class="column-content slide-up-on-scroll">
+                        <p>I began by diving into Arctop's brand guidelines to understand the visual identity and tone. I conducted user research through interviews and usability tests to identify pain points and desired features.</p>
+                        <p>A competitive analysis of similar apps in the cognitive tech and health-tech space provided insights on best practices for this specialized field.</p>
+                    </div>
+                    <div class="column-content slide-up-on-scroll delay-200">
+                        <p>User journey mapping was crucial to ensure coherence across all interactions, from onboarding to calibration games. I created comprehensive flow diagrams to visualize the entire user experience.</p>
+                    </div>
+                </div>
+                <div class="image-container fade-in-on-scroll">
+                    <img src="/assets/placeholder-research.jpg" alt="User Journey Map" class="full-width-image">
+                    <p class="image-caption">User journey mapping highlighted key touchpoints and opportunities</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Design Process -->
+        <section class="content-section process-section alternate-bg">
+            <div class="section-container">
+                <h3 class="section-title slide-up-on-scroll">Design Process</h3>
+                <div class="process-steps">
+                    <div class="process-step fade-in-on-scroll">
+                        <div class="step-number">01</div>
+                        <h4>Wireframing</h4>
+                        <p>Created low-fidelity wireframes to establish layout, flow, and hierarchy across all app screens.</p>
+                        <div class="step-image">
+                            <img src="/assets/placeholder-wireframes.jpg" alt="Wireframes" class="process-image">
+                        </div>
+                    </div>
+                    <div class="process-step fade-in-on-scroll delay-200">
+                        <div class="step-number">02</div>
+                        <h4>Prototyping</h4>
+                        <p>Developed high-fidelity prototypes in Figma, focusing on a clean dashboard and dynamic calibration screens.</p>
+                        <div class="step-image">
+                            <img src="/assets/placeholder-prototype.jpg" alt="Prototypes" class="process-image">
+                        </div>
+                    </div>
+                    <div class="process-step fade-in-on-scroll delay-400">
+                        <div class="step-number">03</div>
+                        <h4>Iterative Testing</h4>
+                        <p>Conducted multiple rounds of usability testing and refined the design based on feedback.</p>
+                        <div class="step-image">
+                            <img src="/assets/placeholder-testing.jpg" alt="Testing" class="process-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interactive Demo Section -->
+        <section class="content-section demo-section">
+            <div class="section-container">
+                <h3 class="section-title slide-up-on-scroll">Interactive Calibration Games</h3>
+                <p class="section-intro slide-up-on-scroll">A key innovation in the redesign was transforming the calibration process into engaging, gamified experiences.</p>
+                <div class="video-container fade-in-on-scroll">
+                    <div class="video-placeholder">
+                        <img src="/assets/placeholder-video.jpg" alt="Interactive Game Demo" class="video-thumbnail">
+                        <div class="play-button">▶</div>
+                    </div>
+                    <p class="video-caption">Animation demonstrates the interactive calibration game flow</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Final Solution -->
+        <section class="content-section solution-section alternate-bg">
+            <div class="section-container">
+                <h3 class="section-title slide-up-on-scroll">Final Solution</h3>
+                <div class="solution-features">
+                    <div class="feature-item fade-in-on-scroll">
+                        <h4>Unified Dashboard</h4>
+                        <p>Users can immediately see their available metrics, with clear options to initiate calibration or review insights.</p>
+                        <div class="feature-image">
+                            <img src="/assets/placeholder-dashboard.jpg" alt="Dashboard" class="solution-image">
+                        </div>
+                    </div>
+                    <div class="feature-item fade-in-on-scroll delay-200">
+                        <h4>Streamlined Navigation</h4>
+                        <p>Improved flows across calibration screens, QA, instructions, and the home dashboard.</p>
+                        <div class="feature-image">
+                            <img src="/assets/placeholder-navigation.jpg" alt="Navigation" class="solution-image">
+                        </div>
+                    </div>
+                    <div class="feature-item fade-in-on-scroll delay-400">
+                        <h4>Consistent Visual Language</h4>
+                        <p>A polished, professional aesthetic that reflects Arctop's brand identity throughout the entire application.</p>
+                        <div class="feature-image">
+                            <img src="/assets/placeholder-visual.jpg" alt="Visual Language" class="solution-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Results & Impact -->
+        <section class="content-section results-section">
+            <div class="section-container">
+                <h3 class="section-title slide-up-on-scroll">Results & Impact</h3>
+                <div class="content-block slide-up-on-scroll">
+                    <p>The redesigned app received positive feedback for its clarity, user-friendliness, and seamless interaction flow. Usability testing showed increased engagement with the app's features, and the improved interface has set the foundation for further development and refinement.</p>
+                </div>
+                <div class="testimonial fade-in-on-scroll">
+                    <blockquote>"The redesigned interface transformed our application's usability while maintaining our scientific credibility. The calibration games are particularly effective at making a complex process engaging."</blockquote>
+                    <cite>— Arctop Product Team</cite>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Reflection -->
+        <section class="content-section reflection-section alternate-bg">
+            <div class="section-container">
+                <h3 class="section-title slide-up-on-scroll">Reflection & Learnings</h3>
+                <div class="two-column">
+                    <div class="column-content slide-up-on-scroll">
+                        <p>This project demonstrated the importance of user-centered design through iterative testing and feedback, which were critical to delivering a polished experience.</p>
+                    </div>
+                    <div class="column-content slide-up-on-scroll delay-200">
+                        <p>Maintaining visual cohesion across various interfaces strengthened the app's identity, while gamifying calibration activities made the user experience both enjoyable and effective.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Next Project -->
+        <section class="next-project-section">
+            <div class="section-container">
+                <h3 class="next-project-title fade-in-on-scroll">Next Project</h3>
+                <a href="/projects/next-project.html" class="next-project-link fade-in-on-scroll">
+                    <span class="project-name">Project Name</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </section>
     </main>
 
-    <!-- Add top-bar-minimizer.js before other scripts -->
+    <html-fragment src="/components/footer.html"></html-fragment>
+    
+    <!-- Scripts -->
     <script src="/js/top-bar-minimizer.js" defer></script>
     <script src="/js/nightMode.js" defer></script>
-    <html-fragment src="/components/footer.html"></html-fragment>
+    <script src="/js/case-study-animations.js" defer></script>
 </body>
 </html>
