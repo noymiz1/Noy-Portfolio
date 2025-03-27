@@ -3,8 +3,8 @@
  * Creates colored pixel squares behind text on hover
  */
 document.addEventListener('DOMContentLoaded', function() {
-  // Configuration
-  const squareSize = 20;
+  // Configuration - keeping original size
+  const squareSize = 20; // Original size maintained
   const fadeOutDuration = 1000;
   const displayDuration = 4000;  // Shorter duration than original
   
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mouseY = e.clientY - rect.top;
   });
   
-  // Function to continuously create squares while hovering
+  // Function to continuously create squares while hovering - UPDATED FOR 3x3 GRID
   function createSquaresOnHover() {
     const currentTime = Date.now();
     
@@ -88,12 +88,12 @@ document.addEventListener('DOMContentLoaded', function() {
       // Get landing page dimensions
       const rect = landingPage.getBoundingClientRect();
       
-      // Create squares in a grid pattern around mouse
-      const startX = Math.floor(mouseX / squareSize) * squareSize - squareSize * 2;
-      const startY = Math.floor(mouseY / squareSize) * squareSize - squareSize * 2;
+      // Create squares in a 3x3 grid pattern around mouse (CHANGED FROM 5x5)
+      const startX = Math.floor(mouseX / squareSize) * squareSize - squareSize;
+      const startY = Math.floor(mouseY / squareSize) * squareSize - squareSize;
       
-      for (let x = startX; x < startX + squareSize * 5 && x < rect.width; x += squareSize) {
-        for (let y = startY; y < startY + squareSize * 5 && y < rect.height; y += squareSize) {
+      for (let x = startX; x < startX + squareSize * 3 && x < rect.width; x += squareSize) {
+        for (let y = startY; y < startY + squareSize * 3 && y < rect.height; y += squareSize) {
           if (x >= 0 && y >= 0) {
             createSquare(x, y);
           }
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       
       // Also create some random squares elsewhere for visual interest
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 2; i++) { // Reduced from 3 to 2
         const randX = Math.floor(Math.random() * rect.width);
         const randY = Math.floor(Math.random() * rect.height);
         createSquare(randX, randY);
@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Create a single colored square
+  // Create a single colored square - unchanged
   function createSquare(x, y) {
     const square = document.createElement('div');
     square.style.position = 'absolute';
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, displayDuration - fadeOutDuration);
   }
   
-  // Generate a random color with controlled opacity - using your original method
+  // Generate a random color with controlled opacity - unchanged
   function randomColor(alpha = 0.8) {
     const letters = '0123456789ABCDEF';
     let hex = '#';
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Pre-create some squares on page load for visual interest
   setTimeout(() => {
     const rect = landingPage.getBoundingClientRect();
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 20; i++) { // Reduced from 30 to 20
       const x = Math.floor(Math.random() * rect.width);
       const y = Math.floor(Math.random() * rect.height);
       createSquare(x, y);
