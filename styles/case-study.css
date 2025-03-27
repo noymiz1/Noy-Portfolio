@@ -289,6 +289,118 @@ p {
     text-align: center;
 }
 
+/* Updated Journey Map Container - better sizing and centering */
+.journey-map-container {
+    margin: 60px auto; /* Changed from 60px 0 to center container */
+    position: relative;
+    overflow-x: auto; /* Enable horizontal scrolling for wide maps */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: thin; /* Modern browsers */
+    scrollbar-color: rgba(0,0,0,0.2) transparent;
+    padding-bottom: 20px; /* Space for scrollbar */
+    max-width: 100%; /* Ensure it doesn't overflow the parent */
+    text-align: center; /* Center the image */
+}
+
+/* Custom scrollbar styling */
+.journey-map-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.journey-map-container::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+.journey-map-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+
+/* Updated journey map styling with better sizing */
+.journey-map {
+    display: inline-block; /* Allow centering */
+    width: auto; /* Let the image determine width */
+    max-width: 90%; /* Use percentage for better responsiveness */
+    height: auto;
+    max-height: 600px; /* Max height for very tall maps */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform var(--transition-speed) ease;
+}
+
+/* Responsive behavior for journey maps */
+@media (max-width: 1200px) {
+    .journey-map {
+        max-width: 95%; /* Slightly larger on medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .journey-map-container {
+        margin: 40px auto; /* Reduced margin on mobile */
+    }
+    
+    .journey-map {
+        max-width: 100%; /* Full width on small screens */
+        max-height: 500px; /* Reduced max height */
+    }
+    
+    /* Show scroll indicator on mobile */
+    .journey-map-container::after {
+        content: '← Scroll to view full map →';
+        position: absolute;
+        bottom: -20px; /* Position below scrollbar */
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #888;
+        opacity: 1; /* Always visible on mobile */
+        pointer-events: none;
+        padding: 4px 0;
+    }
+    
+    .journey-map-container {
+        background: linear-gradient(90deg, 
+            rgba(245, 245, 245, 0.2) 0%, 
+            transparent 2%, 
+            transparent 98%, 
+            rgba(245, 245, 245, 0.2) 100%);
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .journey-map {
+        max-height: 400px; /* Even smaller on phones */
+    }
+    
+    /* Clickable/tappable to view full size */
+    .journey-map:active {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.95);
+        z-index: 9999;
+        max-height: 90vh;
+        max-width: 90vw;
+        cursor: zoom-out;
+    }
+    
+    /* Overlay when image is zoomed */
+    .journey-map:active::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.8);
+        z-index: -1;
+    }
+}
+
 /* Problem section */
 .problem-container {
     display: grid;
@@ -667,6 +779,11 @@ p {
     .case-study-content {
         padding: 0 5%;
     }
+    
+    /* Journey map adjustments for mobile */
+    .journey-map {
+        max-height: 500px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -706,16 +823,23 @@ p {
     .process-steps {
         gap: 70px;
     }
+    
+    /* Journey map adjustments for small mobile */
+    .journey-map {
+        max-height: 400px;
+    }
 }
+
 /* Hero Carousel Styles */
 .hero-carousel-container {
     width: 100%;
     max-width: 1200px;
     margin: 40px auto 0;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     padding: 20px 0;
     height: 500px;
+    perspective: 1000px;
 }
 
 .carousel-track {
@@ -728,47 +852,58 @@ p {
     animation: float 3s ease-in-out infinite alternate;
 }
 
-/* If you want phone frames around the screens */
+/* Phone frame styling */
 .carousel-phone {
     width: 280px;
-    margin: 0 15px;
-    border-radius: 24px;
+    margin: 0 -20px; /* Negative margin for better overlap */
+    border-radius: 36px;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0);
     position: relative;
-    transform: translateY(0);
     transition: transform 0.3s ease;
     animation: phoneFloat 2.5s ease-in-out infinite alternate;
     animation-delay: calc(var(--phone-index, 0) * 0.7s);
-
-    padding: 15px;          /* Creates the frame border */
-    border-radius: 36px;    /* Rounded corners like modern phones */
 }
+
+/* Position and rotation for each phone */
 .carousel-phone:nth-child(1) {
     --phone-index: 0;
     transform: translateY(10px) rotate(-5deg);
+    z-index: 1;
+    --float-y-start: 10px;
+    --float-y-end: 0px;
+    --float-rotate-start: -5deg;
+    --float-rotate-end: -3deg;
 }
 
 .carousel-phone:nth-child(2) {
     --phone-index: 1;
     transform: translateY(0);
-    z-index: 2;
+    z-index: 3; /* Center phone always on top */
+    --float-y-start: 0px;
+    --float-y-end: -10px;
+    --float-rotate-start: 0deg;
+    --float-rotate-end: 0deg;
 }
 
 .carousel-phone:nth-child(3) {
     --phone-index: 2;
     transform: translateY(15px) rotate(5deg);
+    z-index: 2;
+    --float-y-start: 15px;
+    --float-y-end: 5px;
+    --float-rotate-start: 5deg;
+    --float-rotate-end: 3deg;
 }
 
-/* Updated Carousel Image - Removed background */
+/* Phone screen image */
 .carousel-image {
     width: 100%;
     display: block;
-    /* Removed background-color: rgba(155, 229, 240, 0.153); */
-    border-radius: 24px; /* Added border radius to match container */
+    border-radius: 24px; /* Rounded screen corners */
 }
 
-/* Animations */
+/* Animation keyframes */
 @keyframes float {
     0% {
         transform: translateX(-50%) translateY(0);
@@ -787,49 +922,85 @@ p {
     }
 }
 
-.carousel-phone:nth-child(1) {
-    --phone-index: 0;
-    --float-y-start: 10px;
-    --float-y-end: 0px;
-    --float-rotate-start: -5deg;
-    --float-rotate-end: -3deg;
-}
-
-.carousel-phone:nth-child(2) {
-    --phone-index: 1;
-    --float-y-start: 0px;
-    --float-y-end: -10px;
-    --float-rotate-start: 0deg;
-    --float-rotate-end: 0deg;
-}
-
-.carousel-phone:nth-child(3) {
-    --phone-index: 2;
-    --float-y-start: 15px;
-    --float-y-end: 5px;
-    --float-rotate-start: 5deg;
-    --float-rotate-end: 3deg;
-}
-
-/* Add responsive adjustments */
+/* Tablet responsiveness */
 @media (max-width: 768px) {
     .hero-carousel-container {
         height: 400px;
+        transform: scale(0.95);
     }
     
     .carousel-phone {
         width: 220px;
-        margin: 0 10px;
+        margin: 0 -30px; /* More overlap on tablets */
+        padding: 12px; /* Slightly thinner frame */
+    }
+    
+    /* Adjust floating animation for better mobile display */
+    .carousel-phone:nth-child(1) {
+        --float-y-start: 8px;
+        --float-y-end: 0px;
+        --float-rotate-start: -6deg;
+        --float-rotate-end: -4deg;
+    }
+    
+    .carousel-phone:nth-child(2) {
+        --float-y-start: 0px;
+        --float-y-end: -8px;
+    }
+    
+    .carousel-phone:nth-child(3) {
+        --float-y-start: 10px;
+        --float-y-end: 3px;
+        --float-rotate-start: 6deg;
+        --float-rotate-end: 4deg;
     }
 }
 
+/* Mobile phone responsiveness */
 @media (max-width: 480px) {
     .hero-carousel-container {
         height: 320px;
+        transform: scale(0.85);
+        margin-top: 20px;
     }
     
     .carousel-phone {
         width: 180px;
-        margin: 0 5px;
+        margin: 0 -40px; /* Even more overlap on phones */
+        padding: 10px; /* Thinner frame on small screens */
+    }
+    
+    /* More compact arrangement */
+    .carousel-phone:nth-child(1) {
+        --float-y-start: 5px;
+        --float-y-end: 0px;
+        --float-rotate-start: -8deg;
+        --float-rotate-end: -6deg;
+    }
+    
+    .carousel-phone:nth-child(2) {
+        --float-y-start: 0px;
+        --float-y-end: -5px;
+    }
+    
+    .carousel-phone:nth-child(3) {
+        --float-y-start: 5px;
+        --float-y-end: 0px;
+        --float-rotate-start: 8deg;
+        --float-rotate-end: 6deg;
+    }
+}
+
+/* For extremely small screens */
+@media (max-width: 360px) {
+    .hero-carousel-container {
+        height: 280px;
+        transform: scale(0.75);
+    }
+    
+    .carousel-phone {
+        width: 160px;
+        margin: 0 -45px;
+        padding: 8px;
     }
 }
