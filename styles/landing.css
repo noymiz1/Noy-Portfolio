@@ -35,7 +35,7 @@
 }
 
 .landing-page h1 {
-    font-family: 'Test-Signifier-Light', sans-serif;
+    font-family: 'Recoleta-Regular', serif;
     font-weight: 300; /* Add this line to make text lighter */
     color: #333;
     line-height: 1.2;
@@ -62,7 +62,7 @@
     font-size: 1.2rem;
     color: #333;
     background-color: transparent;
-    border: 2px solid #333;
+    border: 1.5px solid #333333;
     padding: 15px 30px;
     border-radius: 30px;
     cursor: pointer;
@@ -147,7 +147,7 @@
 .click-here-text {
     position: absolute;
     bottom: 0;
-    color: rgb(167, 170, 7);
+    color: #aa9500;
     left: 20px; /* Adjusted position */
     font-family: "beth-ellen", sans-serif;
     font-weight: 400;
@@ -243,6 +243,190 @@
     display: block;
 }
 
+/* Featured Project Section */
+.featured-project {
+    padding: 40px 8% 100px;
+    background-color: #ffffff;
+    position: relative;
+    display: block; /* Ensure it's displayed */
+}
+
+.featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block; /* Ensure it's displayed */
+}
+
+.section-header {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.section-header h2 {
+    font-family: 'Recoleta-Regular', serif;
+    font-weight: 300; /* Add this line to make text lighter */
+    font-size: 2.5rem;
+    color: #333;
+    letter-spacing: -0.5px;
+    position: relative;
+}
+.section-header h2:after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background-color: transparent;
+    border-bottom: 3px dotted #3c3c3c;
+}
+
+.featured-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.project-info h3 {
+    font-family: 'Recoleta-Regular', serif;
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-info h4 {
+    font-family: 'Balto-Book', serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.project-info p {
+    font-family: 'Balto-Book', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #555;
+}
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-bottom: 30px;
+}
+
+.project-tags .tag {
+    font-size: 0.85rem;
+    font-family: 'RoobertSemiMonoTRIAL-Regular', sans-serif;
+    color: #555;
+}
+
+.project-tags .tag:not(:last-child)::after {
+    content: "•";
+    margin: 0 8px;
+    color: #888;
+}
+
+.view-project-btn {
+    display: inline-block;
+    font-family: 'Balto-Book', sans-serif;
+    font-size: 1rem;
+    color: #333;
+    background-color: transparent;
+    border: 1.5px solid hsl(0, 0%, 33%);
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.view-project-btn:hover {
+    background-color: #333;
+    color: white;
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Animation Classes */
+.fade-in, .fade-in-on-scroll {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.slide-up, .slide-up-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-up-delay {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease 0.2s, transform 1s ease 0.2s;
+}
+
+.slide-up-delay-2 {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease 0.4s, transform 1s ease 0.4s;
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.slide-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Animation delays */
+.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.delay-400 {
+    transition-delay: 0.4s;
+}
+
+.delay-600 {
+    transition-delay: 0.6s;
+}
+
+/* Active state for animations */
+.fade-in.active, .fade-in-on-scroll.active,
+.slide-up.active, .slide-up-on-scroll.active,
+.slide-up-delay.active, .slide-up-delay-2.active,
+.slide-in-left.active, .slide-in-right.active, 
+.slide-in-up.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .landing-page {
@@ -293,4 +477,50 @@
     .folder-arrow {
         display: none;
     }
+    
+    .featured-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .project-info {
+        order: 2;
+    }
+    
+    .project-image {
+        order: 1;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .project-info h3 {
+        font-size: 1.8rem;
+    }
+    
+    .project-info h4 {
+        font-size: 1.2rem;
+    }
+}
+
+#work {
+    scroll-margin-top: 0px; /* Reduced from 90px to remove extra space */
+}
+
+/* Add these fixes for better featured project visibility */
+.featured-project {
+    min-height: 200px;  /* Ensures minimum height even if content is hidden */
+}
+
+.project-image {
+    opacity: 1 !important;  /* Force image to be visible */
+}
+
+/* Force visibility classes */
+.fade-in-on-scroll.active,
+.slide-in-left.active, 
+.slide-in-right.active {
+    opacity: 1 !important;
+    transform: translate(0, 0) !important;
 }

@@ -12,6 +12,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Balto-Book&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=RoobertTRIAL-Regular&display=swap');
 
+@font-face {
+  font-family: 'Recoleta-Regular';
+  src: url('../fonts/Recoleta-RegularDEMO.otf') format('opentype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Circular-Regular';
+  src: url('../fonts/CircularXXTrial-Regular.otf') format('opentype');
+  font-weight: normal;
+}
 
 @font-face {
   font-family: 'Test-Signifier';
@@ -23,6 +33,7 @@
   src: url('../fonts/TestSignifier-Light.otf') format('opentype');
 
 }
+
 @font-face {
   font-family: 'Sohne-Kraftig';
   src: url('../fonts/TestSöhne-Kräftig.otf') format('opentype');

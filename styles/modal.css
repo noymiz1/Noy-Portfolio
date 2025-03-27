@@ -142,9 +142,10 @@ body.modal-active .modal {
 .polaroid .caption {
   text-align: center;
   margin-top: 25px;
-  font-family: "RoobertSemiMonoTRIAL-Regular", sans-serif;
+  font-family: "beth-ellen", sans-serif;
+  font-weight: 300;
   letter-spacing: -0.7px;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #555;
 }
 

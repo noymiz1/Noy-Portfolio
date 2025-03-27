@@ -16,11 +16,9 @@
     <script src="/js/scroll.js" defer></script>
     <script src="/js/hover-pixel-effect.js" defer></script>
     <script src="/js/scroll-animation.js" defer></script>
-    <script src="/js/pixel-eyes.js" defer></script>
 </head>
 <body>
 
-  
 </div>
 
 <!-- Include top-bar.html -->
@@ -50,7 +48,7 @@
                     <img src="/assets/preview4.png" alt="Project Preview 1">
                 </div>
                 <div class="preview-image-item" id="previewImage2">
-                    <img src="assets/Thumbnails/SoulinaBox_Thumbnail.gif" alt="Project Preview 2">
+                    <img src="/assets/Thumbnails/SoulinaBox_Thumbnail.gif" alt="Project Preview 2">
                 </div>
                 <div class="preview-image-item" id="previewImage3">
                     <img src="/assets/preview3.jpg" alt="Project Preview 3">
@@ -58,8 +56,35 @@
             </div>
         </div>
     </div>
-    <p>Product & brand designer focusing on visual storytelling, usability, and seamless interactions.</p>
+    <p>Product and brand designer focusing on visual storytelling, usability, and seamless interactions.</p>
     <button id="viewWorkButton" class="view-work-button">View My Work</button>
+</section>
+
+<!-- Featured Project Section -->
+<section id="featured" class="featured-project">
+    <div class="featured-container">
+        <div class="section-header fade-in-on-scroll">
+            <h2>Featured Project</h2>
+        </div>
+        
+        <div class="featured-content">
+            <div class="project-info slide-in-left">
+                <h3>Arctop</h3>
+                <h4>Designing an End-to-End Cognitive Decoding App</h4>
+                <p>A comprehensive redesign of a brain interface mobile application for transforming neural signals into actionable insights. I built a user-centered experience that makes complex neurological data accessible and actionable.</p>
+                <div class="project-tags">
+                    <span class="tag">Product Design</span>
+                    <span class="tag">Design Strategy</span>
+                    <span class="tag">Data Visualization</span>
+                </div>
+                <a href="/projects/arctop.html" class="view-project-btn">View Case Study</a>
+            </div>
+            
+            <div class="project-image slide-in-right">
+                <img src="/assets/Arctop/arctop-hero1.png" alt="Arctop App Interface">
+            </div>
+        </div>
+    </div>
 </section>
 
 <main>
@@ -87,5 +112,27 @@
 <script src="js/top-bar-minimizer.js" defer></script>
 <script src="js/about-pointer.js" defer></script>
 <script src="js/folder-interaction.js" defer></script>
+<!-- Force animations to complete for featured section -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Force animations to complete
+    setTimeout(function() {
+      document.querySelectorAll('.fade-in-on-scroll, .slide-in-left, .slide-in-right').forEach(function(element) {
+        element.classList.add('active');
+        element.style.opacity = '1';
+        element.style.transform = 'translate(0, 0)';
+      });
+      
+      // Check if anything is still hidden
+      const featuredSection = document.getElementById('featured');
+      console.log('Featured section visibility check:', {
+        section: featuredSection.getBoundingClientRect(),
+        heading: document.querySelector('.section-header h2').getBoundingClientRect(),
+        info: document.querySelector('.project-info').getBoundingClientRect(),
+        image: document.querySelector('.project-image').getBoundingClientRect()
+      });
+    }, 500);
+  });
+</script>
 </body>
 </html>

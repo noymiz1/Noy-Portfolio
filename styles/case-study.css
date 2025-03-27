@@ -24,11 +24,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Test-Signifier-Light', sans-serif;
+    font-family: 'Recoleta-Regular', serif;
     font-weight: 300; /* Add this line to make text lighter */
     color: #333;
     margin-top: 0;
-    letter-spacing: -1px;
     color: #333;
 }
 
@@ -72,7 +71,7 @@ p {
     margin-bottom: 0.8rem; /* Smaller margin */
     letter-spacing: -1px;
     line-height: 1.1;
-    font-family: 'Test-Signifier-Light', sans-serif;
+    font-family: 'Recoleta-Regular', serif;
     color: #333;
 }
 
@@ -80,8 +79,7 @@ p {
     font-size: 1.3rem; /* Reduced from 2rem */
     font-weight: 400;
     margin-bottom: 1.5rem; /* Reduced from 2.5rem */
-    letter-spacing: -0.5px;
-    font-family: 'RoobertTRIAL-Regular', sans-serif;
+    font-family: 'Balto-Book', sans-serif;
     color: #555;
 }
 
@@ -98,7 +96,7 @@ p {
     border-radius: 20px;
     background-color: rgba(0,0,0,0.05);
     font-size: 0.85rem; /* Smaller text */
-    font-family: 'RoobertTRIAL-Regular', sans-serif;
+    font-family: 'Balto-Book', sans-serif;
 }
 
 .year {
@@ -223,7 +221,7 @@ p {
 .metric h4 {
     margin-bottom: 1rem;
     font-size: 1.3rem;
-    font-family: 'RoobertTRIAL-Regular', sans-serif;
+    font-family: 'Balto-Book', sans-serif;
 }
 
 /* App mockup display */
@@ -306,7 +304,7 @@ p {
     margin-bottom: 20px;
     position: relative;
     font-size: 1.3rem;
-    font-family: 'RoobertTRIAL-Regular', sans-serif;
+    font-family: 'Balto-Book', sans-serif;
 }
 
 .problem-item h4:after {
@@ -339,7 +337,7 @@ p {
     opacity: 0.2;
     margin-bottom: 15px;
     line-height: 1;
-    font-family: 'RoobertTRIAL-Regular', sans-serif;
+    font-family: 'Recoleta-Regular', serif;
 }
 
 .process-step h4 {
@@ -438,7 +436,7 @@ p {
 .feature-item h4 {
     margin-bottom: 20px;
     font-size: 1.3rem;
-    font-family: 'RoobertTRIAL-Regular', sans-serif;
+    font-family: 'Balto-Book', sans-serif;
 }
 
 .feature-image {
@@ -494,7 +492,7 @@ p {
 .testimonial cite {
     font-style: normal;
     font-weight: 600;
-    font-family: 'RoobertTRIAL-Regular', sans-serif;
+    font-family: 'Balto-Book', sans-serif;
 }
 
 /* Next project section */
@@ -505,6 +503,7 @@ p {
 
 .next-project-title {
     font-size: 1rem;
+    line-height: 1;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -516,11 +515,12 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 15px;
-    font-size: 2.2rem;
+    font-size: 1.5em;
     text-decoration: none;
     color: var(--text-color);
     transition: all var(--transition-speed) ease;
-    font-family: 'RoobertTRIAL-Regular', sans-serif;
+    font-family: 'Recoleta-Regular', sans-serif;
+    line-height: 1; /* Ensure consistent line height */
 }
 
 .next-project-link:hover {
@@ -529,8 +529,11 @@ p {
 }
 
 .arrow {
-    font-size: 2.5rem;
-    line-height: 0;
+    font-size: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    margin-top: -2px; /* Slight adjustment to align perfectly */
 }
 
 /* Animation classes */
@@ -595,7 +598,7 @@ p {
 /* Responsive styles */
 @media (max-width: 1024px) {
     .project-title {
-        font-size: 3.4rem; /* Adjusted */
+        font-size: 3rem; /* Adjusted */
     }
     
     .project-subtitle {

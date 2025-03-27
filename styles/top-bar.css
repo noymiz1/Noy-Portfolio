@@ -36,7 +36,7 @@
 }
 
 .name span:hover {
-  font-family: 'lores-12', sans-serif;
+  font-family: lores-12, sans-serif;
   font-size: 2.7rem;
   color: rgb(77, 81, 81);
 }
@@ -150,23 +150,39 @@
     display: inline-flex;
     align-items: center;
     font-family: 'Balto-Book', sans-serif;
-    font-size: 1.2rem;
-    color: inherit;
+    font-size: 1rem;
+    color: rgba(77, 81, 81, 0.7); /* Lighter color */
     text-decoration: none;
     padding: 5px 10px; /* Very small vertical padding */
     background: transparent;
-    border: 1.5px solid transparent; /* Slightly thinner border */
-    border-radius: 25px; /* Slightly smaller radius */
+    border: none; /* Remove border */
     transition: all 0.3s ease;
     height: fit-content; /* Ensure height matches content */
     line-height: 1; /* Tighter line height */
+    position: relative; /* For dotted underline positioning */
+    cursor: pointer; /* Ensure pointer cursor for all menu items */
 }
 
 .menu-item:hover,
 .about-wrapper a:hover,
 .menu a:hover {
-    border-color: #333;
+    color: rgb(77, 81, 81); /* Darker on hover */
     text-decoration: none;
+    border: none; /* Ensure no border */
+}
+
+/* Add dotted underline on hover */
+.menu-item:hover::after,
+.about-wrapper a:hover::after,
+.menu a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    border-bottom: 2px dotted rgb(77, 81, 81);
+    transition: all 0.3s ease;
 }
 
 a {
