@@ -125,16 +125,27 @@
 .name-letter:nth-child(10):hover { color: #bbff00; }
 .name-letter:nth-child(11):hover { color: orange; }
 
-/* Menu styling */
-.menu {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: flex-end;
-    height: 100%;
-    padding-right: 50px;
+/* If using <ul> structure */
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 24px;
 }
 
+/* Or for non-list structure */
+.menu {
+  display: flex;
+  gap: 24px;
+}
+
+.menu .menu-item {
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
 .about-wrapper {
     display: inline-flex;
     align-items: center;

@@ -707,3 +707,129 @@ p {
         gap: 70px;
     }
 }
+/* Hero Carousel Styles */
+.hero-carousel-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    height: 500px;
+}
+
+.carousel-track {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.5s ease;
+    will-change: transform;
+    animation: float 3s ease-in-out infinite alternate;
+}
+
+/* If you want phone frames around the screens */
+.carousel-phone {
+    width: 280px;
+    margin: 0 15px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0);
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+    animation: phoneFloat 2.5s ease-in-out infinite alternate;
+    animation-delay: calc(var(--phone-index, 0) * 0.7s);
+
+    padding: 15px;          /* Creates the frame border */
+    border-radius: 36px;    /* Rounded corners like modern phones */
+}
+.carousel-phone:nth-child(1) {
+    --phone-index: 0;
+    transform: translateY(10px) rotate(-5deg);
+}
+
+.carousel-phone:nth-child(2) {
+    --phone-index: 1;
+    transform: translateY(0);
+    z-index: 2;
+}
+
+.carousel-phone:nth-child(3) {
+    --phone-index: 2;
+    transform: translateY(15px) rotate(5deg);
+}
+
+/* Updated Carousel Image - Removed background */
+.carousel-image {
+    width: 100%;
+    display: block;
+    /* Removed background-color: rgba(155, 229, 240, 0.153); */
+    border-radius: 24px; /* Added border radius to match container */
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    100% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+@keyframes phoneFloat {
+    0% {
+        transform: translateY(var(--float-y-start, 0px)) rotate(var(--float-rotate-start, 0deg));
+    }
+    100% {
+        transform: translateY(var(--float-y-end, -10px)) rotate(var(--float-rotate-end, 0deg));
+    }
+}
+
+.carousel-phone:nth-child(1) {
+    --phone-index: 0;
+    --float-y-start: 10px;
+    --float-y-end: 0px;
+    --float-rotate-start: -5deg;
+    --float-rotate-end: -3deg;
+}
+
+.carousel-phone:nth-child(2) {
+    --phone-index: 1;
+    --float-y-start: 0px;
+    --float-y-end: -10px;
+    --float-rotate-start: 0deg;
+    --float-rotate-end: 0deg;
+}
+
+.carousel-phone:nth-child(3) {
+    --phone-index: 2;
+    --float-y-start: 15px;
+    --float-y-end: 5px;
+    --float-rotate-start: 5deg;
+    --float-rotate-end: 3deg;
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+    .hero-carousel-container {
+        height: 400px;
+    }
+    
+    .carousel-phone {
+        width: 220px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-carousel-container {
+        height: 320px;
+    }
+    
+    .carousel-phone {
+        width: 180px;
+        margin: 0 5px;
+    }
+}

@@ -287,6 +287,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    position: relative; /* Important for floating effect */
+    perspective: 1000px; /* Adds depth to the floating */
 }
 
 .project-info h3 {
@@ -349,17 +351,61 @@
     color: white;
 }
 
+/* Updated project image with floating animation */
 .project-image {
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    position: relative;
+    animation: projectFloat 3s ease-in-out infinite alternate;
+    /* Set float variables */
+    --float-y-start: 0px;
+    --float-y-end: -15px;
+    --float-rotate-start: 0deg;
+    --float-rotate-end: 2deg;
+    /* Ensure this works well with slide-in-right */
+    transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
 .project-image img {
     width: 100%;
     height: auto;
     display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Add subtle hover effect */
+.project-image:hover {
+    animation-play-state: paused; /* Pause animation on hover */
+}
+
+.project-image:hover img {
+    transform: scale(1.02); /* Subtle zoom on hover */
+}
+
+/* Add subtle text container floating */
+.project-info {
+    position: relative;
+    animation: projectFloat 3.5s ease-in-out infinite alternate;
+    animation-delay: 0.5s; /* Offset from image animation */
+    /* More subtle movement for text */
+    --float-y-start: 5px;
+    --float-y-end: -5px;
+    --float-rotate-start: 0deg;
+    --float-rotate-end: 0deg;
+    /* Ensure this works with slide-in-left */
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Floating animation keyframes */
+@keyframes projectFloat {
+    0% {
+        transform: translateY(var(--float-y-start, 0px)) rotate(var(--float-rotate-start, 0deg));
+    }
+    100% {
+        transform: translateY(var(--float-y-end, -10px)) rotate(var(--float-rotate-end, 0deg));
+    }
 }
 
 /* Animation Classes */
@@ -489,6 +535,15 @@
     
     .project-image {
         order: 1;
+        /* Smaller movement on mobile */
+        --float-y-end: -8px;
+        --float-rotate-end: 1deg;
+    }
+    
+    .project-info {
+        /* Even more subtle on mobile */
+        --float-y-start: 3px;
+        --float-y-end: -3px;
     }
     
     .section-header h2 {
@@ -523,4 +578,109 @@
 .slide-in-right.active {
     opacity: 1 !important;
     transform: translate(0, 0) !important;
+}
+/* Phone showcase for featured projects */
+.project-showcase {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    perspective: 1000px;
+}
+
+.phone-showcase {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Same styling as in case-study.css */
+.carousel-phone {
+    width: 250px;
+    margin: 0 -20px; /* Negative margin for overlap */
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    animation: phoneFloat 2.5s ease-in-out infinite alternate;
+    animation-delay: calc(var(--phone-index, 0) * 0.7s);
+    padding: 15px;          /* Creates the frame border */
+    border-radius: 36px;    /* Rounded corners like modern phones */
+}
+
+/* Position and rotate each phone */
+.carousel-phone:nth-child(1) {
+    transform: translateY(10px) rotate(-5deg);
+    z-index: 1;
+}
+
+.carousel-phone:nth-child(2) {
+    transform: translateY(0);
+    z-index: 3; /* Middle phone on top */
+}
+
+.carousel-phone:nth-child(3) {
+    transform: translateY(15px) rotate(5deg);
+    z-index: 2;
+}
+
+.carousel-image {
+    width: 100%;
+    display: block;
+    border-radius: 24px; /* Added border radius to match container */
+}
+
+/* Floating animation keyframes */
+@keyframes phoneFloat {
+    0% {
+        transform: translateY(var(--float-y-start, 0px)) rotate(var(--float-rotate-start, 0deg));
+    }
+    100% {
+        transform: translateY(var(--float-y-end, -10px)) rotate(var(--float-rotate-end, 0deg));
+    }
+}
+
+/* Set float variables for each phone */
+.carousel-phone:nth-child(1) {
+    --float-y-start: 10px;
+    --float-y-end: 0px;
+    --float-rotate-start: -5deg;
+    --float-rotate-end: -3deg;
+}
+
+.carousel-phone:nth-child(2) {
+    --float-y-start: 0px;
+    --float-y-end: -10px;
+    --float-rotate-start: 0deg;
+    --float-rotate-end: 0deg;
+}
+
+.carousel-phone:nth-child(3) {
+    --float-y-start: 15px;
+    --float-y-end: 5px;
+    --float-rotate-start: 5deg;
+    --float-rotate-end: 3deg;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-showcase {
+        height: 400px;
+    }
+    
+    .carousel-phone {
+        width: 180px;
+        margin: 0 -30px; /* More overlap on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-showcase {
+        height: 350px;
+    }
+    
+    .carousel-phone {
+        width: 150px;
+        margin: 0 -35px;
+    }
 }

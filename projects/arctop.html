@@ -14,24 +14,36 @@
 <body>
     <html-fragment src="/components/top-bar.html"></html-fragment>
     
-     <!-- Hero Section - Updated Structure -->
-    <section class="case-study-hero fade-in">
-        <div class="hero-content">
-            <h1 class="project-title slide-up">Arctop</h1>
-            <h2 class="project-subtitle slide-up-delay">Designing an End-to-End Cognitive Decoding App</h2>
-            <div class="project-metadata slide-up-delay-2">
-                <span class="tag">Product Design</span>
-                <span class="tag">UI/UX</span>
-                <span class="tag">Data Visualization</span>
-                <span class="year">2024</span>
-            </div>
+<!-- Hero Section with Animated Carousel -->
+<section class="case-study-hero fade-in">
+    <div class="hero-content">
+        <h1 class="project-title slide-up">Arctop</h1>
+        <h2 class="project-subtitle slide-up-delay">Designing an End-to-End Cognitive Decoding App</h2>
+        <div class="project-metadata slide-up-delay-2">
+            <span class="tag">Product Design</span>
+            <span class="tag">UI/UX</span>
+            <span class="tag">Data Visualization</span>
+            <span class="year">2024</span>
         </div>
-        
-        <div class="hero-image-container fade-in-on-scroll">
-            <img src="/assets/Arctop/arctop-hero1.png" alt="Arctop App Hero Image" class="hero-image">
-        </div>
-    </section>
+    </div>
     
+    <!-- Replace static hero image with animated carousel -->
+    <div class="hero-carousel-container fade-in-on-scroll">
+        <div class="carousel-track">
+            <!-- Add your app screenshots here - adjust paths as needed -->
+            <div class="carousel-phone">
+                <img src="/assets/Arctop/mockup-1.png" alt="Arctop App Dashboard" class="carousel-image">
+            </div>
+            <div class="carousel-phone">
+                <img src="/assets/Arctop/mockup-2.png" alt="Arctop App Calibration" class="carousel-image">
+            </div>
+            <div class="carousel-phone">
+                <img src="/assets/Arctop/mockup-3.png" alt="Arctop App Recording" class="carousel-image">
+            </div>
+            <!-- You can add more screenshots if needed -->
+        </div>
+    </div>
+</section>
     <main class="case-study-content">
         <!-- Project Overview -->
         <section class="content-section overview-section">
@@ -269,5 +281,6 @@
     <script src="/js/top-bar-minimizer.js" defer></script>
     <script src="/js/nightMode.js" defer></script>
     <script src="/js/case-study-animations.js" defer></script>
+    <script src="/js/carousel.js" defer></script>
 </body>
 </html>
