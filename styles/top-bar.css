@@ -200,3 +200,113 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+/* ===== MOBILE STYLES ===== */
+/* These styles only apply on mobile devices */
+
+@media (max-width: 768px) {
+  /* Reset the top bar to be more mobile-friendly */
+  .top-bar {
+    height: auto !important; /* Allow height to adjust based on content */
+    padding: 10px 15px !important; /* More compact padding */
+    flex-direction: column !important; /* Stack items vertically */
+    align-items: flex-start !important; /* Left-align items */
+  }
+  
+  /* Adjust name to be less prominent on mobile */
+  .name {
+    padding-left: 10px !important; /* Reduce side padding */
+    font-size: 2rem !important; /* Slightly smaller text */
+    margin-bottom: 8px; /* Space between name and menu */
+  }
+  
+  /* Menu adjustments for mobile */
+  .menu {
+    width: 100%; /* Full width */
+    padding-left: 10px !important; /* Match name padding */
+    gap: 18px !important; /* Slightly reduced spacing */
+  }
+  
+  /* Mobile minimized state is different - more compact */
+  .top-bar.minimized {
+    flex-direction: row !important; /* Side by side when minimized */
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: auto !important;
+    padding: 8px 15px !important;
+  }
+  
+  .top-bar.minimized .name {
+    margin-bottom: 0 !important; /* Remove spacing when minimized */
+    padding-left: 0 !important;
+  }
+  
+  /* Smaller text on mobile */
+  .menu-item,
+  .about-wrapper a,
+  .menu a {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Very small screens - more compact layout */
+@media (max-width: 480px) {
+  /* Even more compact spacing for very small screens */
+  .top-bar {
+    padding: 8px 12px !important;
+  }
+  
+  .name {
+    font-size: 1.8rem !important;
+  }
+  
+  .menu {
+    gap: 12px !important;
+  }
+  
+  /* Smaller menu text */
+  .menu-item,
+  .about-wrapper a,
+  .menu a {
+    font-size: 0.85rem !important;
+    padding: 3px 8px !important;
+  }
+  
+  /* Adjust minimized state for tiny screens */
+  .top-bar.minimized {
+    top: 10px !important;
+    left: 10px !important;
+    padding: 6px 12px !important;
+  }
+  
+  /* Adjust name initials size for minimized state */
+  .top-bar.minimized .name-initials {
+    font-size: 2.2rem !important;
+  }
+  
+  /* Adjust hover underlines to be smaller */
+  .menu-item:hover::after,
+  .about-wrapper a:hover::after,
+  .menu a:hover::after {
+    left: 15% !important;
+    width: 70% !important;
+  }
+}
+
+/* Ensure menu is visible in landscape mode */
+@media (max-height: 450px) and (orientation: landscape) {
+  .top-bar {
+    flex-direction: row !important; /* Force side-by-side in landscape */
+    height: auto !important;
+    padding: 8px 15px !important;
+  }
+  
+  .name {
+    margin-bottom: 0 !important;
+    font-size: 1.8rem !important;
+  }
+  
+  .menu {
+    padding-left: 20px !important;
+  }
+}
