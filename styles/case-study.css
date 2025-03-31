@@ -271,7 +271,7 @@ p {
 
 .full-width-image {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 15px;
     transition: transform var(--transition-speed) ease;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
@@ -287,6 +287,68 @@ p {
     letter-spacing: -0.7px;
     opacity: 0.75;
     text-align: center;
+}
+
+/* Background & Context media container */
+.bg-media-container {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+    margin: 60px 0;
+    align-items: flex-start;
+}
+
+.bg-media-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.diagram-item {
+    padding-right: 15px;
+}
+
+.video-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Video styling */
+.calibration-video {
+    width: 80%;
+    max-width:260px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform var(--transition-speed) ease;
+    aspect-ratio: 9/19.4;
+    background-color: #f9f9f700;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.bg-media-item:hover .full-width-image {
+    transform: scale(1.02);
+}
+
+.bg-media-item:hover .calibration-video {
+    transform: scale(1.03);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .bg-media-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .diagram-item {
+        padding-right: 0;
+    }
+    
+    .calibration-video {
+        width: 60%;
+        max-width: 240px;
+    }
 }
 
 /* Updated Journey Map Container - better sizing and centering */
