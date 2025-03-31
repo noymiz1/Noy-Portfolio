@@ -294,45 +294,78 @@ p {
     display: grid;
     grid-template-columns: 55% 45%;
     gap: 30px;
-    margin: 60px 0;
+    margin: 40px 0;
     align-items: flex-start;
     background: transparent;
     border: none;
+    width: 100%;
+    overflow: visible;
 }
 
 .bg-media-item {
     display: flex;
     flex-direction: column;
-}
-
-.diagram-item {
-    padding: 0px;
     background: transparent;
+    padding: 0;
+    margin: 0;
 }
 
-.diagram-item img {
-    background-color: transparent
+/* Diagram styling */
+.diagram-item {
+    position: relative;
 }
 
+.diagram-item .full-width-image {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    background-color: transparent;
+    transition: transform var(--transition-speed) ease;
+}
+
+/* Video styling */
 .video-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    background: transparent;
 }
 
-/* Video styling */
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: transparent;
+}
+
 .calibration-video {
     width: 80%;
-    max-width:260px;
+    max-width: 280px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
     transition: transform var(--transition-speed) ease;
-    aspect-ratio: 9/19.4;
-    background-color: #f9f9f700;
+    aspect-ratio: 9/19.5;
+    object-fit: cover;
+    background-color: #f9f9f7;
     border: 1px solid rgba(0,0,0,0.05);
 }
 
+.image-caption {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-family: 'RoobertSemiMonoTRIAL-Regular', sans-serif;
+    letter-spacing: -0.7px;
+    opacity: 0.75;
+    text-align: center;
+    width: 100%;
+}
+
+/* Hover effects */
 .bg-media-item:hover .full-width-image {
     transform: scale(1.02);
 }
@@ -342,6 +375,16 @@ p {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+    .bg-media-container {
+        gap: 25px;
+    }
+    
+    .calibration-video {
+        max-width: 260px;
+    }
+}
+
 @media (max-width: 768px) {
     .bg-media-container {
         grid-template-columns: 1fr;
@@ -349,12 +392,32 @@ p {
     }
     
     .diagram-item {
-        padding-right: 0;
+        max-width: 100%;
+    }
+    
+    .diagram-item .full-width-image {
+        max-width: 100%;
+    }
+    
+    .calibration-video {
+        width: 70%;
+        max-width: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bg-media-container {
+        margin: 30px 0;
+        gap: 30px;
     }
     
     .calibration-video {
         width: 60%;
-        max-width: 240px;
+        max-width: 200px;
+    }
+    
+    .image-caption {
+        font-size: 0.8rem;
     }
 }
 

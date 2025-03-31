@@ -188,25 +188,9 @@
     pointer-events: auto;
 }
 
-/* Special styling for iPhone mockup (previewImage1) */
-#previewImage1 {
-    width: 120px; /* Smaller size for the iPhone mockup */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 0; /* Remove border radius */
-    overflow: visible; /* Allow image to extend beyond container */
-    box-shadow: none; /* Remove shadow */
-}
-
-#previewImage1 img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the whole image is visible */
-}
-
-/* When active, use your original positioning but without rotation */
+/* When active, adjust position but maintain same styling */
 #previewImage1.active {
-    opacity: 1;
-    transform: translate(-100px, -185px) rotate(10deg) scale(1); /* Your original X/Y positioning with no rotation */
+    transform: translate(-100px, -120px) rotate(-10deg) scale(1.2); /* Keep your positioning */
     z-index: 13;
 }
 
