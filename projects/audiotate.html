@@ -3,44 +3,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audiotate</title>
-    <!-- Add top-bar.css reference -->
+    <title>Audiotate | Music as Memories</title>
     <link rel="stylesheet" href="/styles/top-bar.css">
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/audiotate.css">
     <link rel="stylesheet" href="https://use.typekit.net/oyw2ysf.css">
     
     <script src="/js/html-fragment.js" type="module"></script>
 </head>
 <body>
     <html-fragment src="/components/top-bar.html"></html-fragment>
-    <main>
-        <div class="project-container">
-            <h2 class="project-title">Audiotate</h2>
-            <p class="project-blurb">
-                2021<br><br>Audiotate is a music annotation digital platform that allows users from all music streaming apps to capture and revisit music as memories. It was created in Harvard University's Design for Desirability course.
-
-                It includes features like: personal lyric annotations, song-based journaling, customizable tags, cross-platform playlist organization
-                
-                <br><br>Audiotate provides a platform for intimate music discovery, archiving, and sharing.
-                
-                <br><br>Created in collaboration with Brenda Ceja, Daniela Villafuerte, Diana Zhu, Halima Badri, Kara Xie, and Sara-Ann Yong. My contribution came in the form of app and identity design for the application.
-            </p>
+    
+<!-- Hero Section with Animated Carousel -->
+<section class="case-study-hero fade-in">
+    <div class="hero-content">
+        <h1 class="project-title slide-up">Audiotate</h1>
+        <h2 class="project-subtitle slide-up-delay">Designing a Cross-Platform Music Annotation Experience</h2>
+        <div class="project-metadata slide-up-delay-2">
+            <span class="tag">Product Design</span>
+            <span class="tag">UI/UX</span>
+            <span class="tag">Digital Platform</span>
+            <span class="year">2021</span>
         </div>
-        
-        <!-- Moved project images outside of project-container -->
-        <div class="project-images">
-            <img src="/assets/Audiotate/audiotate_pic1.jpg" alt="Project Image 1" class="project-image">
-            <img src="/assets/Audiotate/audiotate_pic2.jpg" alt="Project Image 2" class="project-image">
-            <img src="/assets/Audiotate/audiotate_pic3.jpg" alt="Project Image 3" class="project-image">
-            <img src="/assets/Audiotate/audiotate_pic4.jpg" alt="Project Image 4" class="project-image">
-            <img src="/assets/Audiotate/audiotate_pic5.jpg" alt="Project Image 5" class="project-image">
-            <img src="/assets/Audiotate/audiotate_pic6.jpg" alt="Project Image 6" class="project-image">
+    </div>
+    
+    <!-- Animated carousel for hero section -->
+    <div class="hero-carousel-container fade-in-on-scroll">
+        <div class="carousel-track">
+            <!-- App screenshots -->
+            <div class="carousel-phone">
+                <img src="/assets/Audiotate/feed-screen-blue.png" alt="Audiotate Social Feed Screen" class="carousel-image">
+            </div>
+            <div class="carousel-phone">
+                <img src="/assets/Audiotate/lyric-annotation-screen.png" alt="Audiotate Lyric Annotation Screen" class="carousel-image">
+            </div>
+            <div class="carousel-phone">
+                <img src="/assets/Audiotate/play-screen.png" alt="Audiotate Play Screen" class="carousel-image">
+            </div>
         </div>
-    </main>
+    </div>
+</section>
 
-    <!-- Add top-bar-minimizer.js before other scripts -->
-    <script src="/js/top-bar-minimizer.js" defer></script>
-    <script src="/js/nightMode.js" defer></script>
-    <html-fragment src="/components/footer.html"></html-fragment>
+<main class="case-study-content">
+    <!-- Project Overview -->
+    <section class="content-section overview-section">
+        <div class="section-container">
+            <h3 class="section-title slide-up-on-scroll">Overview</h3>
+            <div class="two-column">
+                <div class="column-content slide-up-on-scroll">
+                    <p>Audiotate is a music annotation digital platform created in Harvard University's Design for Desirability course. It allows users to capture and revisit music as memories, turning passive listening into active memory-making across all major streaming services.</p>
+                </div>
+                <div class="column-content slide-up-on-scroll delay-200">
+                    <p>The platform includes features like personal lyric annotations, song-based journaling, customizable tags, and cross-platform playlist organization. My contribution focused on developing the app UI design and establishing the distinctive purple-to-orange gradient visual identity that defines the brand.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- App Showcase -->
+    <section class="content-section app-showcase">
+        <div class="mockup-display">
+            <div class="phone-mockup slide-in-left">
+                <img src="/assets/Audiotate/feed-screen-blue.png" alt="Audiotate Social Feed" class="mockup-image">
+                <p class="mockup-caption">Social Feed</p>
+            </div>
+            <div class="phone-mockup slide-in-up">
+                <img src="/assets/Audiotate/lyric-annotation-screen.png" alt="Audiotate Lyrics Annotation" class="mockup-image">
+                <p class="mockup-caption">Lyric Annotation</p>
+            </div>
+            <div class="phone-mockup slide-in-right">
+                <img src="/assets/Audiotate/play-screen.png" alt="Audiotate Song Details" class="mockup-image">
+                <p class="mockup-caption">Song Details</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Research & Strategy -->
+        <section class="content-section research-section">
+            <div class="section-container">
+                <h3 class="section-title slide-up-on-scroll">Research & Strategy</h3>
+                <div class="two-column">
+                    <div class="column-content slide-up-on-scroll">
+                        <p>Our team conducted user interviews with music enthusiasts across different age groups to understand how they form emotional connections with songs and what drives them to share music experiences with others.</p>
+                        <p>We created user personas, including "Social Sara," who values sharing songs with friends and attaching personal context to her favorite tracks.</p>
+                    </div>
+                    <div class="column-content slide-up-on-scroll delay-200">
+                        <p>Through our research, we identified a clear opportunity for a platform that treats songs as memory vessels rather than just consumption items. Users wanted a "song-based diary" where they could document their relationship with music over time.</p>
+                    </div>
+                </div>
+                
+                <!-- User Persona Image -->
+                <div class="journey-map-container fade-in-on-scroll">
+                    <img src="/assets/Audiotate/audiotate_pic4.jpg" alt="Social Sara User Persona" class="journey-map">
+                    <p class="image-caption">User persona highlighting needs for cross-platform music annotation and sharing</p>
+                </div>
+            </div>
+        </section>
+    
+    
+    <!-- Problem Statement -->
+    <section class="content-section problem-section">
+        <div class="section-container">
+            <h3 class="section-title slide-up-on-scroll">Problem Statement</h3>
+            <div class="problem-container">
+                <div class="problem-item fade-in-on-scroll">
+                    <h4>Platform Fragmentation</h4>
+                    <p>Users listen to music across Spotify, Apple Music, and SoundCloud but lack a unified way to organize and annotate their music.</p>
+                </div>
+                <div class="problem-item fade-in-on-scroll delay-200">
+                    <h4>Limited Personalization</h4>
+                    <p>Current platforms offer minimal ways to connect personal memories and emotions to specific songs or lyrics.</p>
+                </div>
+                <div class="problem-item fade-in-on-scroll delay-400">
+                    <h4>Social Music Experience</h4>
+                    <p>Existing services don't support meaningful sharing of personal music experiences and annotations with friends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Design Process -->
+    <section class="content-section process-section alternate-bg">
+        <div class="section-container">
+            <h3 class="section-title slide-up-on-scroll">Design Process</h3>
+            <div class="process-steps">
+                <div class="process-step fade-in-on-scroll">
+                    <div class="step-number">01</div>
+                    <div>
+                        <h4>Brand Identity Development</h4>
+                        <p>Created a distinctive visual identity with a purple-to-orange gradient color scheme that evokes emotion and energy. The spring/coil logo represents both musical notes and the layered nature of personal annotations.</p>
+                        <div class="step-image">
+                            <img src="/assets/Audiotate/audiotate_pic1.jpg" alt="Audiotate Brand Identity" class="process-image">
+                            <img src="/assets/Audiotate/audiotate_pic2.jpg" alt="Audiotate UI Design Process" class="process-image">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="process-step fade-in-on-scroll delay-200">
+                    <div class="step-number">02</div>
+                    <div>
+                        <h4>User Interface Design</h4>
+                        <p>Developed a social feed-based interface that showcases annotations from friends while maintaining clear pathways to personal annotation features. Used multiple color themes to distinguish between content types.</p>
+                        <div class="step-image">
+                            <img src="/assets/Audiotate/audiotate_pic3.jpg" alt="Audiotate UI Design Process" class="process-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Final Solution -->
+    <section class="content-section solution-section">
+        <div class="section-container">
+            <h3 class="section-title slide-up-on-scroll">Solution</h3>
+            <div class="solution-features">
+                <div class="feature-item fade-in-on-scroll">
+                    <h4>Social Music Feed</h4>
+                    <p>A dynamic feed that displays annotations and notes from friends and the wider Audiotate community, allowing users to discover new music through personal connections.</p>
+                    <div class="feature-image">
+                        <img src="/assets/Audiotate/audiotate_pic7.png" alt="Social Music Feed" class="solution-image">
+                    </div>
+                </div>
+                
+                <div class="feature-item fade-in-on-scroll delay-200">
+                    <h4>Song-Based Journaling</h4>
+                    <p>Users can create personal journals attached to songs, documenting when and how they discovered tracks, what they mean, and how their relationship with them evolves over time.</p>
+                    <div class="feature-image">
+                        <img src="/assets/Audiotate/audiotate_pic8.png" alt="Song-Based Journaling" class="solution-image">
+                    </div>
+                </div>
+                
+                <div class="feature-item fade-in-on-scroll delay-400">
+                    <h4>Explore Page</h4>
+                    <p>A unified music library that brings together tracks from Spotify, Apple Music, and SoundCloud, with consistent annotation features across all platforms.</p>
+                    <div class="feature-image">
+                        <img src="/assets/Audiotate/explorepage.png" alt="Cross-Platform Library" class="solution-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Key Features Highlight -->
+    <section class="content-section key-features alternate-bg">
+        <div class="section-container">
+            <h3 class="section-title slide-up-on-scroll">Key Features</h3>
+            <div class="content-block slide-up-on-scroll">
+                <p>Audiotate transforms how users interact with music by introducing several innovative features:</p>
+            </div>
+            
+            <div class="journey-map-container fade-in-on-scroll">
+                <img src="/assets/Audiotate/audiotate_pic5.jpg" alt="Home Feed Features" class="journey-map">
+                <p class="image-caption">The social feed allows users to see, like, comment, and bookmark song annotations from their network</p>
+            </div>
+            
+            <div class="two-column">
+                <div class="column-content slide-up-on-scroll">
+                    <p>Users can tag songs with custom categories, making it easy to create mood-based collections that work across streaming platforms. The tagging system helps users quickly find music that matches their current emotional state.</p>
+                </div>
+                <div class="column-content slide-up-on-scroll delay-200">
+                    <p>The lyric annotation feature allows users to highlight and attach personal notes to specific lines in songs, creating a deeper connection with the music and enabling more meaningful sharing with friends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- Reflection -->
+    <section class="content-section reflection-section">
+        <div class="section-container">
+            <h3 class="section-title slide-up-on-scroll">Reflection & Learnings</h3>
+            <div class="two-column">
+                <div class="column-content slide-up-on-scroll">
+                    <p>This project underscored the importance of designing for emotional engagement rather than just functional efficiency. Music is deeply personal, and creating tools that honor that relationship required balancing technical capabilities with emotional touchpoints.</p>
+                </div>
+                <div class="column-content slide-up-on-scroll delay-200">
+                    <p>The visual design system—using gradients that transition from purple to orange—successfully created an emotionally resonant interface that users found inviting and engaging, proving that aesthetic choices significantly impact how users connect with a product.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Team & Collaboration -->
+    <section class="content-section team-section alternate-bg">
+        <div class="section-container">
+            <h3 class="section-title slide-up-on-scroll">Team & Collaboration</h3>
+            <div class="content-block slide-up-on-scroll">
+                <p>Audiotate was created in collaboration as part of Harvard University's Design for Desirability course. My contribution focused on the app UI design screens and establishing the distinctive visual identity with its signature purple-to-orange gradient and spring/coil logo that embodies the concept of "Music as Memories."</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Next Project -->
+    <section class="next-project-section">
+        <div class="section-container">
+            <h3 class="next-project-title fade-in-on-scroll">Next Project</h3>
+            <a href="/projects/arctop.html" class="next-project-link fade-in-on-scroll">
+                <span class="project-name">Arctop</span><span class="arrow">→</span>
+            </a>
+        </div>
+    </section>
+</main>
+
+<html-fragment src="/components/footer.html"></html-fragment>
+
+<!-- Scripts -->
+<script src="/js/top-bar-minimizer.js" defer></script>
+<script src="/js/nightMode.js" defer></script>
+<script src="/js/case-study-animations.js" defer></script>
+<script src="/js/carousel.js" defer></script>
 </body>
 </html>
