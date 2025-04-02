@@ -3,45 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philips</title>
+    <title>Philips - Noy Mizrachi</title>
     <link rel="stylesheet" href="/styles/top-bar.css">
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/philips.css">
     <link rel="stylesheet" href="https://use.typekit.net/oyw2ysf.css">
     
     <script src="/js/html-fragment.js" type="module"></script>
 </head>
 <body>
     <html-fragment src="/components/top-bar.html"></html-fragment>
-    <main>
-        <div class="project-container">
-            <h2 class="project-title">Philips</h2>
-            <p class="project-blurb">
-                2021-2023<br><br>Communications Designer
-                <br><br>As a member of Philips' Experience Design team, I applied global design language across various mediums,
-                 contributing to product enhancement and brand communication. I was involved in designing social media content, 
-                crafting presentations, editing videos, and creating animations.
-                <br><br>My role included developing comprehensive marketing 
-                strategies and communications for Philips Healthcare and Personal Health sectors. My contribution spanned consumer insights, brand positioning,
-                 and creating digital and physical marketing materials for key brands such as Avent, Norelco, and Sonicare. A small sample of my work is shown below.
-            </p>
+    
+    <!-- Lightbox Container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content">
+            <!-- Content will be inserted here via JavaScript -->
+        </div>
+    </div>
+    
+    <div class="case-study-hero">
+        <!-- Background gradient is handled in CSS -->
+        <div class="hero-content">
+            <h1 class="project-title">Philips</h1>
+            <p class="project-subtitle">Brand Communications &amp; Product Design</p>
+            
+            <div class="project-metadata">
+                <span class="tag">Communications Design</span>
+                <span class="tag">Brand Strategy</span>
+                <span class="tag">Marketing Content</span>
+                <span class="year">2021-2023</span>
+            </div>
         </div>
         
-        <div class="project-images philips-images">
-            <video src="/assets/Philips/philips_pic6.mp4" controls class="project-image" alt="Project Video">
-                Sorry, your browser does not support embedded videos.
-            </video>
-            <video src="/assets/Philips/philips_pic2.mp4" controls class="project-image" alt="Project Video">
-                Sorry, your browser does not support embedded videos.
-            </video>
-            <img src="/assets/Philips/philips_pic7.jpg" alt="Project Image 3" class="project-image">
-            <img src="/assets/Philips/philips_pic4.jpg" alt="Project Image 4" class="project-image">
-            <img src="/assets/Philips/philips_pic5.jpg" alt="Project Image 4" class="project-image">
-            <img src="/assets/Philips/philips_pic8.jpeg" alt="Project Image 4" class="project-image">
+        <!-- Philips Logo Hero Image - Floating Style -->
+        <div class="hero-image-container">
+            <div class="floating-logo">
+                <img src="/assets/Thumbnails/philips_thumbnail2.jpg" alt="Philips Logo" class="philips-logo">
+            </div>
         </div>
+    </div>
+    
+    <main class="case-study-content">
+        <!-- Project Overview with Two Columns -->
+        <section class="content-section overview-section">
+            <div class="section-container">
+                <h3 class="section-title">Overview</h3>
+                <div class="two-column">
+                    <div class="column-content">
+                        <p>As a member of Philips' Experience Design team, I applied global design language across various mediums,
+                        contributing to product enhancement and brand communication. I was involved in designing social media content, 
+                        crafting presentations, editing videos, and creating animations.</p>
+                    </div>
+                    <div class="column-content">
+                        <p>My role included developing comprehensive marketing strategies and communications for Philips Healthcare and Personal Health sectors. 
+                        My contribution spanned consumer insights, brand positioning, and creating digital and physical marketing materials for key brands 
+                        such as Avent, Norelco, and Sonicare.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section alternate-bg">
+            <div class="section-container">
+                <h2 class="section-title">Sample Projects</h2>
+                <p class="click-instruction">Click on any item to view full size</p>
+                
+                <div class="project-gallery">
+                    <div class="gallery-item" data-type="video" data-src="/assets/Philips/philips_pic6.mp4">
+                        <video src="/assets/Philips/philips_pic6.mp4" class="project-media expandable-media" alt="Philips Brand Animation"></video>
+                        <p class="image-caption">Social Media Animation</p>
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="/assets/Philips/philips_pic5.jpg">
+                        <img src="/assets/Philips/philips_pic5.jpg" alt="Social Media Content" class="project-media expandable-media">
+                        <p class="image-caption">Product Packaging</p>
+                    </div>
+                    <div class="gallery-item" data-type="video" data-src="/assets/Philips/philips_pic2.mp4">
+                        <video src="/assets/Philips/philips_pic2.mp4" class="project-media expandable-media" alt="Product Demo Animation"></video>
+                        <p class="image-caption">Social Media Animation</p>
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="/assets/Philips/philips_pic7.jpg">
+                        <img src="/assets/Philips/philips_pic7.jpg" alt="Philips Brand Campaign" class="project-media expandable-media">
+                        <p class="image-caption">Social Product Visual</p>
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="/assets/Philips/philips_pic4.jpg">
+                        <img src="/assets/Philips/philips_pic4.jpg" alt="Product Marketing Visual" class="project-media expandable-media">
+                        <p class="image-caption">Marketing Visual</p>
+                    </div>
+                    <div class="gallery-item" data-type="image" data-src="/assets/Philips/philips_pic8.jpeg">
+                        <img src="/assets/Philips/philips_pic8.jpeg" alt="Brand Guidelines Application" class="project-media expandable-media">
+                        <p class="image-caption">Amazon Product Image</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Skills &amp; Contributions</h2>
+                
+                <div class="problem-container">
+                    <div class="problem-item">
+                        <h4>Brand Communications</h4>
+                        <p>Developed marketing materials aligned with Philips' global design language and brand guidelines. Created visual narratives that effectively communicated product benefits and brand values across multiple touchpoints.</p>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <h4>Motion Design</h4>
+                        <p>Produced animated content for product demonstrations, social media, and presentations. Used motion design to explain complex features and technological innovations in an accessible, engaging format.</p>
+                    </div>
+                    
+                    <div class="problem-item">
+                        <h4>Visual Design</h4>
+                        <p>Created cohesive visual systems for marketing campaigns across digital and physical mediums. Applied user-centered design principles to craft compelling visuals that resonated with target audiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="/js/top-bar-minimizer.js" defer></script>
     <script src="/js/nightMode.js" defer></script>
+    <script>
+        // Lightbox functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxContent = lightbox.querySelector('.lightbox-content');
+            const closeButton = lightbox.querySelector('.close-lightbox');
+            const expandableItems = document.querySelectorAll('.expandable-media');
+            
+            // Open lightbox when clicking on an item
+            expandableItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const parent = this.closest('.gallery-item');
+                    const mediaType = parent.getAttribute('data-type');
+                    const mediaSrc = parent.getAttribute('data-src');
+                    const caption = parent.querySelector('.image-caption').textContent;
+                    
+                    lightboxContent.innerHTML = '';
+                    
+                    if (mediaType === 'image') {
+                        const img = document.createElement('img');
+                        img.src = mediaSrc;
+                        img.alt = this.alt;
+                        img.className = 'lightbox-media';
+                        lightboxContent.appendChild(img);
+                    } else if (mediaType === 'video') {
+                        const video = document.createElement('video');
+                        video.src = mediaSrc;
+                        video.controls = true;
+                        video.autoplay = true;
+                        video.className = 'lightbox-media';
+                        lightboxContent.appendChild(video);
+                    }
+                    
+                    const captionElement = document.createElement('p');
+                    captionElement.className = 'lightbox-caption';
+                    captionElement.textContent = caption;
+                    lightboxContent.appendChild(captionElement);
+                    
+                    lightbox.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            });
+            
+            // Close lightbox when clicking the X button
+            closeButton.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+                
+                // Pause any videos that were playing
+                const videos = lightboxContent.querySelectorAll('video');
+                videos.forEach(video => {
+                    video.pause();
+                });
+            });
+            
+            // Close lightbox when clicking outside the content
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeButton.click();
+                }
+            });
+            
+            // Handle escape key press
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                    closeButton.click();
+                }
+            });
+        });
+    </script>
     <html-fragment src="/components/footer.html"></html-fragment>
 </body>
 </html>

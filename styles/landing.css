@@ -286,6 +286,7 @@
 .project-info h4 {
     font-family: 'Balto-Book', serif;
     font-size: 1.4rem;
+    line-height: 1.4;
     font-weight: 400;
     margin-bottom: 20px;
     color: #555;
