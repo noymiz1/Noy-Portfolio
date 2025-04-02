@@ -14,6 +14,14 @@
 <body>
     <html-fragment src="/components/top-bar.html"></html-fragment>
     
+    <!-- Lightbox Container -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content">
+            <!-- Content will be inserted here via JavaScript -->
+        </div>
+    </div>
+    
     <div class="case-study-hero">
         <!-- Background gradient is handled in CSS -->
         <div class="hero-content">
@@ -31,31 +39,31 @@
         <!-- Bounty Hero Image - Floating Style -->
         <div class="hero-image-container">
             <div class="floating-logo">
-                <img src="/assets/Bounty/bounty_pic1.png" alt="Bounty Carsheets" class="bounty-logo">
+                <img src="/assets/Bounty/bounty_pic.png" alt="Bounty Carsheets" class="bounty-logo">
             </div>
         </div>
     </div>
     
     <main class="case-study-content">
-        <section class="content-section">
+        <!-- Project Overview with Two Columns -->
+        <section class="content-section overview-section">
             <div class="section-container">
-                <div class="content-block">
-                    <p class="section-intro">
-                        Added a new product to the Bounty paper towel line in the form of Carsheets. The product was developed 
+                <h3 class="section-title">Overview</h3>
+                <div class="two-column">
+                    <div class="column-content">
+                        <p>Added a new product to the Bounty paper towel line in the form of Carsheets. The product was developed 
                         in the Harvard GSD seminar, Paper or Plastic: Reinventing Shelf Life in the Supermarket Landscape. In which 
                         we were asked to operate as brand strategists. However, rather than invent new products, students will instead 
-                        innovate upon existing brands.
-                    </p>
-                    <p>
-                        We worked as a group to reconsider the entire Bounty brand including: brand architecture, brand identity, 
-                        consumer target, logo, tagline, packaging, etc. We also studied our product's shelf competitors and presented 
-                        our observations through visual arguments. My group and I did extensive market research, user profiling, and 
-                        design iteration to reach the final product presented.
-                    </p>
-                    <p>
-                        Created in collaboration with Ruiheng Li, Sara-Ann Yong, Oliver Shi, Zhihan Wang, and Yabby Abejie. My contribution 
-                        is in the form of brand identity and packaging design seen below.
-                    </p>
+                        innovate upon existing brands.</p>
+                        
+                        <p>We worked to reconsider the entire Bounty brand including: brand architecture, brand identity, 
+                        consumer target, logo, tagline, packaging, etc.</p>
+                    </div>
+                    <div class="column-content">
+                        <p>We studied our product's shelf competitors and presented our observations through visual arguments. My group and I did extensive market research, user profiling, and design iteration to reach the final product presented.</p>
+                        
+                        <p><b>My contribution is in the form of brand identity and packaging design seen below.</b></p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -63,71 +71,72 @@
         <section class="content-section alternate-bg">
             <div class="section-container">
                 <h2 class="section-title">Project Gallery</h2>
+                <p class="click-instruction">Click on any image to view full size</p>
                 
                 <div class="project-gallery">
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic3.png" alt="Bounty Carsheets Package" class="gallery-image">
-                        <p class="image-caption">Package Design Front</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic4.png" alt="Bounty Carsheets Details" class="gallery-image">
-                        <p class="image-caption">Package Design Details</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic6.png" alt="Bounty Carsheets Display" class="gallery-image">
-                        <p class="image-caption">Product Display</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic7.png" alt="Bounty Carsheets Mockup" class="gallery-image">
-                        <p class="image-caption">Package Mockup</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic8.png" alt="Bounty Carsheets Identity" class="gallery-image">
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic3.png">
+                        <img src="/assets/Bounty/bounty_pic3.png" alt="Bounty Carsheets Package" class="gallery-image expandable-media">
                         <p class="image-caption">Brand Identity</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic9.png" alt="Bounty Carsheets Usage" class="gallery-image">
-                        <p class="image-caption">Product Usage</p>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic4.png">
+                        <img src="/assets/Bounty/bounty_pic4.png" alt="Bounty Carsheets Details" class="gallery-image expandable-media">
+                        <p class="image-caption">Logo Lockups</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic10.png" alt="Bounty Carsheets Marketing" class="gallery-image">
-                        <p class="image-caption">Marketing Concept</p>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic6.png">
+                        <img src="/assets/Bounty/bounty_pic6.png" alt="Bounty Carsheets Display" class="gallery-image expandable-media">
+                        <p class="image-caption">Logo Before and After</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic11.png" alt="Bounty Carsheets Packaging" class="gallery-image">
-                        <p class="image-caption">Packaging Design</p>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic7.png">
+                        <img src="/assets/Bounty/bounty_pic7.png" alt="Bounty Carsheets Mockup" class="gallery-image expandable-media">
+                        <p class="image-caption">Packaging</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic12.png" alt="Bounty Carsheets Integration" class="gallery-image">
-                        <p class="image-caption">Brand Integration</p>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic8.png">
+                        <img src="/assets/Bounty/bounty_pic8.png" alt="Bounty Carsheets Identity" class="gallery-image expandable-media">
+                        <p class="image-caption">Packaging</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic15.png" alt="Bounty Carsheets Research" class="gallery-image">
-                        <p class="image-caption">Market Research</p>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic9.png">
+                        <img src="/assets/Bounty/bounty_pic9.png" alt="Bounty Carsheets Usage" class="gallery-image expandable-media">
+                        <p class="image-caption">Packaging</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic16.png" alt="Bounty Carsheets Application" class="gallery-image">
-                        <p class="image-caption">Product Application</p>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic10.png">
+                        <img src="/assets/Bounty/bounty_pic10.png" alt="Bounty Carsheets Marketing" class="gallery-image expandable-media">
+                        <p class="image-caption">Packaging</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic17.png" alt="Bounty Carsheets Strategy" class="gallery-image">
-                        <p class="image-caption">Marketing Strategy</p>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic11.png">
+                        <img src="/assets/Bounty/bounty_pic11.png" alt="Bounty Carsheets Packaging" class="gallery-image expandable-media">
+                        <p class="image-caption">Packaging</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic18.png" alt="Bounty Carsheets System" class="gallery-image">
-                        <p class="image-caption">Design System</p>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic12.png">
+                        <img src="/assets/Bounty/bounty_pic12.png" alt="Bounty Carsheets Integration" class="gallery-image expandable-media">
+                        <p class="image-caption">Package Mockup</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic19.png" alt="Bounty Carsheets Context" class="gallery-image">
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic15.png">
+                        <img src="/assets/Bounty/bounty_pic15.png" alt="Bounty Carsheets Research" class="gallery-image expandable-media">
+                        <p class="image-caption">Package Mockup</p>
+                    </div>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic16.png">
+                        <img src="/assets/Bounty/bounty_pic16.png" alt="Bounty Carsheets Application" class="gallery-image expandable-media">
+                        <p class="image-caption">Package Mockup</p>
+                    </div>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic17.png">
+                        <img src="/assets/Bounty/bounty_pic17.png" alt="Bounty Carsheets Strategy" class="gallery-image expandable-media">
                         <p class="image-caption">Product Context</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic20.png" alt="Bounty Carsheets Visual" class="gallery-image">
-                        <p class="image-caption">Visual Identity</p>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic18.png">
+                        <img src="/assets/Bounty/bounty_pic18.png" alt="Bounty Carsheets System" class="gallery-image expandable-media">
+                        <p class="image-caption">Product Context</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="/assets/Bounty/bounty_pic21.png" alt="Bounty Carsheets Presentation" class="gallery-image">
-                        <p class="image-caption">Presentation Board</p>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic19.png">
+                        <img src="/assets/Bounty/bounty_pic19.png" alt="Bounty Carsheets Context" class="gallery-image expandable-media">
+                        <p class="image-caption">Product Context</p>
+                    </div>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic20.png">
+                        <img src="/assets/Bounty/bounty_pic20.png" alt="Bounty Carsheets Visual" class="gallery-image expandable-media">
+                        <p class="image-caption">Product Context</p>
+                    </div>
+                    <div class="gallery-item" data-src="/assets/Bounty/bounty_pic21.png">
+                        <img src="/assets/Bounty/bounty_pic21.png" alt="Bounty Carsheets Presentation" class="gallery-image expandable-media">
+                        <p class="image-caption">Product Context</p>
                     </div>
                 </div>
             </div>
@@ -136,6 +145,60 @@
 
     <script src="/js/top-bar-minimizer.js" defer></script>
     <script src="/js/nightMode.js" defer></script>
+    <script>
+        // Lightbox functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxContent = lightbox.querySelector('.lightbox-content');
+            const closeButton = lightbox.querySelector('.close-lightbox');
+            const expandableItems = document.querySelectorAll('.expandable-media');
+            
+            // Open lightbox when clicking on an item
+            expandableItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const parent = this.closest('.gallery-item');
+                    const mediaSrc = parent.getAttribute('data-src');
+                    const caption = parent.querySelector('.image-caption').textContent;
+                    
+                    lightboxContent.innerHTML = '';
+                    
+                    const img = document.createElement('img');
+                    img.src = mediaSrc;
+                    img.alt = this.alt;
+                    img.className = 'lightbox-media';
+                    lightboxContent.appendChild(img);
+                    
+                    const captionElement = document.createElement('p');
+                    captionElement.className = 'lightbox-caption';
+                    captionElement.textContent = caption;
+                    lightboxContent.appendChild(captionElement);
+                    
+                    lightbox.style.display = 'flex';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                });
+            });
+            
+            // Close lightbox when clicking the X button
+            closeButton.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            });
+            
+            // Close lightbox when clicking outside the content
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeButton.click();
+                }
+            });
+            
+            // Handle escape key press
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                    closeButton.click();
+                }
+            });
+        });
+    </script>
     <html-fragment src="/components/footer.html"></html-fragment>
 </body>
 </html>

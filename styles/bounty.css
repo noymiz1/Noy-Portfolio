@@ -105,6 +105,7 @@ p {
     line-height: 2;
     font-family: 'Balto-Book', sans-serif;
 }
+
 /* Floating Logo Style */
 .hero-image-container {
     width: 100%;
@@ -121,7 +122,7 @@ p {
     height: 320px;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(228, 30, 38, 0.15);
+    box-shadow: 0 20px 40px rgba(228, 30, 37, 0.299);
     animation: logoFloat 4s ease-in-out infinite alternate;
     position: relative;
 }
@@ -133,7 +134,6 @@ p {
     display: block;
     background-color: white;
     border-radius: 24px;
-    padding: 20px;
 }
 
 @keyframes logoFloat {
@@ -163,6 +163,7 @@ p {
     margin: 0 auto;
 }
 
+/* Section title with dotted line instead of solid line */
 .section-title {
     font-size: 2rem;
     margin-bottom: 2rem;
@@ -178,8 +179,30 @@ p {
     bottom: -12px;
     left: 0;
     width: 60px;
-    height: 3px;
-    background-color: var(--accent-color);
+    height: 1px; /* Reduced height for dotted line */
+    background-color: transparent; /* Remove solid background */
+    border-bottom: 3px dotted #3c3c3c;}
+
+/* Two-column layout like Philips and Arctop */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    max-width: 1100px;
+    margin-bottom: 40px;
+}
+
+.column-content p {
+    margin-bottom: 1.3rem;
+    font-family: 'Balto-Book', sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Overview section specific styling */
+.overview-section {
+    margin-bottom: 80px;
 }
 
 .alternate-bg {
@@ -208,12 +231,15 @@ p {
     color: #555;
 }
 
-p {
+/* Instruction text for gallery items */
+.click-instruction {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
     font-family: 'Balto-Book', sans-serif;
-    margin-bottom: 1.3rem;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #555;
+    font-style: italic;
 }
 
 /* Project Gallery Grid */
@@ -231,19 +257,46 @@ p {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
     aspect-ratio: 16/9;
+    cursor: pointer;
 }
 
 .gallery-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(228, 30, 38, 0.15);
+}
+
+.gallery-item:after {
+    content: '🔍';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity var(--transition-speed) ease;
+}
+
+.gallery-item:hover:after {
+    opacity: 1;
 }
 
 .gallery-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Maintains aspect ratio while filling container */
     display: block;
     border-radius: 15px;
+}
+
+/* Make images indicate they're clickable */
+.expandable-media {
+    cursor: pointer;
 }
 
 .image-caption {
@@ -269,11 +322,72 @@ p {
     transform: translateY(0);
 }
 
+/* Lightbox styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    flex-direction: column;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lightbox-media {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain; /* This ensures no cropping */
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.lightbox-caption {
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Balto-Book', sans-serif;
+    font-size: 1.1rem;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+    transition: color 0.3s ease;
+}
+
+.close-lightbox:hover {
+    color: #bbbbbb;
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
     .floating-logo {
         width: 280px;
         height: 280px;
+    }
+    
+    .two-column {
+        gap: 40px;
     }
     
     .project-gallery {
@@ -303,9 +417,14 @@ p {
         padding: 15px;
     }
     
-    .project-gallery {
+    .two-column {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 30px;
+    }
+    
+    .project-gallery {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on tablet */
+        gap: 20px; /* Smaller gap on tablet */
     }
     
     .alternate-bg {
@@ -323,6 +442,16 @@ p {
         transform: translateY(0);
         font-size: 0.85rem;
         padding: 8px 0;
+    }
+    
+    /* Adjust lightbox for mobile */
+    .lightbox-content {
+        max-width: 95%;
+    }
+    
+    .close-lightbox {
+        top: 10px;
+        right: 15px;
     }
 }
 
@@ -350,6 +479,15 @@ p {
     
     .section-title {
         font-size: 1.8rem;
+    }
+    
+    .lightbox-caption {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+    
+    .project-gallery {
+        grid-template-columns: 1fr; /* Single column on mobile */
     }
     
     .gallery-item {
