@@ -13,22 +13,27 @@ footer {
 }
 
 .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px; /* Side padding */
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.footer-name-link,
+.footer-github-link {
+    color: #0E5AA7; /* Match your accent color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-name-link:hover,
+.footer-github-link:hover {
+    text-decoration: underline;
 }
 
 .extra-text {
-    display: none;
-    color: #a4cc38;  /* Let's say the color is orange. Change this as needed. */
-    margin-left: 10px;  /* To add some space between the name and the extra text */
-}
-
-.footer-name-link {
-    text-decoration: none; /* remove the default underline for links */
-    color: inherit; /* inherit the color of its parent, so it uses the same color */
-}
-
-.footer-name-link:hover + .extra-text {
-    display: inline;
+    margin-left: 5px;
+    font-style: italic;
+    color: #777;
 }
