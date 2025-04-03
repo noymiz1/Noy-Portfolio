@@ -322,6 +322,47 @@ p {
     transform: translateY(0);
 }
 
+/* Next project section */
+.next-project-section {
+    margin: 100px 0 80px; /* Reduced from 120px top margin */
+    text-align: center;
+}
+
+.next-project-title {
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    font-family: 'RoobertSemiMonoTRIAL-Regular', sans-serif;
+}
+
+.next-project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all var(--transition-speed) ease;
+    font-family: 'Recoleta-Regular', sans-serif;
+    line-height: 1; /* Ensure consistent line height */
+}
+
+.next-project-link:hover {
+    transform: translateX(10px);
+    color: var(--accent-color);
+}
+
+.arrow {
+    font-size: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    margin-top: -2px; /* Slight adjustment to align perfectly */
+}
+
 /* Lightbox styling */
 .lightbox {
     display: none;
