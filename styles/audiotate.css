@@ -247,7 +247,7 @@ p {
 .mockup-image {
     width: 100%;
     border-radius: 24px;
-    background-color: rgba(155, 229, 240, 0.153);
+    background-color: rgba(203, 155, 240, 0.153);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
     transition: box-shadow var(--transition-speed) ease;
 }

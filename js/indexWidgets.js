@@ -12,7 +12,7 @@ const GALLERY_DATA = [
   {
     name: "Arctop",
     href: "/projects/arctop.html",
-    src: "/assets/Thumbnails/arctop_thumbnail2.jpg",
+    src: "/assets/Thumbnails/Arctop_logo.png",
     text: "Product Design",
     tags: ["product design", "branding", "design strategy"]
   },
@@ -24,9 +24,16 @@ const GALLERY_DATA = [
     tags: ["branding", "packaging", "design strategy", "animation"]
   },
   {
+    name: "Audiotate",
+    href: "/projects/audiotate.html",
+    src:  "/assets/Audiotate/audiotate_logo.png",
+    text: "Design for Desirability Lab, Harvard",
+    tags: ["product design", "design strategy", "branding",]
+  },
+  {
     name: "Bounty Carsheets",
     href: "/projects/bounty.html",
-    src: "/assets/Thumbnails/bounty_thumbnail2.jpg",
+    src: "/assets/Bounty/bounty_pic.png",
     text: "Rebrand, Harvard GSD",
     tags: ["branding", "packaging", "design strategy", "fabrication"]
   },
@@ -36,13 +43,6 @@ const GALLERY_DATA = [
     src: "/assets/Thumbnails/AKnot_Thumbnail.gif",
     text: "Short film",
     tags: ["animation", "production"]
-  },
-  {
-    name: "Audiotate",
-    href: "/projects/audiotate.html",
-    src:  "/assets/Thumbnails/audiotate_thumbnail2.jpg",
-    text: "Design for Desirability Lab, Harvard",
-    tags: ["product design", "design strategy", "branding",]
   },
   {
     name: "Carestry",
