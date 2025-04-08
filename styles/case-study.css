@@ -801,6 +801,78 @@ p {
     transition: transform var(--transition-speed) ease;
 }
 
+/* Stacked Videos Section */
+.stacked-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Space between each video */
+    margin-top: 30px;
+}
+
+.stacked-video-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Space between text and video */
+}
+
+.stacked-video-item h4 {
+    font-size: 1.5rem;
+    font-family: 'Recoleta-Regular', serif;
+    margin-bottom: 0px;
+    color: var(--text-color);
+}
+
+.stacked-video-item p {
+    font-size: 1rem;
+    font-family: 'Balto-Book', sans-serif;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.solution-video {
+    width: 100%;
+    max-width: 100px; /* Limit the video width */
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform var(--transition-speed) ease;
+    aspect-ratio: 16/9; /* Maintain video aspect ratio */
+    object-fit: cover;
+    background-color: #f9f9f7;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stacked-video-item:hover .solution-video {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .stacked-videos {
+        gap: 40px; /* Reduce spacing between videos */
+    }
+
+    .solution-video {
+        max-width: 100%; /* Allow videos to take full width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .stacked-video-item h4 {
+        font-size: 1.3rem;
+    }
+
+    .stacked-video-item p {
+        font-size: 0.9rem;
+    }
+
+    .solution-video {
+        max-width: 100%; /* Full width on very small screens */
+    }
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
     .solution-features {
