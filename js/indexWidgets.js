@@ -58,6 +58,7 @@ const GALLERY_DATA = [
     text: "New Spaces of Justice, Harvard GSD",
     tags: ["design strategy", "data visualization", "writing"]
   },
+  /*
   {
     name: "Enduring Heirlooms",
     href: "/projects/enduringheirlooms_project.html",
@@ -66,6 +67,7 @@ const GALLERY_DATA = [
     tags: ["writing", "product design", "design strategy"]
     
   },
+  */
   {
     name: "Wishful Thinking",
     href: "/projects/wishfulthinking.html",
