@@ -106,28 +106,56 @@ p {
     font-family: 'Balto-Book', sans-serif;
 }
 
-/* Make hero image more prominent */
+/* Hero Image Container with Floating Effect */
 .hero-image-container {
     width: 100%;
-    max-width: 500px;
-    margin: 40px auto 0; /* Reduced top margin from 60px to 40px */
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    transform: translateY(0);
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    max-width: 1200px; /* Adjust the maximum width */
+    margin: 40px auto 0; /* Center the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.hero-image-container.active {
-    transform: translateY(0);
-    opacity: 1;
-}
-
+/* Floating Hero Image */
 .hero-image {
-    width: 100%;
-    display: block;
+    width: 320px; /* Set a fixed width for the image */
+    height: 320px; /* Set a fixed height for the image */
+    border-radius: 24px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(203, 155, 240, 0.3); /* Subtle shadow */
+    animation: heroFloat 4s ease-in-out infinite alternate; /* Floating animation */
+    position: relative;
+    object-fit: cover; /* Ensure the image scales properly */
+    background-color: white; /* Optional: Add a background color */
 }
 
+/* Floating Animation */
+@keyframes heroFloat {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(1deg);
+    }
+    100% {
+        transform: translateY(-5px) rotate(-1deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-image {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        width: 200px;
+        height: 200px;
+    }
+}
 /* Content sections */
 .case-study-content {
     padding: 50px 8%;
@@ -139,7 +167,7 @@ p {
 }
 
 .section-container {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -169,11 +197,6 @@ p {
     width: 100vw;
     transition: background-color var(--transition-speed) ease;
 }
-
-.dark-mode .alternate-bg {
-    background-color: var(--secondary-color);
-}
-
 .content-block {
     max-width: 800px;
     margin-bottom: 40px;
@@ -532,6 +555,36 @@ p {
         background: rgba(0,0,0,0.8);
         z-index: -1;
     }
+}
+/* Container for Journey Images */
+.journey-images-container {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: space-between; /* Add space between the images */
+    gap: 20px; /* Add spacing between the items */
+    margin-top: 20px; /* Add spacing above the container */
+}
+
+/* Individual Image Item */
+.journey-image-item {
+    flex: 1; /* Ensure all items take up equal space */
+    max-width: 48%; /* Limit the width of each image item */
+    text-align: center; /* Center-align the captions */
+}
+
+/* Styling for Images */
+.journey-image {
+    width: 100%; /* Make the images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    object-fit: cover; /* Ensure the images scale properly */
+}
+
+/* Styling for Captions */
+.image-caption {
+    margin-top: 10px; /* Add spacing above the caption */
+    font-size: 0.9rem; /* Adjust the font size */
+    color: #555; /* Use a subtle text color */
 }
 /* Prototype Videos Container */
 .prototype-videos-container {
@@ -1455,4 +1508,46 @@ p {
     .flipbook-container {
         max-width: 95%;
     }
+}
+
+/* Ensure the video matches the size of the images */
+.project-image {
+    width: 100%; /* Make the video responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Match the styling of the images */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    object-fit: cover; /* Ensure the video scales properly */
+}
+
+/* Container for Solution Images */
+.stacked-images {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 40px; /* Add spacing between the items */
+    margin-top: 40px; /* Add spacing above the container */
+}
+
+/* Individual Image Item */
+.stacked-image-item {
+    text-align: center; /* Center-align the captions */
+}
+
+/* Styling for Images and Videos */
+.project-image {
+    width: 100%; /* Make the images responsive */
+    max-width: 800px; /* Limit the maximum width of the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    object-fit: cover; /* Ensure the images scale properly */
+    margin: 0 auto; /* Center the images */
+}
+
+/* Styling for Captions */
+.image-caption {
+    margin-top: 10px; /* Add spacing above the caption */
+    font-size: 1rem; /* Adjust the font size */
+    color: #555; /* Use a subtle text color */
+    max-width: 800px; /* Limit the width of the captions */
+    margin: 10px auto 0; /* Center the captions */
 }
