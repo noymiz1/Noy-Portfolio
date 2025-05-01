@@ -3,38 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enduring Heirlooms</title>
+    <title>Enduring Heirlooms | Case Study</title>
     <link rel="stylesheet" href="/styles/top-bar.css">
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/enduringheirlooms.css">
     <link rel="stylesheet" href="https://use.typekit.net/oyw2ysf.css">
     
+    <!-- jQuery (MUST come first) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/turn.min.js"></script>
+    
+    <!-- HTML fragments module -->
     <script src="/js/html-fragment.js" type="module"></script>
+    
+    <!-- Custom scripts (after libraries) -->
+    <script src="/js/flipbook.js"></script>
 </head>
 <body>
     <html-fragment src="/components/top-bar.html"></html-fragment>
-    <main>
-        <div class="project-container">
-            <h2 class="project-title">Enduring Heirlooms</h2>
-            <p class="project-blurb">
-                2021-2023<br><br>
-                
-                Enduring Heirlooms is a digital platform concept where users build their heirlooms a provenance— mapping lost cultural identity and discovering the origin of enduring traits, proverbs, and behaviors passed down to them. The methodology is meant to be shared and open access with others who have difficulty mapping their lineage and only have remnants of a lost culture in their possession. 
+    <main class="case-study-content">
+        <!-- Hero Section -->
+        <section class="case-study-hero">
+            <div class="hero-content">
+                <h1 class="project-title fade-in">Enduring Heirlooms</h1>
+                <p class="project-subtitle fade-in">A platform for tracking and mapping family heirlooms to rediscover cultural identity</p>
+                <div class="project-metadata fade-in">
+                    <span class="tag">UX/UI Design</span>
+                    <span class="tag">Cultural Research</span>
+                    <span class="tag">Storytelling</span>
+                    <span class="year">2021-2023</span>
+                </div>
+            </div>
+            <div class="hero-image-container fade-in">
+                <img src="/assets/Thumbnails/EnduringHeirlooms_Thumbnail.jpg" alt="Enduring Heirlooms Hero Image" class="hero-image">
+            </div>
+        </section>
 
-                <br><br>The website EnduringHeirlooms.com encourages open access ownership of family heirlooms. The platform includes a timeline, map, and archive of relics that eventually link shared origin stories. Users can upload images and descriptions of various family heirlooms like amulets, traits, language, recipes, etc., and map their migration across lands. Eventually, with more aggregated data, users searching for information about family heirlooms will be able to parse the database and discover similar matches, connecting missing links in their genealogy.
-            </p>
-        </div>
-        
-        <div class="project-images">
-            <img src="/assets/EnduringHeirlooms/EH_pic5.png" alt="Project Image 3" class="project-image">
-            <img src="/assets/EnduringHeirlooms/EH_pic4.png" alt="Project Image 4" class="project-image">
-            <img src="/assets/EnduringHeirlooms/EH_pic3.png" alt="Project Image 5" class="project-image">
-            <img src="/assets/EnduringHeirlooms/EH_pic1.png" alt="Project Image 5" class="project-image">
-        </div>
+        <!-- Project Overview -->
+        <section class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Project Overview</h2>
+                <p class="section-intro">
+                    Enduring Heirlooms is a digital platform concept that helps users map lost cultural identity by building a provenance for their family heirlooms. The platform encourages open access ownership of heirlooms and connects users through shared origin stories.
+                </p>
+                <div class="content-block">
+                    <p>
+                        This project began as a personal journey to track the origins of my family's amulet. By meeting with an heirloom collector in Tel Aviv and researching similar artifacts, I was able to trace its origins to a specific time and place. This inspired the idea for a digital platform that could help others uncover the stories behind their own heirlooms.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Section -->
+        <section class="content-section alternate-bg">
+            <div class="section-container">
+                <h2 class="section-title">The Problem</h2>
+                <p class="section-intro">
+                    Many individuals with fragmented cultural identities struggle to map their lineage due to limited access to historical records or lost cultural artifacts.
+                </p>
+                <div class="problem-container">
+                    <div class="problem-item fade-in-on-scroll">
+                        <h4>Disconnected Heirlooms</h4>
+                        <p>Family heirlooms often lack context, leaving their origins and significance unknown.</p>
+                    </div>
+                    <div class="problem-item fade-in-on-scroll">
+                        <h4>Fragmented Histories</h4>
+                        <p>Users struggle to piece together their family histories due to incomplete records.</p>
+                    </div>
+                    <div class="problem-item fade-in-on-scroll">
+                        <h4>Limited Collaboration</h4>
+                        <p>Existing tools don't allow users to collaborate or share data to uncover shared histories.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Story Section -->
+        <section class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">My Journey</h2>
+                <p class="section-intro">
+                    The idea for Enduring Heirlooms was inspired by my personal experience of tracking my family's amulet.
+                </p>
+
+                <div class="stacked-images">
+                    <!-- Image 1 -->
+                    <div class="stacked-image-item fade-in-on-scroll">
+                        <img src="/assets/EnduringHeirlooms/EH_pic1.png" alt="Family Amulet" class="project-image">
+                        <p class="image-caption">My family's amulet, passed down through generations.</p>
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div class="stacked-image-item fade-in-on-scroll">
+                        <img src="/assets/EnduringHeirlooms/EH_pic6.jpg" alt="Meeting the Collector" class="project-image">
+                        <p class="image-caption">Meeting with an heirloom collector in Tel Aviv to trace its origins.</p>
+                    </div>
+                </div>
+
+                <!-- Flipbook section - UPDATED -->
+                <div class="flipbook-container fade-in-on-scroll">
+                    <h3 style="text-align:center; margin-bottom:20px;">Research Booklet</h3>
+                    <div id="flipbook">
+                        <div class="page"><img src="/assets/EnduringHeirlooms/EH_Booklet_Page_01.jpg" alt="Page 1"></div>
+                        <div class="page"><img src="/assets/EnduringHeirlooms/EH_Booklet_Page_02.jpg" alt="Page 2"></div>
+                        <div class="page"><img src="/assets/EnduringHeirlooms/EH_Booklet_Page_03.jpg" alt="Page 3"></div>
+                        <div class="page"><img src="/assets/EnduringHeirlooms/EH_Booklet_Page_04.jpg" alt="Page 4"></div>
+                        <div class="page"><img src="/assets/EnduringHeirlooms/EH_Booklet_Page_05.jpg" alt="Page 5"></div>
+                        <div class="page"><img src="/assets/EnduringHeirlooms/EH_Booklet_Page_06.jpg" alt="Page 6"></div>
+                    </div>
+                    <div style="text-align:center; margin-top:20px; font-size:0.9rem; color:#777;">
+                        Click the edges of the pages to turn, or use your arrow keys
+                    </div>
+                </div>
+                <!-- End Flipbook -->
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="content-section alternate-bg">
+            <div class="section-container">
+                <h2 class="section-title">The Solution</h2>
+                <p class="section-intro">
+                    Enduring Heirlooms provides a collaborative platform for mapping cultural identity through family heirlooms.
+                </p>
+                <div class="stacked-images">
+                    <div class="stacked-image-item fade-in-on-scroll">
+                        <img src="/assets/EnduringHeirlooms/EH_Homepage.png" alt="Timeline Feature" class="project-image">
+                        <p class="image-caption">The timeline feature allows users to map heirlooms across generations.</p>
+                    </div>
+
+                    <div class="stacked-image-item fade-in-on-scroll">
+                        <img src="/assets/EnduringHeirlooms/EH_Search.png" alt="Interactive Map" class="project-image">
+                        <p class="image-caption">The interactive map visualizes the migration of heirlooms across regions.</p>
+                    </div>
+                    
+                    <div class="stacked-video-item fade-in-on-scroll">
+                        <h4>Recording Session</h4>
+                        <p>Streamlining the recording process for better usability and efficiency.</p>
+                        <video class="solution-video" autoplay muted loop playsinline>
+                            <source src="/assets/EnduringHeirlooms/EH_amulet.mov" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+
+                    <div class="stacked-image-item fade-in-on-scroll">
+                        <img src="/assets/EnduringHeirlooms/EH_archive.png" alt="Heirloom Archive" class="project-image">
+                        <p class="image-caption">The archive feature lets users search and explore heirlooms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section class="content-section">
+            <div class="section-container">
+                <h2 class="section-title">Impact</h2>
+                <p class="section-intro">
+                    Enduring Heirlooms empowers users to reconnect with their cultural identity and collaborate with others to uncover shared histories.
+                </p>
+                <div class="content-block">
+                    <p>
+                        By combining storytelling with data visualization, the platform bridges the gap between personal history and collective heritage. It has the potential to create a global archive of cultural artifacts, fostering collaboration and understanding across communities.
+                    </p>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <script src="/js/top-bar-minimizer.js" defer></script>
-    <script src="/js/nightMode.js" defer></script>
+    
     <html-fragment src="/components/footer.html"></html-fragment>
-    <script src="/js/modal.js" defer></script>
 </body>
 </html>

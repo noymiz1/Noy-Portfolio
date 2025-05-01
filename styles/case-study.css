@@ -1389,3 +1389,42 @@ p {
         padding: 8px;
     }
 }
+
+/* Prototype Section Styling */
+.prototype-videos-container {
+    display: flex; /* Use flexbox to align items side by side */
+    justify-content: space-between; /* Add space between the items */
+    gap: 20px; /* Add spacing between the items */
+    margin-top: 20px; /* Add some spacing above the container */
+}
+
+.prototype-video-item {
+    flex: 1; /* Ensure all items take up equal space */
+    max-width: 370px; /* Set a maximum width for each item */
+    text-align: center; /* Center-align the captions */
+}
+
+.prototype-video-item img {
+    width: 100%; /* Make the images responsive */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+   
+}
+
+.video-caption {
+    margin-top: 10px; /* Add spacing above the caption */
+    font-size: 0.9rem; /* Adjust the font size */
+    color: #555; /* Use a subtle color for the caption */
+}
+
+@media (max-width: 768px) {
+    .prototype-videos-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center-align the items */
+    }
+
+    .prototype-video-item {
+        max-width: 100%; /* Allow items to take up the full width */
+        margin-bottom: 20px; /* Add spacing between stacked items */
+    }
+}
