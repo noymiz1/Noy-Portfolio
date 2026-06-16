@@ -23,14 +23,16 @@ body.modal-active .modal {
 }
 
 .modal-content {
-  background: rgba(255, 255, 255, 0.9); /* Semi-transparent background for modal content */
-  backdrop-filter: blur(10px); /* Blur effect for modal content */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 30px;
   padding-top: 40px;
   border-radius: 12px;
   width: 50%;
   max-width: 550px;
+  max-height: 90vh;
+  overflow-y: auto;
   text-align: left;
   font-family: "Balto-Book", sans-serif;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
@@ -288,8 +290,9 @@ body.modal-active {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .modal-content {
-      width: 90%; /* Adjust width on smaller screens */
-      padding: 20px; /* Adjust padding on smaller screens */
+      width: 90%;
+      max-height: 85vh;
+      padding: 20px;
   }
 
   .hover-trigger {
