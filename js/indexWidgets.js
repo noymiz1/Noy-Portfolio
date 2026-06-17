@@ -10,6 +10,13 @@ const GALLERY_DATA = [
   //   tags: ["branding", "packaging","video"]
   // },
   {
+    name: "Amazon IMDb",
+    href: "https://imdbcreativestudio.com/",
+    src: "/assets/Thumbnails/imdb_thumbnail.jpg",
+    text: "UX/Interaction Design, IMDB Creative Studio",
+    tags: ["product design", "design strategy", "animation", "interaction"]
+  },
+  {
     name: "Arctop",
     href: "/projects/arctop.html",
     src: "/assets/Thumbnails/Arctop_logo.png",
@@ -161,12 +168,15 @@ const GALLERY_DATA = [
 function createGalleryEl({ src, name, text, tags, href }) {
   const el = document.createElement("div");
   el.classList.add("gallery-entry");
-  el.dataset.tags = tags.join(' '); // Sets a data attribute with all tags for filtering
-  
+  el.dataset.tags = tags.join(' ');
+
+  const isExternal = href && href.startsWith('http');
+  const targetAttr = isExternal ? 'target="_blank" rel="noopener noreferrer"' : '';
+
   el.innerHTML = `
-    <a class="gallery-entry-link" href="${href ?? "/"}">
+    <a class="gallery-entry-link" href="${href ?? "/"}" ${targetAttr}>
       <div class="gallery-entry-img">
-        <img src="${src}"/>
+        <img src="${src}" alt="${name}"/>
         <div class="gallery-text">${name}</div>
       </div>
       <div class="gallery-description">${text}</div>
@@ -188,7 +198,7 @@ GALLERY_DATA.forEach(data => {
 
   el.timer = 1;
 
-  el.addEventListener("mouseenter", e => {
+  el.addEventListener("mouseenter", () => {
     if (el.intervalId) clearInterval(el.intervalId);
 
     el.intervalId = setInterval(() => {
@@ -204,7 +214,7 @@ GALLERY_DATA.forEach(data => {
 
   });
 
-  el.addEventListener("mouseleave", e => {
+  el.addEventListener("mouseleave", () => {
     if (el.intervalId) clearInterval(el.intervalId);
 
     el.reset();
